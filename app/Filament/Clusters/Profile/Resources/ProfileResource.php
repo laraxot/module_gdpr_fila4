@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0c1819a (.)
+=======
+use Override;
+>>>>>>> ceb9f4f (.)
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\ListProfiles;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\EditProfile;
@@ -19,6 +23,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class ProfileResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     protected static null|string $model = Profile::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -32,6 +39,7 @@ class ProfileResource extends XotBaseResource
     }
 
     #[Override]
+<<<<<<< HEAD
 =======
     protected static ?string $model = Profile::class;
 
@@ -46,6 +54,8 @@ class ProfileResource extends XotBaseResource
     }
 
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     public static function getPages(): array
     {
         return [

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Cache;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Gdpr\Enums\ConsentType;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
@@ -17,6 +18,11 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Enums\ConsentType;
 >>>>>>> 0c1819a (.)
+=======
+use Modules\Gdpr\Enums\ConsentType;
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Treatment;
+>>>>>>> ceb9f4f (.)
 
 /**
  * Trait HasGdpr
@@ -48,10 +54,14 @@ trait HasGdpr
         return $this->consents()->whereNull('revoked_at');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 0c1819a (.)
+=======
+
+>>>>>>> ceb9f4f (.)
     /**
      * Get the treatments associated with the user through consents.
      *
@@ -60,10 +70,14 @@ trait HasGdpr
     public function treatments()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
         return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')->where(
             'consents.user_type',
             get_class($this),
         ); // Foreign key on consents table // Foreign key on treatments table // Local key on users table // Local key on consents table
+<<<<<<< HEAD
 =======
         return $this->hasManyThrough(
             Treatment::class,
@@ -74,21 +88,28 @@ trait HasGdpr
             'treatment_id' // Local key on consents table
         )->where('consents.user_type', get_class($this));
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     }
 
     /**
      * Check if the user has given a specific consent.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0c1819a (.)
+=======
+     *
+>>>>>>> ceb9f4f (.)
      * @param  ConsentType|string  $type
      * @param  bool  $cached  Use cached version if available
      * @return bool
      */
     public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $type = ($type instanceof ConsentType) ? $type->value : $type;
         $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
@@ -98,10 +119,16 @@ trait HasGdpr
         $cacheKey = 'user_' . (string) $this->getKey() . '_consent_' . $type;
         
 >>>>>>> 0c1819a (.)
+=======
+        $type = ($type instanceof ConsentType) ? $type->value : $type;
+        $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
+
+>>>>>>> ceb9f4f (.)
         if ($cached && Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         $hasConsent = $this->activeConsents()->where('type', $type)->exists();
 =======
@@ -109,6 +136,9 @@ trait HasGdpr
             ->where('type', $type)
             ->exists();
 >>>>>>> 0c1819a (.)
+=======
+        $hasConsent = $this->activeConsents()->where('type', $type)->exists();
+>>>>>>> ceb9f4f (.)
 
         Cache::put($cacheKey, $hasConsent, now()->addDay());
 
@@ -125,12 +155,17 @@ trait HasGdpr
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $type = ($type instanceof ConsentType) ? $type->value : $type;
 
 =======
         $type = $type instanceof ConsentType ? $type->value : $type;
         
 >>>>>>> 0c1819a (.)
+=======
+        $type = ($type instanceof ConsentType) ? $type->value : $type;
+
+>>>>>>> ceb9f4f (.)
         /** @var Consent $consent */
         $consent = $this->consents()->create([
             'type' => $type,
@@ -142,25 +177,34 @@ trait HasGdpr
 
         $this->clearConsentCache($type);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 0c1819a (.)
+=======
+
+>>>>>>> ceb9f4f (.)
         return $consent;
     }
 
     /**
      * Revoke a specific consent.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0c1819a (.)
+=======
+     *
+>>>>>>> ceb9f4f (.)
      * @param  ConsentType|string  $type
      * @return bool
      */
     public function revokeConsent(ConsentType|string $type): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $type = ($type instanceof ConsentType) ? $type->value : $type;
 
@@ -168,6 +212,10 @@ trait HasGdpr
         $type = $type instanceof ConsentType ? $type->value : $type;
         
 >>>>>>> 0c1819a (.)
+=======
+        $type = ($type instanceof ConsentType) ? $type->value : $type;
+
+>>>>>>> ceb9f4f (.)
         $updated = $this->activeConsents()
             ->where('type', $type)
             ->update([
@@ -186,34 +234,47 @@ trait HasGdpr
     /**
      * Clear cached consent status.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0c1819a (.)
+=======
+     *
+>>>>>>> ceb9f4f (.)
      * @param  string  $type
      * @return void
      */
     protected function clearConsentCache(string $type): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
 =======
         $cacheKey = 'user_' . (string) $this->getKey() . '_consent_' . $type;
 >>>>>>> 0c1819a (.)
+=======
+        $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
+>>>>>>> ceb9f4f (.)
         Cache::forget($cacheKey);
     }
 
     /**
      * Get all required consents that the user hasn't given yet.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0c1819a (.)
+=======
+     *
+>>>>>>> ceb9f4f (.)
      * @return array<string, string>
      */
     public function getMissingRequiredConsents(): array
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
@@ -228,15 +289,24 @@ trait HasGdpr
             $givenConsents
         );
 >>>>>>> 0c1819a (.)
+=======
+        $givenConsents = $this->activeConsents()->pluck('type')->toArray();
+
+        return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
+>>>>>>> ceb9f4f (.)
     }
 
     /**
      * Check if user has given all required consents.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0c1819a (.)
+=======
+     *
+>>>>>>> ceb9f4f (.)
      * @return bool
      */
     public function hasAllRequiredConsents(): bool

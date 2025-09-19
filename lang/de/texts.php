@@ -1,11 +1,17 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
 =======
 >>>>>>> 0c1819a (.)
+=======
+declare(strict_types=1);
+
+
+>>>>>>> ceb9f4f (.)
 return [
     'alert_accept' => 'Accetta tutti i cookie',
     'alert_essentials_only' => 'Accetta solo i cookie necessari',

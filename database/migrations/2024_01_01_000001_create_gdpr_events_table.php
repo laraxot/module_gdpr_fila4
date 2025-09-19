@@ -8,10 +8,14 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class extends XotBaseMigration {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected null|string $model_class = Event::class;
 =======
     protected ?string $model_class = Event::class;
 >>>>>>> 0c1819a (.)
+=======
+    protected null|string $model_class = Event::class;
+>>>>>>> ceb9f4f (.)
 
     /**
      * Run the migrations.
@@ -21,6 +25,9 @@ return new class extends XotBaseMigration {
         // -- CREATE --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->uuid('treatment_id')->nullable();
@@ -57,6 +64,7 @@ return new class extends XotBaseMigration {
                 hasSoftDeletes: true,
             );
         });
+<<<<<<< HEAD
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
@@ -96,5 +104,7 @@ return new class extends XotBaseMigration {
             }
         );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     }
 };

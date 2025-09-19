@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0c1819a (.)
+=======
+use Override;
+>>>>>>> ceb9f4f (.)
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\ListConsents;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\EditConsent;
@@ -19,6 +23,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class ConsentResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     protected static null|string $model = Consent::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -38,6 +45,7 @@ class ConsentResource extends XotBaseResource
     }
 
     #[Override]
+<<<<<<< HEAD
 =======
     protected static ?string $model = Consent::class;
 
@@ -58,6 +66,8 @@ class ConsentResource extends XotBaseResource
     }
 
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     public static function getPages(): array
     {
         return [

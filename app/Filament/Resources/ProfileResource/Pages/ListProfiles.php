@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources\ProfileResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0c1819a (.)
+=======
+use Override;
+>>>>>>> ceb9f4f (.)
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables;
@@ -22,6 +26,9 @@ class ListProfiles extends UserListProfiles
      * @return array<string, Tables\Columns\Column>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     #[Override]
     public function getTableColumns(): array
     {
@@ -32,6 +39,7 @@ class ListProfiles extends UserListProfiles
             'last_name' => TextColumn::make('last_name')->searchable(),
             'full_name' => TextColumn::make('full_name')->searchable(),
             'email' => TextColumn::make('email')->searchable(),
+<<<<<<< HEAD
 =======
     public function getTableColumns(): array
     {
@@ -49,6 +57,8 @@ class ListProfiles extends UserListProfiles
             'email' => TextColumn::make('email')
                 ->searchable(),
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
@@ -57,6 +67,7 @@ class ListProfiles extends UserListProfiles
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+<<<<<<< HEAD
 <<<<<<< HEAD
             'user_id' => TextColumn::make('user_id')->searchable(),
             'updated_by' => TextColumn::make('updated_by')->searchable(),
@@ -69,10 +80,16 @@ class ListProfiles extends UserListProfiles
             'created_by' => TextColumn::make('created_by')
                 ->searchable(),
 >>>>>>> 0c1819a (.)
+=======
+            'user_id' => TextColumn::make('user_id')->searchable(),
+            'updated_by' => TextColumn::make('updated_by')->searchable(),
+            'created_by' => TextColumn::make('created_by')->searchable(),
+>>>>>>> ceb9f4f (.)
             'deleted_at' => TextColumn::make('deleted_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+<<<<<<< HEAD
 <<<<<<< HEAD
             'deleted_by' => TextColumn::make('deleted_by')->searchable(),
             'is_active' => IconColumn::make('is_active')->boolean(),
@@ -82,6 +99,10 @@ class ListProfiles extends UserListProfiles
             'is_active' => IconColumn::make('is_active')
                 ->boolean(),
 >>>>>>> 0c1819a (.)
+=======
+            'deleted_by' => TextColumn::make('deleted_by')->searchable(),
+            'is_active' => IconColumn::make('is_active')->boolean(),
+>>>>>>> ceb9f4f (.)
         ];
     }
 }

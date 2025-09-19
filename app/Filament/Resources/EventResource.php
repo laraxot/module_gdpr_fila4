@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0c1819a (.)
+=======
+use Override;
+>>>>>>> ceb9f4f (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -22,6 +26,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class EventResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     protected static null|string $model = Event::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -46,6 +53,7 @@ class EventResource extends XotBaseResource
     }
 
     #[Override]
+<<<<<<< HEAD
 =======
     protected static ?string $model = Event::class;
 
@@ -81,6 +89,8 @@ class EventResource extends XotBaseResource
     }
 
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     public static function getPages(): array
     {
         return [
