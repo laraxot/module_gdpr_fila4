@@ -29,17 +29,12 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     case MARKETING_EMAIL = 'marketing_email';
     case MARKETING_SMS = 'marketing_sms';
     case MARKETING_PHONE = 'marketing_phone';
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 5a85228 (.)
     // Privacy and data processing
     case PRIVACY_POLICY = 'privacy_policy';
     case COOKIES = 'cookies';
     case ANALYTICS = 'analytics';
     case PERSONALIZATION = 'personalization';
-<<<<<<< HEAD
 
     // Data sharing
     case THIRD_PARTY_SHARING = 'third_party_sharing';
@@ -49,17 +44,6 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     case TERMS_AND_CONDITIONS = 'terms_and_conditions';
     case AGE_VERIFICATION = 'age_verification';
 
-=======
-    
-    // Data sharing
-    case THIRD_PARTY_SHARING = 'third_party_sharing';
-    case DATA_TRANSFER = 'data_transfer';
-    
-    // Account related
-    case TERMS_AND_CONDITIONS = 'terms_and_conditions';
-    case AGE_VERIFICATION = 'age_verification';
-    
->>>>>>> 5a85228 (.)
     // Special consents
     case RESEARCH = 'research';
     case PROFILING = 'profiling';
@@ -130,11 +114,7 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
      * Get consent types grouped by category.
      * 
      * @return array<string, array<string, string>>
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> 5a85228 (.)
     public static function groupedByCategory(): array
     {
         return [
@@ -169,7 +149,6 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
      * Get consent types as a flattened array for forms.
      * 
      * @return array<string, string>
-<<<<<<< HEAD
 
     public static function forFormSelect(): array
     {
@@ -179,17 +158,6 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
             $result[__("gdpr::consent.categories.$category")] = $types;
         }
 
-=======
-     
-    public static function forFormSelect(): array
-    {
-        $result = [];
-        
-        foreach (self::groupedByCategory() as $category => $types) {
-            $result[__("gdpr::consent.categories.$category")] = $types;
-        }
-        
->>>>>>> 5a85228 (.)
         return $result;
     }
         */

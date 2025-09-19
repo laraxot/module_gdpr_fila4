@@ -12,11 +12,7 @@ abstract class GdprBasePolicy
 {
     use HandlesAuthorization;
 
-<<<<<<< HEAD
-    public function before(UserContract $user, string $_ability): null|bool
-=======
     public function before(UserContract $user, string $ability): ?bool
->>>>>>> 5a85228 (.)
     {
         $xotData = XotData::make();
         if ($user->hasRole('super-admin')) {
@@ -25,8 +21,4 @@ abstract class GdprBasePolicy
 
         return null;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5a85228 (.)

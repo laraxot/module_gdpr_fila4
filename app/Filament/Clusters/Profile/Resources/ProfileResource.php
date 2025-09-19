@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
-<<<<<<< HEAD
-use Override;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\ListProfiles;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\EditProfile;
-=======
->>>>>>> 5a85228 (.)
 use Modules\Gdpr\Filament\Clusters\Profile as ProfileCluster;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages;
 use Modules\Gdpr\Models\Profile;
@@ -18,30 +14,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ProfileResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static null|string $model = Profile::class;
-
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static null|string $cluster = ProfileCluster::class;
-
-    #[Override]
-    public static function getFormSchema(): array
-    {
-        return [];
-    }
-
-    #[Override]
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListProfiles::route('/'),
-            'create' => CreateProfile::route('/create'),
-            'edit' => EditProfile::route('/{record}/edit'),
-=======
     protected static ?string $model = Profile::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $cluster = ProfileCluster::class;
 
@@ -55,10 +30,9 @@ class ProfileResource extends XotBaseResource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProfiles::route('/'),
-            'create' => Pages\CreateProfile::route('/create'),
-            'edit' => Pages\EditProfile::route('/{record}/edit'),
->>>>>>> 5a85228 (.)
+            'index' => ListProfiles::route('/'),
+            'create' => CreateProfile::route('/create'),
+            'edit' => EditProfile::route('/{record}/edit'),
         ];
     }
 }
