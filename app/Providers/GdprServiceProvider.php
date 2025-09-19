@@ -4,12 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Providers;
 
+<<<<<<< HEAD
 use Override;
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+=======
+use Illuminate\Routing\Router;
+use Modules\Gdpr\Datas\GdprData;
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+>>>>>>> 5a85228 (.)
 
 class GdprServiceProvider extends XotBaseServiceProvider
 {
@@ -17,20 +24,28 @@ class GdprServiceProvider extends XotBaseServiceProvider
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
 
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> 5a85228 (.)
     public function boot(): void
     {
         parent::boot();
 
         $lang_path = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'lang');
         $this->loadTranslationsFrom($lang_path, 'cookie-consent');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 5a85228 (.)
         $router = app('router');
         $this->registerMyMiddleware($router);
     }
 
     public function registerMyMiddleware(Router $router): void
     {
+<<<<<<< HEAD
         $gdpr = GdprData::make();
         if ($gdpr->cookie_banner_enabled) {
             $router->pushMiddlewareToGroup('web', CookieConsentMiddleware::class);
@@ -38,4 +53,16 @@ class GdprServiceProvider extends XotBaseServiceProvider
     }
 
     
+=======
+        $gdpr=GdprData::make();
+        if($gdpr->cookie_banner_enabled){
+            $router->pushMiddlewareToGroup('web', \Statikbe\CookieConsent\CookieConsentMiddleware::class);
+        }
+    }
+
+    public function register(): void
+    {
+        parent::register();
+    }
+>>>>>>> 5a85228 (.)
 }
