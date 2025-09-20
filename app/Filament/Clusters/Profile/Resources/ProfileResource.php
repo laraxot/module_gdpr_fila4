@@ -22,7 +22,7 @@ class ProfileResource extends XotBaseResource
 
     public static function getFormSchema(): array
     {
-        /** @var array<string, \Filament\Forms\Components\Component> */
+        // Types are inferred by Filament v4
         return [
         ];
     }

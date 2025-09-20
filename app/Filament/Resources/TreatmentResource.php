@@ -27,7 +27,7 @@ class TreatmentResource extends XotBaseResource
 
     public static function getFormSchema(): array
     {
-        /** @var array<string, \Filament\Forms\Components\Component> */
+        // Types are inferred by Filament v4
         return [
             'active' => Toggle::make('active')
                 ->required(),
@@ -53,7 +53,7 @@ class TreatmentResource extends XotBaseResource
 
     public function getTableColumns(): array
     {
-        /** @var array<string, Column> */
+        // Column types are inferred by Filament v4
         return [
             // Tables\Columns\TextColumn::make('id')
             //
