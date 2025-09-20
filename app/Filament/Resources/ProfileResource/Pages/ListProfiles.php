@@ -20,7 +20,7 @@ class ListProfiles extends UserListProfiles
      */
     public function getTableColumns(): array
     {
-        /** @var array<string, Column> */
+        // Column types are inferred by Filament v4
         return [
             'id' => TextColumn::make('id')
                 ->searchable(),
