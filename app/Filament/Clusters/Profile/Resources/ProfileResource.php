@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
-<<<<<<< HEAD
-=======
 use Override;
->>>>>>> a074f99 (.)
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\ListProfiles;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\EditProfile;
@@ -18,21 +15,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ProfileResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static ?string $model = Profile::class;
-
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static ?string $cluster = ProfileCluster::class;
-
-    public static function getFormSchema(): array
-    {
-        // Types are inferred by Filament v4
-        return [
-        ];
-    }
-
-=======
     protected static null|string $model = Profile::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -46,7 +28,6 @@ class ProfileResource extends XotBaseResource
     }
 
     #[Override]
->>>>>>> a074f99 (.)
     public static function getPages(): array
     {
         return [

@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-<<<<<<< HEAD
-=======
 use Override;
->>>>>>> a074f99 (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -21,42 +18,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class EventResource extends XotBaseResource
 {
-<<<<<<< HEAD
-    protected static ?string $model = Event::class;
-
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function getFormSchema(): array
-    {
-        // Types are inferred by Filament v4
-        return [
-            'treatment_id' => TextInput::make('treatment_id')
-                ->maxLength(36)
-                ->default(null),
-            'consent_id' => Select::make('consent_id')
-                ->relationship('consent', 'id'),
-            'subject_id' => TextInput::make('subject_id')
-                ->required()
-                ->maxLength(191),
-            'ip' => TextInput::make('ip')
-                ->required()
-                ->maxLength(191),
-            'action' => TextInput::make('action')
-                ->required()
-                ->maxLength(191),
-            'payload' => Textarea::make('payload')
-                ->required()
-                ->columnSpanFull(),
-        ];
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
-=======
     protected static null|string $model = Event::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -81,7 +42,6 @@ class EventResource extends XotBaseResource
     }
 
     #[Override]
->>>>>>> a074f99 (.)
     public static function getPages(): array
     {
         return [

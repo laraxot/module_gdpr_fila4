@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a074f99 (.)
 return [
     'navigation' => [
         'name' => 'Trattamenti',
