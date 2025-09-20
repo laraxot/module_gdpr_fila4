@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources\EventResource\Pages;
 
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< HEAD
 use Filament\Tables\Columns\Column;
+=======
+>>>>>>> a074f99 (.)
 use Filament\Tables;
 use Modules\Gdpr\Filament\Resources\EventResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -16,7 +19,10 @@ class ListEvents extends XotBaseListRecords
 
     public function getTableColumns(): array
     {
+<<<<<<< HEAD
         // Column types are inferred by Filament v4
+=======
+>>>>>>> a074f99 (.)
         return [
             'id' => TextColumn::make('id')
                 ->numeric()
@@ -34,10 +40,15 @@ class ListEvents extends XotBaseListRecords
                 ->numeric()
                 ->sortable()
                 ->searchable(),
+<<<<<<< HEAD
             'ip' => TextColumn::make('ip')
                 ->searchable(),
             'action' => TextColumn::make('action')
                 ->searchable(),
+=======
+            'ip' => TextColumn::make('ip')->searchable(),
+            'action' => TextColumn::make('action')->searchable(),
+>>>>>>> a074f99 (.)
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
