@@ -4,7 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+=======
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -63,7 +70,15 @@ abstract class BaseModel extends Model
      */
     protected static function newFactory()
     {
+<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
+=======
+<<<<<<< HEAD
+        return app(GetFactoryAction::class)->execute(static::class);
+=======
+        return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     }
 
     /** @return array<string, string> */
@@ -73,10 +88,38 @@ abstract class BaseModel extends Model
             'id' => 'string',
             'uuid' => 'string',
             'published_at' => 'datetime',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
             'verified_at' => 'datetime',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
