@@ -4,42 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
-<<<<<<< HEAD
 use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-=======
-use Illuminate\Support\Collection;
-use Illuminate\Support\Arr;
-use Filament\Support\Contracts\HasIcon;
-use Filament\Forms\Components\TextInput;
-use Filament\Support\Contracts\HasColor;
-use Filament\Support\Contracts\HasLabel;
->>>>>>> 7f200e9 (.)
 use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
  * Enum ConsentType
-<<<<<<< HEAD
  *
-=======
- * 
->>>>>>> 7f200e9 (.)
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
 enum ConsentType: string implements HasLabel, HasIcon, HasColor
 {
-<<<<<<< HEAD
     use TransTrait;
 
-=======
-
-    use TransTrait;
->>>>>>> 7f200e9 (.)
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
     case MARKETING_SMS = 'marketing_sms';
@@ -66,48 +48,27 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
 
     public function getLabel(): string
     {
-<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.label');
-=======
-        return $this->transClass(self::class,$this->value.'.label');
->>>>>>> 7f200e9 (.)
     }
 
     public function getColor(): string
     {
-<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.color');
-=======
-        return $this->transClass(self::class,$this->value.'.color');
-
->>>>>>> 7f200e9 (.)
     }
 
     public function getIcon(): string
     {
-<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.icon');
-=======
-        return $this->transClass(self::class,$this->value.'.icon');
->>>>>>> 7f200e9 (.)
     }
 
     public function getDescription(): string
     {
-<<<<<<< HEAD
         return $this->transClass(self::class, $this->value . '.description');
-=======
-        return $this->transClass(self::class,$this->value.'.description');
->>>>>>> 7f200e9 (.)
     }
 
     /**
      * Check if this consent type is required for using the service.
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 7f200e9 (.)
      * @return bool
      */
     public function isRequired(): bool
@@ -116,62 +77,37 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
             self::PRIVACY_POLICY,
             self::TERMS_AND_CONDITIONS,
             self::AGE_VERIFICATION,
-<<<<<<< HEAD
         ], strict: true);
-=======
-        ]);
->>>>>>> 7f200e9 (.)
     }
 
     /**
      * Get all required consent types.
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 7f200e9 (.)
      * @return array<string>
      */
     public static function getRequiredConsentTypes(): array
     {
-<<<<<<< HEAD
         return array_map(fn(self $type) => $type->value, array_filter(
             self::cases(),
             fn(self $type) => $type->isRequired(),
         ));
-=======
-        return array_map(
-            fn (self $type) => $type->value,
-            array_filter(self::cases(), fn (self $type) => $type->isRequired())
-        );
->>>>>>> 7f200e9 (.)
     }
 
     /**
      * Get all optional consent types.
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 7f200e9 (.)
      * @return array<string>
      */
     public static function getOptionalConsentTypes(): array
     {
         return array_map(
-<<<<<<< HEAD
             fn(self $type) => $type->value,
             array_filter(self::cases(), fn(self $type) => !$type->isRequired()),
-=======
-            fn (self $type) => $type->value,
-            array_filter(self::cases(), fn (self $type) => !$type->isRequired())
->>>>>>> 7f200e9 (.)
         );
     }
 
     /*
      * Get consent types grouped by category.
-<<<<<<< HEAD
      *
      * @return array<string, array<string, string>>
      *
@@ -205,40 +141,4 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
      * ];
      * }
      */
-=======
-     * 
-     * @return array<string, array<string, string>>
-
-    public static function groupedByCategory(): array
-    {
-        return [
-            'marketing' => [
-                self::MARKETING_EMAIL->value => self::MARKETING_EMAIL->label(),
-                self::MARKETING_SMS->value => self::MARKETING_SMS->label(),
-                self::MARKETING_PHONE->value => self::MARKETING_PHONE->label(),
-            ],
-            'privacy' => [
-                self::PRIVACY_POLICY->value => self::PRIVACY_POLICY->label(),
-                self::COOKIES->value => self::COOKIES->label(),
-                self::ANALYTICS->value => self::ANALYTICS->label(),
-                self::PERSONALIZATION->value => self::PERSONALIZATION->label(),
-            ],
-            'data_sharing' => [
-                self::THIRD_PARTY_SHARING->value => self::THIRD_PARTY_SHARING->label(),
-                self::DATA_TRANSFER->value => self::DATA_TRANSFER->label(),
-            ],
-            'account' => [
-                self::TERMS_AND_CONDITIONS->value => self::TERMS_AND_CONDITIONS->label(),
-                self::AGE_VERIFICATION->value => self::AGE_VERIFICATION->label(),
-            ],
-            'special' => [
-                self::RESEARCH->value => self::RESEARCH->label(),
-                self::PROFILING->value => self::PROFILING->label(),
-                self::AUTOMATED_DECISION_MAKING->value => self::AUTOMATED_DECISION_MAKING->label(),
-            ],
-        ];
-    }
-    */
-    
->>>>>>> 7f200e9 (.)
 }
