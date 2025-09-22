@@ -53,6 +53,7 @@ class GdprServiceProvider extends XotBaseServiceProvider
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 111fa0e (.)
 =======
 
@@ -70,4 +71,6 @@ class GdprServiceProvider extends XotBaseServiceProvider
         parent::register();
     }
 >>>>>>> 7f200e9 (.)
+=======
+>>>>>>> d5b1ed8 (.)
 }
