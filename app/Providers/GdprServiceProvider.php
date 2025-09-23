@@ -38,5 +38,8 @@ class GdprServiceProvider extends XotBaseServiceProvider
     }
 
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef13ad6 (.)
 }

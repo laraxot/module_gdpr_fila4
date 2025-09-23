@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ef13ad6 (.)
 # 🔐 **GDPR Module** - Sistema Completo Conformità GDPR
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -561,4 +564,7 @@ CREATE INDEX idx_consents_active ON consents (subject_id, revoked_at);
 - [Modulo Notify](../Notify/docs/README.md) - Sistema notifiche
 - [Documentazione Principale](../../../docs/README.md) - Documentazione generale
 
+<<<<<<< HEAD
 >>>>>>> f13dd89 (.)
+=======
+>>>>>>> ef13ad6 (.)
