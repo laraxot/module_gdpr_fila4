@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Providers;
 
-use Override;
-use Statikbe\CookieConsent\CookieConsentMiddleware;
 use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+use Override;
+use Statikbe\CookieConsent\CookieConsentMiddleware;
 
 class GdprServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Gdpr';
+
     protected string $module_dir = __DIR__;
+
     protected string $module_ns = __NAMESPACE__;
 
     #[Override]
@@ -36,6 +38,4 @@ class GdprServiceProvider extends XotBaseServiceProvider
             $router->pushMiddlewareToGroup('web', CookieConsentMiddleware::class);
         }
     }
-
-    
 }
