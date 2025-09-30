@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Datas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 use Filament\Support\Colors\Color;
 use Illuminate\Support\Arr;
 use Livewire\Wireable;
@@ -17,6 +20,7 @@ use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
 =======
 use Livewire\Wireable;
 use Illuminate\Support\Arr;
@@ -30,6 +34,8 @@ use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 use function Safe\file_get_contents;
 
 /**
@@ -67,10 +73,14 @@ use function Safe\file_get_contents;
  * @property string $favicon
  * @property array<string, array{key?: string, color: string, hex?: string}> $colors
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> 0c1819a (.)
+=======
+ *
+>>>>>>> ceb9f4f (.)
  * @method string getBrandLogoBase64() Get the brand logo as base64 data URI for inline embedding
  */
 class GdprData extends Data implements Wireable
@@ -78,11 +88,15 @@ class GdprData extends Data implements Wireable
     use WireableData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     public bool $cookie_banner_enabled = true;
     /**
      * Singleton instance.
      */
     private static null|self $instance = null;
+<<<<<<< HEAD
 =======
     public bool $cookie_banner_enabled=true;
     /**
@@ -90,6 +104,8 @@ class GdprData extends Data implements Wireable
      */
     private static ?self $instance = null;
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
     /**
      * Creates or returns the singleton instance.
@@ -99,10 +115,14 @@ class GdprData extends Data implements Wireable
     public static function make(): self
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!self::$instance) {
 =======
         if (! self::$instance) {
 >>>>>>> 0c1819a (.)
+=======
+        if (!self::$instance) {
+>>>>>>> ceb9f4f (.)
             /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('gdpr');
             self::$instance = self::from($data);
@@ -111,8 +131,11 @@ class GdprData extends Data implements Wireable
         return self::$instance;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 }

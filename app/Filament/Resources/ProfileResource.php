@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0c1819a (.)
+=======
+use Override;
+>>>>>>> ceb9f4f (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\ListProfiles;
@@ -21,6 +25,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class ProfileResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     protected static null|string $model = Profile::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -33,6 +40,7 @@ class ProfileResource extends XotBaseResource
             'first_name' => TextInput::make('first_name')->maxLength(191)->default(null),
             'last_name' => TextInput::make('last_name')->maxLength(191)->default(null),
             'full_name' => TextInput::make('full_name')->maxLength(191)->default(null),
+<<<<<<< HEAD
 =======
     protected static ?string $model = Profile::class;
 
@@ -54,11 +62,16 @@ class ProfileResource extends XotBaseResource
                 ->maxLength(191)
                 ->default(null),
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
             'email' => TextInput::make('email')
                 ->email()
                 ->maxLength(191)
                 ->default(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
             'user_id' => TextInput::make('user_id')->maxLength(36)->default(null),
             'updated_by' => TextInput::make('updated_by')->maxLength(36)->default(null),
             'created_by' => TextInput::make('created_by')->maxLength(36)->default(null),
@@ -74,6 +87,7 @@ class ProfileResource extends XotBaseResource
     }
 
     #[Override]
+<<<<<<< HEAD
 =======
             'user_id' => TextInput::make('user_id')
                 ->maxLength(36)
@@ -99,6 +113,8 @@ class ProfileResource extends XotBaseResource
     }
 
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     public static function getPages(): array
     {
         return [

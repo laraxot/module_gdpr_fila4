@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 declare(strict_types=1);
 
 
@@ -39,6 +42,7 @@ return [
         'data_sharing' => 'Condivisione Dati',
     ],
 ];
+<<<<<<< HEAD
 =======
 return array (
   'navigation' => 
@@ -83,3 +87,5 @@ return array (
   ),
 );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
