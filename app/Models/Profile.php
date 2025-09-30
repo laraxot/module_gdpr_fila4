@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -17,20 +13,6 @@ use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Models\DeviceUser;
 use Modules\User\Models\Device;
 use Modules\Media\Models\Media;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Carbon;
-use Spatie\SchemalessAttributes\SchemalessAttributes;
-use Illuminate\Database\Eloquent\Collection;
-use Modules\User\Models\DeviceUser;
-use Modules\User\Models\Device;
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
-use Modules\Media\Models\Media;
-use Illuminate\Notifications\DatabaseNotificationCollection;
-use Illuminate\Notifications\DatabaseNotification;
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
