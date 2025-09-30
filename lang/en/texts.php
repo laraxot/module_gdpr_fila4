@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 0c1819a (.)
 return [
     'alert_accept' => 'Accept all cookies',
     'alert_essentials_only' => 'Accept only necessary cookies',

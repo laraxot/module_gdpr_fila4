@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 0c1819a (.)
 return [
     'navigation' => [
         'name' => 'Consensi',
