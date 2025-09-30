@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages;
 
-use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 class CreateConsent extends XotBaseCreateRecord
 {

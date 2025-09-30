@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'alert_accept' => 'Accetta tutti i cookie',
     'alert_essentials_only' => 'Accetta solo i cookie necessari',

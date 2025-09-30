@@ -58,14 +58,12 @@ trait HasGdpr
     /**
      * Check if the user has given a specific consent.
      *
-     * @param  ConsentType|string  $type
      * @param  bool  $cached  Use cached version if available
-     * @return bool
      */
     public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
     {
         $type = ($type instanceof ConsentType) ? $type->value : $type;
-        $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
+        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
 
         if ($cached && Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
@@ -81,9 +79,7 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  ConsentType|string  $type
      * @param  array<string, mixed>  $metadata
-     * @return Consent
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -105,9 +101,6 @@ trait HasGdpr
 
     /**
      * Revoke a specific consent.
-     *
-     * @param  ConsentType|string  $type
-     * @return bool
      */
     public function revokeConsent(ConsentType|string $type): bool
     {
@@ -122,6 +115,7 @@ trait HasGdpr
 
         if ($updated > 0) {
             $this->clearConsentCache($type);
+
             return true;
         }
 
@@ -130,13 +124,10 @@ trait HasGdpr
 
     /**
      * Clear cached consent status.
-     *
-     * @param  string  $type
-     * @return void
      */
     protected function clearConsentCache(string $type): void
     {
-        $cacheKey = 'user_' . ((string) $this->getKey()) . '_consent_' . $type;
+        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
         Cache::forget($cacheKey);
     }
 
@@ -154,8 +145,6 @@ trait HasGdpr
 
     /**
      * Check if user has given all required consents.
-     *
-     * @return bool
      */
     public function hasAllRequiredConsents(): bool
     {

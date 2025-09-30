@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-// //use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+// //use Laravel\Scout\Searchable;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**

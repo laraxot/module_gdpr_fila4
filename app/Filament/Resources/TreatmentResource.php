@@ -4,26 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Override;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\EditTreatment;
-use Filament\Forms;
-use Filament\Tables;
-use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages;
+use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class TreatmentResource extends XotBaseResource
 {
-    protected static null|string $model = Treatment::class;
+    protected static ?string $model = Treatment::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     #[Override]
     public static function getFormSchema(): array
@@ -43,7 +41,7 @@ class TreatmentResource extends XotBaseResource
     {
         return [
             // Tables\Columns\TextColumn::make('id')
-            
+
             //     ->searchable(),
             IconColumn::make('active')->boolean(),
             IconColumn::make('required')->boolean(),
