@@ -27,8 +27,11 @@ build/
 
 # Laravel specific
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7f200e9 (.)
+=======
+>>>>>>> d5b1ed8 (.)
 # ==============================================
 # LARAXOT MODULE GDPR - .GITIGNORE
 # ==============================================
@@ -104,10 +107,13 @@ lerna-debug.log*
 # LARAVEL SPECIFIC
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ea05f (.)
 =======
 >>>>>>> 7f200e9 (.)
+=======
+>>>>>>> d5b1ed8 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -196,8 +202,11 @@ database_old
 # Other
 -e
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7f200e9 (.)
+=======
+>>>>>>> d5b1ed8 (.)
 .env.*
 !.env.example
 
@@ -298,17 +307,17 @@ test_gdpr_requests.sql
 # END OF GDPR .GITIGNORE
 <<<<<<< HEAD
 # ==============================================
-=======
->>>>>>> 54ea05f (.)
 
 # 🚫 File specifici del progetto
 *.fila2
 laravel
 public_html
-<<<<<<< HEAD
 public_html
+<<<<<<< HEAD
 =======
 >>>>>>> 54ea05f (.)
 =======
 # ==============================================
 >>>>>>> 7f200e9 (.)
+=======
+>>>>>>> d5b1ed8 (.)
