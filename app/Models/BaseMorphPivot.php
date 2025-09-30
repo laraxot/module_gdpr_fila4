@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
-=======
->>>>>>> 5a85228 (.)
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -61,12 +58,7 @@ abstract class BaseMorphPivot extends MorphPivot
     /** @var list<string> */
     protected $fillable = [
         'id',
-<<<<<<< HEAD
-        'post_id',
-        'post_type',
-=======
         'post_id', 'post_type',
->>>>>>> 5a85228 (.)
         'related_type',
         'user_id',
         'note',
@@ -79,11 +71,7 @@ abstract class BaseMorphPivot extends MorphPivot
      */
     protected static function newFactory()
     {
-<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
-=======
-        return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);
->>>>>>> 5a85228 (.)
     }
 
     /** @return array<string, string> */
@@ -95,10 +83,7 @@ abstract class BaseMorphPivot extends MorphPivot
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-=======
 
->>>>>>> 5a85228 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
