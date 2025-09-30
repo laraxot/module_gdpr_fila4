@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Datas;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5562af7 (.)
 use Filament\Support\Colors\Color;
 use Illuminate\Support\Arr;
 use Livewire\Wireable;
@@ -16,6 +21,36 @@ use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+=======
+=======
+use Livewire\Wireable;
+=======
+use Filament\Support\Colors\Color;
+>>>>>>> b93ef594b4 (.)
+use Illuminate\Support\Arr;
+use Livewire\Wireable;
+use Modules\Tenant\Services\TenantService;
+use Modules\Xot\Actions\File\AssetAction;
+use Modules\Xot\Actions\File\AssetPathAction;
+use Modules\Xot\Datas\Transformers\AssetTransformer;
+use Spatie\LaravelData\Attributes\WithTransformer;
+use Spatie\LaravelData\Concerns\WireableData;
+use Spatie\LaravelData\Data;
+use Webmozart\Assert\Assert;
+<<<<<<< HEAD
+use Filament\Support\Colors\Color;
+use Modules\Xot\Actions\File\AssetAction;
+use Modules\Tenant\Services\TenantService;
+use Modules\Xot\Actions\File\AssetPathAction;
+use Spatie\LaravelData\Concerns\WireableData;
+use Spatie\LaravelData\Attributes\WithTransformer;
+use Modules\Xot\Datas\Transformers\AssetTransformer;
+>>>>>>> a12f125f4a (.)
+=======
+
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 5562af7 (.)
 use function Safe\file_get_contents;
 
 /**
@@ -52,18 +87,52 @@ use function Safe\file_get_contents;
  * @property string $color_banner
  * @property string $favicon
  * @property array<string, array{key?: string, color: string, hex?: string}> $colors
+<<<<<<< HEAD
  *
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+ *
+=======
+ * 
+>>>>>>> a12f125f4a (.)
+=======
+ *
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 5562af7 (.)
  * @method string getBrandLogoBase64() Get the brand logo as base64 data URI for inline embedding
  */
 class GdprData extends Data implements Wireable
 {
     use WireableData;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5562af7 (.)
     public bool $cookie_banner_enabled = true;
     /**
      * Singleton instance.
      */
     private static null|self $instance = null;
+<<<<<<< HEAD
+=======
+=======
+    public bool $cookie_banner_enabled=true;
+    /**
+     * Singleton instance.
+     */
+    private static ?self $instance = null;
+>>>>>>> a12f125f4a (.)
+=======
+    public bool $cookie_banner_enabled = true;
+    /**
+     * Singleton instance.
+     */
+    private static null|self $instance = null;
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 5562af7 (.)
 
     /**
      * Creates or returns the singleton instance.
@@ -72,7 +141,19 @@ class GdprData extends Data implements Wireable
      */
     public static function make(): self
     {
+<<<<<<< HEAD
         if (!self::$instance) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (!self::$instance) {
+=======
+        if (! self::$instance) {
+>>>>>>> a12f125f4a (.)
+=======
+        if (!self::$instance) {
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 5562af7 (.)
             /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('gdpr');
             self::$instance = self::from($data);
@@ -80,4 +161,15 @@ class GdprData extends Data implements Wireable
 
         return self::$instance;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 5562af7 (.)
 }
