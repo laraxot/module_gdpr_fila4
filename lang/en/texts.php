@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a074f99 (.)
 return [
     'alert_accept' => 'Accept all cookies',
     'alert_essentials_only' => 'Accept only necessary cookies',
