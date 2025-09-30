@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
-<<<<<<< HEAD
 use Override;
-=======
->>>>>>> d6fdc5d (.)
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\ListConsents;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\EditConsent;
@@ -18,7 +15,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ConsentResource extends XotBaseResource
 {
-<<<<<<< HEAD
     protected static null|string $model = Consent::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -38,27 +34,6 @@ class ConsentResource extends XotBaseResource
     }
 
     #[Override]
-=======
-    protected static ?string $model = Consent::class;
-
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static ?string $cluster = ProfileCluster::class;
-
-    public static function getFormSchema(): array
-    {
-        // Types are inferred by Filament v4
-        return [
-        ];
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
->>>>>>> d6fdc5d (.)
     public static function getPages(): array
     {
         return [

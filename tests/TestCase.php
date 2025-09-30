@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests;
 
-<<<<<<< HEAD
 use Illuminate\Foundation\Application;
 use Modules\Gdpr\Providers\GdprServiceProvider;
-=======
-use Modules\Gdpr\Providers\GdprServiceProvider;
-use Illuminate\Foundation\Application;
->>>>>>> d6fdc5d (.)
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Xot\Tests\CreatesApplication;
 
@@ -30,11 +25,7 @@ abstract class TestCase extends BaseTestCase
 
         // Load Gdpr module specific configurations
         $this->loadLaravelMigrations();
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> d6fdc5d (.)
         // Seed any required data for Gdpr tests
         $this->artisan('module:seed', ['module' => 'Gdpr']);
     }

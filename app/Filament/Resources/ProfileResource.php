@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-<<<<<<< HEAD
 use Override;
-=======
->>>>>>> d6fdc5d (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Modules\Gdpr\Filament\Resources\ProfileResource\Pages\ListProfiles;
@@ -20,7 +17,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ProfileResource extends XotBaseResource
 {
-<<<<<<< HEAD
     protected static null|string $model = Profile::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -33,33 +29,10 @@ class ProfileResource extends XotBaseResource
             'first_name' => TextInput::make('first_name')->maxLength(191)->default(null),
             'last_name' => TextInput::make('last_name')->maxLength(191)->default(null),
             'full_name' => TextInput::make('full_name')->maxLength(191)->default(null),
-=======
-    protected static ?string $model = Profile::class;
-
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function getFormSchema(): array
-    {
-        // Types are inferred by Filament v4
-        return [
-            'type' => TextInput::make('type')
-                ->maxLength(255)
-                ->default(null),
-            'first_name' => TextInput::make('first_name')
-                ->maxLength(191)
-                ->default(null),
-            'last_name' => TextInput::make('last_name')
-                ->maxLength(191)
-                ->default(null),
-            'full_name' => TextInput::make('full_name')
-                ->maxLength(191)
-                ->default(null),
->>>>>>> d6fdc5d (.)
             'email' => TextInput::make('email')
                 ->email()
                 ->maxLength(191)
                 ->default(null),
-<<<<<<< HEAD
             'user_id' => TextInput::make('user_id')->maxLength(36)->default(null),
             'updated_by' => TextInput::make('updated_by')->maxLength(36)->default(null),
             'created_by' => TextInput::make('created_by')->maxLength(36)->default(null),
@@ -75,31 +48,6 @@ class ProfileResource extends XotBaseResource
     }
 
     #[Override]
-=======
-            'user_id' => TextInput::make('user_id')
-                ->maxLength(36)
-                ->default(null),
-            'updated_by' => TextInput::make('updated_by')
-                ->maxLength(36)
-                ->default(null),
-            'created_by' => TextInput::make('created_by')
-                ->maxLength(36)
-                ->default(null),
-            'deleted_by' => TextInput::make('deleted_by')
-                ->maxLength(36)
-                ->default(null),
-            'is_active' => Toggle::make('is_active')
-                ->required(),
-        ];
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
->>>>>>> d6fdc5d (.)
     public static function getPages(): array
     {
         return [
