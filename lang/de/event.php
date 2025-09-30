@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d6fdc5d (.)
 return [
     'navigation' => [
         'name' => 'Eventi Privacy',
