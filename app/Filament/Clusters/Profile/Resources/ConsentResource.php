@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
+<<<<<<< HEAD
+=======
+use Override;
+>>>>>>> a074f99 (.)
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\ListConsents;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\EditConsent;
@@ -14,6 +18,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ConsentResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static ?string $model = Consent::class;
 
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -33,6 +38,27 @@ class ConsentResource extends XotBaseResource
         ];
     }
 
+=======
+    protected static null|string $model = Consent::class;
+
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static null|string $cluster = ProfileCluster::class;
+
+    #[Override]
+    public static function getFormSchema(): array
+    {
+        return [];
+    }
+
+    #[Override]
+    public static function getRelations(): array
+    {
+        return [];
+    }
+
+    #[Override]
+>>>>>>> a074f99 (.)
     public static function getPages(): array
     {
         return [

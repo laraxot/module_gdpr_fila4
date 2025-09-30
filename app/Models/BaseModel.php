@@ -73,12 +73,18 @@ abstract class BaseModel extends Model
             'id' => 'string',
             'uuid' => 'string',
             'published_at' => 'datetime',
+<<<<<<< HEAD
 
+=======
+>>>>>>> a074f99 (.)
             'verified_at' => 'datetime',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+<<<<<<< HEAD
 
+=======
+>>>>>>> a074f99 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
