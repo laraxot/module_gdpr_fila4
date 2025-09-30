@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -26,7 +25,6 @@ error_log
 build/
 
 # Laravel specific
-=======
 # ==============================================
 # LARAXOT MODULE GDPR - .GITIGNORE
 # ==============================================
@@ -86,7 +84,6 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
->>>>>>> 111fa0e (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -95,7 +92,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
 
 # Database directories
 database/Factories_
@@ -174,7 +170,6 @@ database_old
 
 # Other
 -e
-=======
 .env.*
 !.env.example
 
@@ -268,13 +263,9 @@ test_gdpr_requests.sql
 # ==============================================
 # END OF GDPR .GITIGNORE
 # ==============================================
->>>>>>> 111fa0e (.)
 
 # 🚫 File specifici del progetto
 *.fila2
 laravel
-<<<<<<< HEAD
 public_html
-=======
 public_html
->>>>>>> 111fa0e (.)
