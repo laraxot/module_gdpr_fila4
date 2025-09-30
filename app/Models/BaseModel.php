@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
+=======
+>>>>>>> 5a85228 (.)
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -63,7 +66,11 @@ abstract class BaseModel extends Model
      */
     protected static function newFactory()
     {
+<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
+=======
+        return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);
+>>>>>>> 5a85228 (.)
     }
 
     /** @return array<string, string> */
@@ -73,10 +80,18 @@ abstract class BaseModel extends Model
             'id' => 'string',
             'uuid' => 'string',
             'published_at' => 'datetime',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a85228 (.)
             'verified_at' => 'datetime',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a85228 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
