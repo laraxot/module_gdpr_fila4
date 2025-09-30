@@ -1,6 +1,4 @@
 # Dependencies and packages
-<<<<<<< HEAD
-=======
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -37,7 +35,6 @@ build/
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
->>>>>>> 0ac7944 (.)
 /vendor/
 /node_modules/
 /docs/vendor/
@@ -72,8 +69,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
-=======
 
 # Database directories
 database/Factories_
@@ -154,7 +149,6 @@ database_old
 -e
 .env.*
 !.env.example
->>>>>>> 0ac7944 (.)
 
 # Database directories
 database/Factories_
@@ -238,7 +232,4 @@ database_old
 *.fila2
 laravel
 public_html
-<<<<<<< HEAD
-=======
 public_html
->>>>>>> 0ac7944 (.)
