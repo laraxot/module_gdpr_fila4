@@ -172,7 +172,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Profile wherePhone($value)
  * @method static Builder<static>|Profile wherePostalCode($value)
  *
- * @mixin IdeHelperProfile
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

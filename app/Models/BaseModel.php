@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 // //use Laravel\Scout\Searchable;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModel.
+ *
+ * @template TFactory of \Illuminate\Database\Eloquent\Factories\Factory
  */
 abstract class BaseModel extends Model
 {
     // use Searchable;
     // //use Cachable;
-    use HasFactory;
+    /** @use HasFactory<TFactory> */
+    use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
 
     /**
@@ -55,16 +56,6 @@ abstract class BaseModel extends Model
     protected $hidden = [
         // 'password'
     ];
-
-    /**
-     * Create a new factory instance for the model.
-     *
-     * @return Factory
-     */
-    protected static function newFactory()
-    {
-        return app(GetFactoryAction::class)->execute(static::class);
-    }
 
     /** @return array<string, string> */
     protected function casts(): array
