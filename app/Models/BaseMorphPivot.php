@@ -14,7 +14,6 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BaseMorphPivot extends MorphPivot
 {
-    /** @use HasFactory<ModulesGdprDatabaseFactoriesBaseMorphPivotFactory> */
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
 
