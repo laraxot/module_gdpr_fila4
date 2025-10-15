@@ -62,7 +62,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property int|null $teams_count
  * @property UserContract|null $user
  * @property string|null $user_name
- *
  * @method static ProfileFactory factory($count = null, $state = [])
  * @method static Builder|Profile newModelQuery()
  * @method static Builder|Profile newQuery()
@@ -86,10 +85,8 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|BaseProfile withExtraAttributes()
  * @method static Builder|BaseProfile withoutPermission($permissions)
  * @method static Builder|BaseProfile withoutRole($roles, $guard = null)
- *
  * @property string|null $deleted_by
  * @property int $is_active
- *
  * @method static ProfileFactory factory($count = null, $state = [])
  * @method static Builder|Profile newModelQuery()
  * @method static Builder|Profile newQuery()
@@ -113,10 +110,8 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|BaseProfile withExtraAttributes()
  * @method static Builder|BaseProfile withoutPermission($permissions)
  * @method static Builder|BaseProfile withoutRole($roles, $guard = null)
- *
  * @property string|null $deleted_by
  * @property int $is_active
- *
  * @method static ProfileFactory factory($count = null, $state = [])
  * @method static Builder|Profile newModelQuery()
  * @method static Builder|Profile newQuery()
@@ -135,35 +130,27 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|Profile whereUpdatedAt($value)
  * @method static Builder|Profile whereUpdatedBy($value)
  * @method static Builder|Profile whereUserId($value)
- *
  * @property DeviceUser $pivot
  * @property Membership $membership
  * @property string $credits
  * @property string|null $slug
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder|Profile whereCredits($value)
  * @method static Builder|Profile whereExtra($value)
  * @method static Builder|Profile whereSlug($value)
- *
  * @property int $oauth_enable
  * @property int $credentials_enable
- *
  * @method static Builder|Profile whereCredentialsEnable($value)
  * @method static Builder|Profile whereOauthEnable($value)
- *
  * @property string $uuid
- *
  * @method static Builder|Profile whereUuid($value)
- *
  * @property string|null $phone
  * @property string|null $address
  * @property string|null $city
  * @property string|null $country
  * @property string|null $postal_code
  * @property string|null $bio
- *
  * @method static Builder<static>|Profile whereAddress($value)
  * @method static Builder<static>|Profile whereAvatar($value)
  * @method static Builder<static>|Profile whereBio($value)
@@ -171,7 +158,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Profile whereCountry($value)
  * @method static Builder<static>|Profile wherePhone($value)
  * @method static Builder<static>|Profile wherePostalCode($value)
- *
+ * @property-read string $display_name
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

@@ -117,7 +117,15 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin \Eloquent
  */
-/** */
+/**
+ * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ * @method static \Modules\Gdpr\Database\Factories\TreatmentFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Treatment newModelQuery()
+ * @method static Builder<static>|Treatment newQuery()
+ * @method static Builder<static>|Treatment query()
+ * @mixin \Eloquent
+ */
 class Treatment extends BaseModel
 {
     use HasUuids;

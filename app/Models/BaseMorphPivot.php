@@ -12,7 +12,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
-abstract class BaseMorphPivot extends MorphPivot
+abstract class BaseMorphPivot extends \Modules\Xot\Models\XotBaseMorphPivot
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
