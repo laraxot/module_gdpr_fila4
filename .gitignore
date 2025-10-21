@@ -25,6 +25,7 @@ error_log
 build/
 
 # Laravel specific
+<<<<<<< HEAD
 # ==============================================
 # LARAXOT MODULE GDPR - .GITIGNORE
 # ==============================================
@@ -84,6 +85,8 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+=======
+>>>>>>> 54ea05f (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -170,6 +173,7 @@ database_old
 
 # Other
 -e
+<<<<<<< HEAD
 .env.*
 !.env.example
 
@@ -263,9 +267,14 @@ test_gdpr_requests.sql
 # ==============================================
 # END OF GDPR .GITIGNORE
 # ==============================================
+=======
+>>>>>>> 54ea05f (.)
 
 # 🚫 File specifici del progetto
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 public_html
+=======
+>>>>>>> 54ea05f (.)
