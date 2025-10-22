@@ -28,36 +28,53 @@ use Tests\TestCase;
 uses(TestCase::class, RefreshDatabase::class);
 >>>>>>> 95dc6c2f (.)
 
-beforeEach(function (): void {
-    $this->baseModel = new class extends BaseModel
+test('base model extends eloquent model', function (): void {
+    $model = new class extends BaseModel
     {
+        /** @var string */
         protected $table = 'test_gdpr_table';
     };
-});
 
-test('base model extends eloquent model', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect($model)->toBeInstanceOf(Model::class);
 });
 
 test('base model has correct table name', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
+    $model = new class extends BaseModel
+    {
+        /** @var string */
+        protected $table = 'test_gdpr_table';
+    };
+
+    expect($model->getTable())->toBe('test_gdpr_table');
 });
 
 test('base model can be instantiated', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    $model = new class extends BaseModel
+    {
+        /** @var string */
+        protected $table = 'test_gdpr_table';
+    };
+
+    expect($model)->toBeInstanceOf(BaseModel::class);
 });
 
 test('base model has proper inheritance chain', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    $model = new class extends BaseModel
+    {
+        /** @var string */
+        protected $table = 'test_gdpr_table';
+    };
+
+    expect($model)->toBeInstanceOf(BaseModel::class);
+    expect($model)->toBeInstanceOf(Model::class);
 });
 
 test('base model has timestamps enabled', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->usesTimestamps()->toBeTrue();
+    $model = new class extends BaseModel
+    {
+        /** @var string */
+        protected $table = 'test_gdpr_table';
+    };
+
+    expect($model->usesTimestamps())->toBeTrue();
 });
