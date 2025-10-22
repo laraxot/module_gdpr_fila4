@@ -4,25 +4,50 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Collection;
+use Modules\Xot\Filament\Traits\TransTrait;
+//use Modules\Core\Traits\EnumTrait;
+use Illuminate\Support\Arr;
+use Filament\Support\Contracts\HasIcon;
+use Filament\Forms\Components\TextInput;
+use Filament\Support\Contracts\HasColor;
+use Filament\Support\Contracts\HasLabel;
+
+
+>>>>>>> 7f200e9 (.)
 /**
  * Enum ConsentType
  * 
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
+<<<<<<< HEAD
 enum ConsentType: string
 {
+=======
+enum ConsentType: string implements HasLabel, HasIcon, HasColor
+{
+    //use EnumTrait;
+    use TransTrait;
+>>>>>>> 7f200e9 (.)
 
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
     case MARKETING_SMS = 'marketing_sms';
     case MARKETING_PHONE = 'marketing_phone';
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 7f200e9 (.)
     // Privacy and data processing
     case PRIVACY_POLICY = 'privacy_policy';
     case COOKIES = 'cookies';
     case ANALYTICS = 'analytics';
     case PERSONALIZATION = 'personalization';
+<<<<<<< HEAD
     
     // Data sharing
     case THIRD_PARTY_SHARING = 'third_party_sharing';
@@ -32,11 +57,23 @@ enum ConsentType: string
     case TERMS_AND_CONDITIONS = 'terms_and_conditions';
     case AGE_VERIFICATION = 'age_verification';
     
+=======
+
+    // Data sharing
+    case THIRD_PARTY_SHARING = 'third_party_sharing';
+    case DATA_TRANSFER = 'data_transfer';
+
+    // Account related
+    case TERMS_AND_CONDITIONS = 'terms_and_conditions';
+    case AGE_VERIFICATION = 'age_verification';
+
+>>>>>>> 7f200e9 (.)
     // Special consents
     case RESEARCH = 'research';
     case PROFILING = 'profiling';
     case AUTOMATED_DECISION_MAKING = 'automated_decision_making';
 
+<<<<<<< HEAD
     /**
      * Get the human-readable name of the consent type.
      * 
@@ -85,6 +122,27 @@ enum ConsentType: string
             self::PROFILING => __('gdpr::consent.descriptions.profiling'),
             self::AUTOMATED_DECISION_MAKING => __('gdpr::consent.descriptions.automated_decision_making'),
         };
+=======
+    public function getLabel(): string
+    {
+        return $this->transClass(self::class,$this->value.'.label');
+    }
+
+    public function getColor(): string
+    {
+        return $this->transClass(self::class,$this->value.'.color');
+
+    }
+
+    public function getIcon(): string
+    {
+        return $this->transClass(self::class,$this->value.'.icon');
+    }
+
+    public function getDescription(): string
+    {
+        return $this->transClass(self::class,$this->value.'.description');
+>>>>>>> 7f200e9 (.)
     }
 
     /**
@@ -127,11 +185,19 @@ enum ConsentType: string
         );
     }
 
+<<<<<<< HEAD
     /**
      * Get consent types grouped by category.
      * 
      * @return array<string, array<string, string>>
      */
+=======
+    /*
+     * Get consent types grouped by category.
+     * 
+     * @return array<string, array<string, string>>
+
+>>>>>>> 7f200e9 (.)
     public static function groupedByCategory(): array
     {
         return [
@@ -161,22 +227,39 @@ enum ConsentType: string
             ],
         ];
     }
+<<<<<<< HEAD
 
     /**
      * Get consent types as a flattened array for forms.
      * 
      * @return array<string, string>
      */
+=======
+    */
+    /*
+     * Get consent types as a flattened array for forms.
+     * 
+     * @return array<string, string>
+
+>>>>>>> 7f200e9 (.)
     public static function forFormSelect(): array
     {
         $result = [];
 
         foreach (self::groupedByCategory() as $category => $types) {
+<<<<<<< HEAD
             foreach ($types as $value => $label) {
                 $result[$value] = $label;
             }
+=======
+            $result[__("gdpr::consent.categories.$category")] = $types;
+>>>>>>> 7f200e9 (.)
         }
 
         return $result;
     }
+<<<<<<< HEAD
+=======
+        */
+>>>>>>> 7f200e9 (.)
 }
