@@ -170,13 +170,13 @@ enum ConsentType: string
     public static function forFormSelect(): array
     {
         $result = [];
-        
+
         foreach (self::groupedByCategory() as $category => $types) {
             foreach ($types as $value => $label) {
                 $result[$value] = $label;
             }
         }
-        
+
         return $result;
     }
 }
