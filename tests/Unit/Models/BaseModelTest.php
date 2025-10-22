@@ -11,53 +11,36 @@ use Modules\Gdpr\Models\BaseModel;
 use Tests\TestCase;
 >>>>>>> adb2503 (.)
 
-test('base model extends eloquent model', function (): void {
-    $model = new class extends BaseModel
+beforeEach(function (): void {
+    $this->baseModel = new class extends BaseModel
     {
-        /** @var string */
         protected $table = 'test_gdpr_table';
     };
+});
 
-    expect($model)->toBeInstanceOf(Model::class);
+test('base model extends eloquent model', function (): void {
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has correct table name', function (): void {
-    $model = new class extends BaseModel
-    {
-        /** @var string */
-        protected $table = 'test_gdpr_table';
-    };
-
-    expect($model->getTable())->toBe('test_gdpr_table');
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
 });
 
 test('base model can be instantiated', function (): void {
-    $model = new class extends BaseModel
-    {
-        /** @var string */
-        protected $table = 'test_gdpr_table';
-    };
-
-    expect($model)->toBeInstanceOf(BaseModel::class);
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
 });
 
 test('base model has proper inheritance chain', function (): void {
-    $model = new class extends BaseModel
-    {
-        /** @var string */
-        protected $table = 'test_gdpr_table';
-    };
-
-    expect($model)->toBeInstanceOf(BaseModel::class);
-    expect($model)->toBeInstanceOf(Model::class);
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has timestamps enabled', function (): void {
-    $model = new class extends BaseModel
-    {
-        /** @var string */
-        protected $table = 'test_gdpr_table';
-    };
-
-    expect($model->usesTimestamps())->toBeTrue();
+    /** @phpstan-ignore-next-line property.notFound */
+    expect($this->baseModel)->usesTimestamps()->toBeTrue();
 });
