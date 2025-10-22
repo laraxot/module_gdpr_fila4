@@ -25,15 +25,6 @@ class TreatmentFactory extends Factory
      */
     public function definition(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return [];
-=======
-        return [
-        ];
->>>>>>> 0c1819a (.)
-=======
-        return [];
->>>>>>> ceb9f4f (.)
     }
 }
