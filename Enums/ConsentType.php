@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
-use Illuminate\Support\Collection;
-use Modules\Core\Traits\EnumTrait;
-
 /**
  * Enum ConsentType
  * 
@@ -15,7 +12,6 @@ use Modules\Core\Traits\EnumTrait;
  */
 enum ConsentType: string
 {
-    use EnumTrait;
 
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
@@ -174,11 +170,13 @@ enum ConsentType: string
     public static function forFormSelect(): array
     {
         $result = [];
-        
+
         foreach (self::groupedByCategory() as $category => $types) {
-            $result[__("gdpr::consent.categories.$category")] = $types;
+            foreach ($types as $value => $label) {
+                $result[$value] = $label;
+            }
         }
-        
+
         return $result;
     }
 }
