@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
-=======
->>>>>>> d6fdc5d (.)
 {{--
 <x-filament-page-with-sidebar::page>
 
