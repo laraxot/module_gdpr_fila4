@@ -1,81 +1,149 @@
-# GDPR Module Documentation
+# Modulo Gdpr - Documentazione
 
-This document provides a comprehensive overview of the `Gdpr` module for Laraxot PTVX, which is designed to manage user consent and data processing treatments in compliance with GDPR regulations.
+## Panoramica
 
-## Core Concepts
+Il modulo Gdpr gestisce il sistema completo di compliance GDPR per l'applicazione Laraxot PTVX. Implementa la gestione dei consensi, dei trattamenti dati e degli eventi di privacy in conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR).
 
-The module is built around three primary models:
+## Business Logic
 
-- **Treatment**: Represents a specific purpose for data processing for which user consent is required (e.g., marketing communications, analytics).
-- **Consent**: Records a user's agreement to a specific treatment.
-- **Event**: Logs all GDPR-related actions, such as granting or revoking consent, creating a verifiable audit trail.
+### Sistema di Consensi
+Il modulo implementa un sistema completo per la gestione dei consensi:
 
-## Data Models
+#### 1. Trattamenti (Treatments)
+- **Definizione Trattamenti**: Configurazione dei diversi tipi di trattamento dati
+- **Documentazione**: Versioni documenti e URL per informativa privacy
+- **Ponderazione**: Sistema di pesi per priorità dei trattamenti
+- **Stati**: Attivo/Inattivo e Obbligatorio/Opzionale
 
-### 1. `Treatment`
+#### 2. Consensi (Consents)
+- **Tracciamento Consensi**: Registrazione esplicita dei consensi per trattamento
+- **Soggetti**: Collegamento a utenti o profili anonimi
+- **Audit Trail**: Tracciamento completo data/ora e operatore
+- **UUID Based**: Sistema UUID per identificazione univoca
 
-The `Treatment` model defines the various data processing activities.
+#### 3. Eventi Privacy (Events)
+- **Eventi di Privacy**: Registrazione di tutti gli eventi privacy rilevanti
+- **Categorizzazione**: Diversi tipi di eventi (accesso, modifica, cancellazione)
+- **Contesto**: Dettagli completi su cosa, quando, chi
 
-- **Table**: `treatments`
-- **Key Attributes**:
-  - `id` (UUID): Primary key.
-  - `name` (string): A short, human-readable name for the treatment (e.g., `marketing-emails`).
-  - `description` (string): A detailed explanation of what the data processing involves.
-  - `required` (boolean): Whether this treatment is mandatory for using the service.
-  - `active` (boolean): Toggles the treatment's availability.
+#### 4. Profili (Profiles)
+- **Gestione Profili**: Dati anagrafici per soggetti non utenti del sistema
+- **Privacy by Design**: Architettura orientata alla privacy
 
-### 2. `Consent`
+## Componenti Principali
 
-The `Consent` model links a user (subject) to a specific treatment they have agreed to.
+### Modelli Core
+- **Treatment**: Definizione e configurazione dei trattamenti dati
+- **Consent**: Registrazione consensi specifici per trattamento
+- **Event**: Eventi di privacy e audit trail
+- **Profile**: Gestione profili per privacy
 
-- **Table**: `consents`
-- **Key Attributes**:
-  - `id` (UUID): Primary key.
-  - `subject_id` (string): The ID of the user who has given consent.
-  - `treatment_id` (UUID): Foreign key linking to the `treatments` table.
-- **Relationships**:
-  - `treatment()`: A `BelongsTo` relationship to the `Treatment` model.
+### Filament Resources
+Il modulo espone 4 risorse Filament per la gestione completa:
 
-### 3. `Event`
+- **TreatmentResource**: Gestione definizioni trattamenti
+- **ConsentResource**: Registrazione e gestione consensi
+- **EventResource**: Visualizzazione eventi privacy
+- **ProfileResource**: Gestione profili privacy
 
-The `Event` model provides a complete audit log of all consent-related activities.
+### Base Architecture
+- **BaseModel**: Estensione Model con trait Xot (Updater)
+- **BasePivot/BaseMorphPivot**: Relazioni pivot per consensi
+- **UUID System**: Identificazione univoca per tutti i record
+- **Soft Deletes**: Cancellazione logica per audit trail
 
-- **Table**: `events`
-- **Key Attributes**:
-  - `id` (UUID): Primary key.
-  - `action` (string): The type of event (e.g., `consent:given`, `consent:revoked`).
-  - `consent_id` (UUID): Foreign key linking to the `consents` table.
-  - `ip` (string, encrypted): The IP address from which the action was performed.
-  - `payload` (string, encrypted): Additional data related to the event.
-- **Relationships**:
-  - `consent()`: A `BelongsTo` relationship to the `Consent` model.
+## Architettura Tecnica
 
-## Core Functionality
+### Pattern Implementati
+- **Repository Pattern**: Per gestione dati strutturata
+- **Policy Pattern**: Per controllo accessi granulare
+- **Observer Pattern**: Per audit automatico eventi
+- **Factory Pattern**: Per generazione dati di test
 
-The module's primary service, likely named `GdprService`, orchestrates the core logic:
+### Integrazione con Altri Moduli
+- **User**: Collegamento a utenti del sistema
+- **Activity**: Tracciamento completo modifiche
+- **Lang**: Sistema traduzioni completo
+- **Xot**: Estensione classi base
 
-- Checking if a user has consented to a specific treatment.
-- Granting consent for a user and creating the corresponding `Consent` and `Event` records.
-- Revoking consent and logging the action as an `Event`.
-- Retrieving all active, required, or optional treatments.
+### Database Architecture
+- **Connessione Dedicata**: Usa connessione `user` per dati sensibili
+- **UUID Primary Keys**: Identificazione univoca senza sequenzialità
+- **Audit Fields**: Tracciamento created_by, updated_by, deleted_by
+- **Soft Deletes**: Cancellazione logica per compliance
 
-```php
-// Example: Checking consent
-$hasConsented = Gdpr::hasConsent('marketing-emails', $user);
+## Configurazione
 
-// Example: Granting consent
-Gdpr::grantConsent('analytics', $user);
+### File di Configurazione
+- `config/gdpr.php`: Configurazioni principali
+- Variabili ambiente per parametri privacy
+
+### Traduzioni
+Struttura completa in:
+- `lang/it/`: Italiano (principale)
+- `lang/en/`: Inglese
+- `lang/de/`: Tedesco
+
+Supporto completo per:
+- Label e placeholder per tutti i campi
+- Messaggi di validazione privacy
+- Azioni e operazioni GDPR
+- Notifiche e feedback compliance
+
+## Funzionalità Avanzate
+
+### Compliance GDPR
+- **Consenso Esplicito**: Registrazione consensi per ogni trattamento
+- **Diritto all'Oblio**: Cancellazione dati con audit trail
+- **Portabilità Dati**: Export dati in formato strutturato
+- **Limitazione Trattamento**: Gestione limitazioni specifiche
+
+### Audit Trail
+- **Eventi Automatici**: Registrazione automatica di tutti gli eventi
+- **Contesto Completo**: Dettagli su operazioni effettuate
+- **Storico Immutabile**: Tracciamento modifiche nel tempo
+- **Report Compliance**: Generazione report per verifiche
+
+### Gestione Documenti
+- **Versionamento**: Controllo versioni documenti privacy
+- **URL Esterne**: Collegamento a documenti informativa
+- **Validazione**: Verifica validità documenti
+- **Archiviazione**: Storage sicuro documenti
+
+## Testing
+
+### Test Coverage
+- Unit test per logica privacy
+- Feature test per flussi GDPR
+- Test policy e autorizzazioni
+- Test audit trail e eventi
+
+### Comandi Test
+```bash
+php artisan test --filter=Gdpr
+php artisan test --filter=ConsentTest
+php artisan test --filter=TreatmentTest
+php artisan test --filter=PrivacyTest
 ```
 
-## Best Practices
+## Collegamenti
 
-- **Immutability**: Treat `Event` records as immutable. Never modify them after creation to preserve the integrity of the audit trail.
-- **Security**: The `Event` model encrypts sensitive data like IP addresses and payloads. Ensure your application's `APP_KEY` is secure.
-- **Clarity**: Use clear and unambiguous names and descriptions for `Treatment` records so that users understand what they are consenting to.
-- **Modularity**: All business logic should be encapsulated within the module's services and actions, not in controllers or routes.
+### Documentazione Interna
+- [Privacy Policy Implementation](./privacy-policy.md)
+- [GDPR Compliance Guide](./gdpr-compliance.md)
+- [Audit Trail System](./audit-trail.md)
+- [Consent Management](./consent-management.md)
 
-## Troubleshooting
+### Documentazione Moduli Correlati
+- [Modulo Xot Service Provider Architecture](../xot/docs/service-provider-architecture.md)
+- [Modulo User Authentication System](../user/docs/README.md)
+- [Modulo Activity Audit Trail](../activity/docs/README.md)
+- [Modulo Lang Translation System](../lang/docs/README.md)
 
-- **Model Not Found**: Ensure all models (`Consent`, `Treatment`, `Event`) are correctly placed in the `laravel/Modules/Gdpr/app/Models/` directory and extend the module's `BaseModel`.
-- **Encryption Errors**: If you encounter errors related to `Crypt`, verify that your `APP_KEY` is correctly set in your `.env` file.
-- **Relationship Issues**: Double-check that foreign key constraints are correctly defined in your migrations and that relationships in the models are correctly specified.
+### Documentazione Esterna
+- [GDPR Official Website](https://gdpr.eu/)
+- [Laravel Privacy Package](https://github.com/spatie/laravel-permission)
+- [Filament GDPR Resources](https://filamentphp.com/plugins/filament-gdpr)
+
+*Ultimo aggiornamento: Sistema di documentazione automatica*
+

@@ -5,14 +5,18 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphPivot;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseMorphPivot.
  */
-abstract class BaseMorphPivot extends \Modules\Xot\Models\XotBaseMorphPivot
+abstract class BaseMorphPivot extends MorphPivot
 {
-    use \Modules\Xot\Models\Traits\HasXotFactory;
+    use HasFactory;
     use Updater;
 
     // use HasUuids;
@@ -60,6 +64,16 @@ abstract class BaseMorphPivot extends \Modules\Xot\Models\XotBaseMorphPivot
         'user_id',
         'note',
     ];
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return Factory
+     */
+    protected static function newFactory()
+    {
+        return app(GetFactoryAction::class)->execute(static::class);
+    }
 
     /** @return array<string, string> */
     protected function casts(): array
