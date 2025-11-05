@@ -13,8 +13,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
-use Modules\Gdpr\Database\Factories\EventFactory;
-use Modules\Xot\Contracts\ProfileContract;
 
 use function Safe\json_encode;
 
@@ -30,69 +28,30 @@ use function Safe\json_encode;
  * @property string $payload
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property Consent|null $consent
- *
- * @method static EventFactory factory($count = null, $state = [])
- * @method static Builder|Event newModelQuery()
- * @method static Builder|Event newQuery()
- * @method static Builder|Event query()
- * @method static Builder|Event whereAction($value)
- * @method static Builder|Event whereConsentId($value)
- * @method static Builder|Event whereCreatedAt($value)
- * @method static Builder|Event whereId($value)
- * @method static Builder|Event whereIp($value)
- * @method static Builder|Event wherePayload($value)
- * @method static Builder|Event whereSubjectId($value)
- * @method static Builder|Event whereTreatmentId($value)
- * @method static Builder|Event whereUpdatedAt($value)
- *
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
- * @method static Builder|Event whereCreatedBy($value)
- * @method static Builder|Event whereDeletedAt($value)
- * @method static Builder|Event whereDeletedBy($value)
- * @method static Builder|Event whereUpdatedBy($value)
- *
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $consent_id
- * @property string $subject_id
- * @property string $ip
- * @property string $action
- * @property string $payload
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property Consent|null $consent
- *
- * @method static EventFactory factory($count = null, $state = [])
- * @method static Builder|Event newModelQuery()
- * @method static Builder|Event newQuery()
- * @method static Builder|Event query()
- * @method static Builder|Event whereAction($value)
- * @method static Builder|Event whereConsentId($value)
- * @method static Builder|Event whereCreatedAt($value)
- * @method static Builder|Event whereCreatedBy($value)
- * @method static Builder|Event whereDeletedAt($value)
- * @method static Builder|Event whereDeletedBy($value)
- * @method static Builder|Event whereId($value)
- * @method static Builder|Event whereIp($value)
- * @method static Builder|Event wherePayload($value)
- * @method static Builder|Event whereSubjectId($value)
- * @method static Builder|Event whereTreatmentId($value)
- * @method static Builder|Event whereUpdatedAt($value)
- * @method static Builder|Event whereUpdatedBy($value)
- *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
- *
- * @mixin IdeHelperEvent
+ * @property-read \Modules\Gdpr\Models\Consent|null $consent
+ * @property-read \Modules\Quaeris\Models\Profile|null $creator
+ * @property-read \Modules\Quaeris\Models\Profile|null $updater
+ * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Event newModelQuery()
+ * @method static Builder<static>|Event newQuery()
+ * @method static Builder<static>|Event query()
+ * @method static Builder<static>|Event whereAction($value)
+ * @method static Builder<static>|Event whereConsentId($value)
+ * @method static Builder<static>|Event whereCreatedAt($value)
+ * @method static Builder<static>|Event whereCreatedBy($value)
+ * @method static Builder<static>|Event whereDeletedAt($value)
+ * @method static Builder<static>|Event whereDeletedBy($value)
+ * @method static Builder<static>|Event whereId($value)
+ * @method static Builder<static>|Event whereIp($value)
+ * @method static Builder<static>|Event wherePayload($value)
+ * @method static Builder<static>|Event whereSubjectId($value)
+ * @method static Builder<static>|Event whereTreatmentId($value)
+ * @method static Builder<static>|Event whereUpdatedAt($value)
+ * @method static Builder<static>|Event whereUpdatedBy($value)
  * @mixin \Eloquent
  */
 class Event extends BaseModel

@@ -7,8 +7,6 @@ namespace Modules\Gdpr\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Carbon;
-use Modules\Gdpr\Database\Factories\TreatmentFactory;
-use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modules\Gdpr\Models\Treatment.
@@ -26,96 +24,27 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
- *
- * @method static TreatmentFactory factory($count = null, $state = [])
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- *
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment whereCreatedBy($value)
- * @method static Builder|Treatment whereDeletedAt($value)
- * @method static Builder|Treatment whereDeletedBy($value)
- * @method static Builder|Treatment whereUpdatedBy($value)
- *
- * @property string|null $deleted_by
- *
- * @method static TreatmentFactory factory($count = null, $state = [])
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereCreatedBy($value)
- * @method static Builder|Treatment whereDeletedAt($value)
- * @method static Builder|Treatment whereDeletedBy($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereUpdatedBy($value)
- * @method static Builder|Treatment whereWeight($value)
- *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
- *
- * @mixin IdeHelperTreatment
+ * @property-read \Modules\Quaeris\Models\Profile|null $creator
+ * @property-read \Modules\Quaeris\Models\Profile|null $updater
+ * @method static \Modules\Gdpr\Database\Factories\TreatmentFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Treatment newModelQuery()
+ * @method static Builder<static>|Treatment newQuery()
+ * @method static Builder<static>|Treatment query()
+ * @method static Builder<static>|Treatment whereActive($value)
+ * @method static Builder<static>|Treatment whereCreatedAt($value)
+ * @method static Builder<static>|Treatment whereCreatedBy($value)
+ * @method static Builder<static>|Treatment whereDeletedAt($value)
+ * @method static Builder<static>|Treatment whereDeletedBy($value)
+ * @method static Builder<static>|Treatment whereDescription($value)
+ * @method static Builder<static>|Treatment whereDocumentUrl($value)
+ * @method static Builder<static>|Treatment whereDocumentVersion($value)
+ * @method static Builder<static>|Treatment whereId($value)
+ * @method static Builder<static>|Treatment whereName($value)
+ * @method static Builder<static>|Treatment whereRequired($value)
+ * @method static Builder<static>|Treatment whereUpdatedAt($value)
+ * @method static Builder<static>|Treatment whereUpdatedBy($value)
+ * @method static Builder<static>|Treatment whereWeight($value)
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel
