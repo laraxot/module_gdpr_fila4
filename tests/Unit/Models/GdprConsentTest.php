@@ -7,7 +7,7 @@ use Modules\User\Models\User;
 
 test('gdpr consent can be created', function (): void {
     /** @var \Illuminate\Database\Eloquent\Collection */
-        $user = User::factory()->create();
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
     $consent = createGdprConsent([
         'user_id' => $user->id,
@@ -28,7 +28,7 @@ test('gdpr consent can be created', function (): void {
 
 test('gdpr consent belongs to user', function (): void {
     /** @var \Illuminate\Database\Eloquent\Collection */
-        $user = User::factory()->create();
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
     $consent = createGdprConsent(['user_id' => $user->id]);
 
     expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
