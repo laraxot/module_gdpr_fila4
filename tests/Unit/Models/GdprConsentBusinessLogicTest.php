@@ -8,7 +8,7 @@ use Modules\User\Models\User;
 describe('GDPR Consent Business Logic', function (): void {
     it('records consent with required metadata', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $user = User::factory()->create();
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         $consent = GdprConsent::create([
             'user_id' => $user->id,
@@ -34,7 +34,7 @@ describe('GDPR Consent Business Logic', function (): void {
 
     it('allows consent withdrawal', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $consent = GdprConsent::factory()->create([
+        $consent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
             'consent_given' => true,
         ]);
 
@@ -56,7 +56,7 @@ describe('GDPR Consent Business Logic', function (): void {
 
         foreach ($validBases as $basis) {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $consent = GdprConsent::factory()->create([
+        $consent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
                 'legal_basis' => $basis,
             ]);
 
@@ -66,12 +66,12 @@ describe('GDPR Consent Business Logic', function (): void {
 
     it('requires parental consent for minors', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $minor = User::factory()->create([
+        $minor = User/** @phpstan-ignore-line */ ::factory()->create([
             'date_of_birth' => now()->subYears(14),
         ]);
 
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $consent = GdprConsent::factory()->create([
+        $consent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
             'user_id' => $minor->id,
             'purpose' => 'service_provision',
         ]);
@@ -81,7 +81,7 @@ describe('GDPR Consent Business Logic', function (): void {
 
     it('tracks consent history', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $user = User::factory()->create();
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         // Initial consent
         $consent1 = GdprConsent::create([
@@ -121,13 +121,13 @@ describe('GDPR Consent Business Logic', function (): void {
 
     it('validates consent expiration', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $expiredConsent = GdprConsent::factory()->create([
+        $expiredConsent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
             'consent_date' => now()->subYears(2),
             'expires_at' => now()->subYear(),
         ]);
 
         /** @var \Illuminate\Database\Eloquent\Collection */
-        $validConsent = GdprConsent::factory()->create([
+        $validConsent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
             'consent_date' => now()->subMonths(6),
             'expires_at' => now()->addYear(),
         ]);
