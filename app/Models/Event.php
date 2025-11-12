@@ -75,19 +75,27 @@ class Event extends BaseModel
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setPayloadAttribute(null|string $value): void
 =======
     public function setPayloadAttribute(?string $value): void
 >>>>>>> 0c1819a (.)
+=======
+    public function setPayloadAttribute(null|string $value): void
+>>>>>>> ceb9f4f (.)
     {
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function setIpAttribute(null|string $value): void
 =======
     public function setIpAttribute(?string $value): void
 >>>>>>> 0c1819a (.)
+=======
+    public function setIpAttribute(null|string $value): void
+>>>>>>> ceb9f4f (.)
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
     }
