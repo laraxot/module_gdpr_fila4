@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseMorphPivot.
  */
-abstract class BaseMorphPivot extends \Modules\Xot\Models\XotBaseMorphPivot
+abstract class BaseMorphPivot extends MorphPivot
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
