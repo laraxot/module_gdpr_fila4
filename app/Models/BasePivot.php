@@ -53,9 +53,12 @@ abstract class BasePivot extends Pivot
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
