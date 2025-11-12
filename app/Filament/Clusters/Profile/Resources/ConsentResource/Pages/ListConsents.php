@@ -13,6 +13,9 @@ class ListConsents extends XotBaseListRecords
 {
     protected static string $resource = ConsentResource::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableColumns(): array
     {
         return [
