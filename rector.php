@@ -10,12 +10,6 @@ use RectorLaravel\Rector\MethodCall\RedirectRouteToToRouteHelperRector;
 use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     $rectorConfig->paths([
         __DIR__,
     ]);
@@ -25,54 +19,12 @@ return static function (RectorConfig $rectorConfig): void {
         '*/docs',
         '*/vendor',
     ]);
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-    $rectorConfig->paths(
-        [
-            __DIR__,
-        ]
-    );
-
-    $rectorConfig->skip(
-        [
-            './vendor/',
-            '*/docs',
-            '*/vendor',
-        ]
-    );
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    $rectorConfig->paths([
-        __DIR__,
-    ]);
-
-    $rectorConfig->skip([
-        './vendor/',
-        '*/docs',
-        '*/vendor',
-    ]);
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
 
     // register a single rule
     // $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
     // $rectorConfig->rule(RedirectRouteToToRouteHelperRector::class);
 
     // define sets of rules
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 5562af7 (.)
     $rectorConfig->sets([
         PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
         // SetList::DEAD_CODE,
@@ -86,35 +38,6 @@ return static function (RectorConfig $rectorConfig): void {
         // SetList::EARLY_RETURN,
         // SetList::INSTANCEOF,
     ]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/develop
-    $rectorConfig->sets(
-        [
-            PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
-            // SetList::DEAD_CODE,
-            // SetList::CODE_QUALITY,
-            LevelSetList::UP_TO_PHP_81,
-            LaravelSetList::LARAVEL_100,
-
-            // SetList::NAMING, //problemi con injuction
-            SetList::TYPE_DECLARATION,
-            // SetList::CODING_STYLE,
-            // SetList::PRIVATIZATION,//problemi con final
-            // SetList::EARLY_RETURN,
-            // SetList::INSTANCEOF,
-        ]
-    );
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
 
     $rectorConfig->importNames();
 };
