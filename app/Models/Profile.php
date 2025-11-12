@@ -40,7 +40,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property Carbon|null $deleted_at
  * @property SchemalessAttributes $extra
  * @property-read string $avatar
- * @property-read \Modules\Quaeris\Models\Profile|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read Collection<int, DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
  * @property-read \Modules\User\Models\DeviceProfile|null $pivot
@@ -59,7 +59,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property-read int|null $permissions_count
  * @property-read Collection<int, Role> $roles
  * @property-read int|null $roles_count
- * @property-read \Modules\Quaeris\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
  * @method static \Modules\Gdpr\Database\Factories\ProfileFactory factory($count = null, $state = [])
