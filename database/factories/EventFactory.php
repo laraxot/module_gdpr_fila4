@@ -25,6 +25,11 @@ class EventFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+        ];
+>>>>>>> d6fdc5d (.)
     }
 }
