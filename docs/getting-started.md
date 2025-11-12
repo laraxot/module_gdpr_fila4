@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
@@ -91,3 +92,8 @@ npm run dev
 * [getting-started.md](laravel/Modules/Cms/docs/getting-started.md)
 
 >>>>>>> 0c1819a (.)
+=======
+# GDPR Module - Getting Started
+
+This module handles GDPR compliance and data protection features.
+>>>>>>> ceb9f4f (.)
