@@ -7,7 +7,7 @@ use Modules\User\Models\User;
 
 describe('GDPR Consent Business Logic', function (): void {
     it('records consent with required metadata', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         $consent = GdprConsent::create([
@@ -65,7 +65,7 @@ describe('GDPR Consent Business Logic', function (): void {
     });
 
     it('requires parental consent for minors', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $minor = User/** @phpstan-ignore-line */ ::factory()->create([
             'date_of_birth' => now()->subYears(14),
         ]);
@@ -80,7 +80,7 @@ describe('GDPR Consent Business Logic', function (): void {
     });
 
     it('tracks consent history', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         // Initial consent
