@@ -47,11 +47,11 @@ trait HasGdpr
      *
      * @return HasManyThrough<Treatment, Consent, $this>
      */
-    public function treatments()
+    public function treatments(): HasManyThrough
     {
         return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')->where(
             'consents.user_type',
-            get_class($this),
+            static::class,
         ); // Foreign key on consents table // Foreign key on treatments table // Local key on users table // Local key on consents table
     }
 
@@ -62,8 +62,8 @@ trait HasGdpr
      */
     public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
     {
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
-        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
+        $type = $type instanceof ConsentType ? $type->value : $type;
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
 
         if ($cached && Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
@@ -83,7 +83,7 @@ trait HasGdpr
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
+        $type = $type instanceof ConsentType ? $type->value : $type;
 
         /** @var Consent $consent */
         $consent = $this->consents()->create([
@@ -104,7 +104,7 @@ trait HasGdpr
      */
     public function revokeConsent(ConsentType|string $type): bool
     {
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
+        $type = $type instanceof ConsentType ? $type->value : $type;
 
         $updated = $this->activeConsents()
             ->where('type', $type)
@@ -120,15 +120,6 @@ trait HasGdpr
         }
 
         return false;
-    }
-
-    /**
-     * Clear cached consent status.
-     */
-    protected function clearConsentCache(string $type): void
-    {
-        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
-        Cache::forget($cacheKey);
     }
 
     /**
@@ -149,5 +140,14 @@ trait HasGdpr
     public function hasAllRequiredConsents(): bool
     {
         return empty($this->getMissingRequiredConsents());
+    }
+
+    /**
+     * Clear cached consent status.
+     */
+    protected function clearConsentCache(string $type): void
+    {
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+        Cache::forget($cacheKey);
     }
 }

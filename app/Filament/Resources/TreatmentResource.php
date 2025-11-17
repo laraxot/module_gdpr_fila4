@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
