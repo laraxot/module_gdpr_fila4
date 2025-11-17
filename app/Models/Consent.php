@@ -25,7 +25,6 @@ use Illuminate\Support\Carbon;
  * @property string|null $user_id
  * @property string|null $type
  * @property string|null $accepted_at
- *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Gdpr\Models\Treatment|null $treatment
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater

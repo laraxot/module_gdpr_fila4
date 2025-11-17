@@ -8,8 +8,8 @@ use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
-
     public string $name = 'Gdpr';
+
     protected string $moduleNamespace = 'Modules\Gdpr\Http\Controllers';
 
     protected string $module_dir = __DIR__;

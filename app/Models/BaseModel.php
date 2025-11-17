@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Xot\Models\Traits\HasXotFactory;
+use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Traits\Updater;
 
 // //use Laravel\Scout\Searchable;
@@ -13,9 +14,10 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
-abstract class BaseModel extends Model
+abstract class BaseModel extends XotBaseModel
 {
     use HasXotFactory;
+    use SoftDeletes;
     // use Searchable;
     // //use Cachable;
 

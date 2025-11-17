@@ -39,7 +39,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property string|null $vat_number
  * @property Carbon|null $deleted_at
  * @property SchemalessAttributes $extra
- *
  * @property-read string $avatar
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read Collection<int, DeviceUser> $deviceUsers
