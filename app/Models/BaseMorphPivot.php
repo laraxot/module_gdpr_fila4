@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**
@@ -64,8 +61,6 @@ abstract class BaseMorphPivot extends MorphPivot
         'user_id',
         'note',
     ];
-
-    
 
     /** @return array<string, string> */
     protected function casts(): array

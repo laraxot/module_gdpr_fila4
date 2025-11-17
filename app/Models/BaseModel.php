@@ -4,24 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Modules\Xot\Traits\Updater;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\Traits\HasXotFactory;
+use Modules\Xot\Traits\Updater;
+
 // //use Laravel\Scout\Searchable;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class BaseModel.
  */
 abstract class BaseModel extends Model
 {
+    use HasXotFactory;
     // use Searchable;
     // //use Cachable;
-    
+
     use Updater;
-    use HasXotFactory;
 
     /**
      * Indicates whether attributes are snake cased on arrays.
@@ -58,7 +56,6 @@ abstract class BaseModel extends Model
         // 'password'
     ];
 
-   
     /** @return array<string, string> */
     protected function casts(): array
     {

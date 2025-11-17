@@ -4,25 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
-use Illuminate\Support\Collection;
-use Modules\Xot\Filament\Traits\TransTrait;
-//use Modules\Core\Traits\EnumTrait;
-use Illuminate\Support\Arr;
-use Filament\Support\Contracts\HasIcon;
-use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
+// use Modules\Core\Traits\EnumTrait;
+use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
-
+use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
  * Enum ConsentType
- * 
+ *
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
-enum ConsentType: string implements HasLabel, HasIcon, HasColor
+enum ConsentType: string implements HasColor, HasIcon, HasLabel
 {
-    //use EnumTrait;
+    // use EnumTrait;
     use TransTrait;
 
     // Marketing communications
@@ -51,29 +47,27 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class,$this->value.'.label');
+        return $this->transClass(self::class, $this->value.'.label');
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class,$this->value.'.color');
+        return $this->transClass(self::class, $this->value.'.color');
 
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class,$this->value.'.icon');
+        return $this->transClass(self::class, $this->value.'.icon');
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class,$this->value.'.description');
+        return $this->transClass(self::class, $this->value.'.description');
     }
 
     /**
      * Check if this consent type is required for using the service.
-     * 
-     * @return bool
      */
     public function isRequired(): bool
     {
@@ -86,7 +80,7 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
 
     /**
      * Get all required consent types.
-     * 
+     *
      * @return array<string>
      */
     public static function getRequiredConsentTypes(): array
@@ -99,23 +93,23 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
 
     /**
      * Get all optional consent types.
-     * 
+     *
      * @return array<string>
      */
     public static function getOptionalConsentTypes(): array
     {
         return array_map(
             fn (self $type) => $type->value,
-            array_filter(self::cases(), fn (self $type) => !$type->isRequired())
+            array_filter(self::cases(), fn (self $type) => ! $type->isRequired())
         );
     }
 
     /*
      * Get consent types grouped by category.
-     * 
+     *
      * @return array<string, array<string, string>>
 
-     
+
     public static function groupedByCategory(): array
     {
         return [
@@ -148,7 +142,7 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     */
     /*
      * Get consent types as a flattened array for forms.
-     * 
+     *
      * @return array<string, string>
 
     public static function forFormSelect(): array
@@ -159,7 +153,7 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
             $result[__("gdpr::consent.categories.$category")] = $types;
         }
 
-     
+
     public static function forFormSelect(): array
     {
         $result = [];

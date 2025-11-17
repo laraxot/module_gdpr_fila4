@@ -27,6 +27,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $deleted_by
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @method static \Modules\Gdpr\Database\Factories\TreatmentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Treatment newModelQuery()
  * @method static Builder<static>|Treatment newQuery()
@@ -45,6 +46,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Treatment whereUpdatedAt($value)
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
+ *
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel

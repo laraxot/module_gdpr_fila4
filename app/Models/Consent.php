@@ -28,6 +28,7 @@ use Illuminate\Support\Carbon;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Gdpr\Models\Treatment|null $treatment
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
@@ -45,6 +46,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Consent whereUpdatedBy($value)
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
+ *
  * @mixin \Eloquent
  */
 class Consent extends BaseModel
