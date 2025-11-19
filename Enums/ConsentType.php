@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Enums;
 
 use Illuminate\Support\Collection;
-<<<<<<< HEAD
-use Modules\Core\Traits\EnumTrait;
-=======
 use Modules\Xot\Filament\Traits\TransTrait;
 //use Modules\Core\Traits\EnumTrait;
 use Illuminate\Support\Arr;
@@ -16,7 +13,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 
->>>>>>> ceb9f4f (.)
 
 /**
  * Enum ConsentType
@@ -24,42 +20,21 @@ use Filament\Support\Contracts\HasLabel;
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
-<<<<<<< HEAD
-enum ConsentType: string
-{
-    use EnumTrait;
-=======
 enum ConsentType: string implements HasLabel, HasIcon, HasColor
 {
     //use EnumTrait;
     use TransTrait;
->>>>>>> ceb9f4f (.)
 
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
     case MARKETING_SMS = 'marketing_sms';
     case MARKETING_PHONE = 'marketing_phone';
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> ceb9f4f (.)
     // Privacy and data processing
     case PRIVACY_POLICY = 'privacy_policy';
     case COOKIES = 'cookies';
     case ANALYTICS = 'analytics';
     case PERSONALIZATION = 'personalization';
-<<<<<<< HEAD
-    
-    // Data sharing
-    case THIRD_PARTY_SHARING = 'third_party_sharing';
-    case DATA_TRANSFER = 'data_transfer';
-    
-    // Account related
-    case TERMS_AND_CONDITIONS = 'terms_and_conditions';
-    case AGE_VERIFICATION = 'age_verification';
-    
-=======
 
     // Data sharing
     case THIRD_PARTY_SHARING = 'third_party_sharing';
@@ -69,62 +44,11 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     case TERMS_AND_CONDITIONS = 'terms_and_conditions';
     case AGE_VERIFICATION = 'age_verification';
 
->>>>>>> ceb9f4f (.)
     // Special consents
     case RESEARCH = 'research';
     case PROFILING = 'profiling';
     case AUTOMATED_DECISION_MAKING = 'automated_decision_making';
 
-<<<<<<< HEAD
-    /**
-     * Get the human-readable name of the consent type.
-     * 
-     * @return string
-     */
-    public function label(): string
-    {
-        return match($this) {
-            self::MARKETING_EMAIL => __('gdpr::consent.types.marketing_email'),
-            self::MARKETING_SMS => __('gdpr::consent.types.marketing_sms'),
-            self::MARKETING_PHONE => __('gdpr::consent.types.marketing_phone'),
-            self::PRIVACY_POLICY => __('gdpr::consent.types.privacy_policy'),
-            self::COOKIES => __('gdpr::consent.types.cookies'),
-            self::ANALYTICS => __('gdpr::consent.types.analytics'),
-            self::PERSONALIZATION => __('gdpr::consent.types.personalization'),
-            self::THIRD_PARTY_SHARING => __('gdpr::consent.types.third_party_sharing'),
-            self::DATA_TRANSFER => __('gdpr::consent.types.data_transfer'),
-            self::TERMS_AND_CONDITIONS => __('gdpr::consent.types.terms_and_conditions'),
-            self::AGE_VERIFICATION => __('gdpr::consent.types.age_verification'),
-            self::RESEARCH => __('gdpr::consent.types.research'),
-            self::PROFILING => __('gdpr::consent.types.profiling'),
-            self::AUTOMATED_DECISION_MAKING => __('gdpr::consent.types.automated_decision_making'),
-        };
-    }
-
-    /**
-     * Get the description of the consent type.
-     * 
-     * @return string
-     */
-    public function description(): string
-    {
-        return match($this) {
-            self::MARKETING_EMAIL => __('gdpr::consent.descriptions.marketing_email'),
-            self::MARKETING_SMS => __('gdpr::consent.descriptions.marketing_sms'),
-            self::MARKETING_PHONE => __('gdpr::consent.descriptions.marketing_phone'),
-            self::PRIVACY_POLICY => __('gdpr::consent.descriptions.privacy_policy'),
-            self::COOKIES => __('gdpr::consent.descriptions.cookies'),
-            self::ANALYTICS => __('gdpr::consent.descriptions.analytics'),
-            self::PERSONALIZATION => __('gdpr::consent.descriptions.personalization'),
-            self::THIRD_PARTY_SHARING => __('gdpr::consent.descriptions.third_party_sharing'),
-            self::DATA_TRANSFER => __('gdpr::consent.descriptions.data_transfer'),
-            self::TERMS_AND_CONDITIONS => __('gdpr::consent.descriptions.terms_and_conditions'),
-            self::AGE_VERIFICATION => __('gdpr::consent.descriptions.age_verification'),
-            self::RESEARCH => __('gdpr::consent.descriptions.research'),
-            self::PROFILING => __('gdpr::consent.descriptions.profiling'),
-            self::AUTOMATED_DECISION_MAKING => __('gdpr::consent.descriptions.automated_decision_making'),
-        };
-=======
     public function getLabel(): string
     {
         return $this->transClass(self::class,$this->value.'.label');
@@ -144,7 +68,6 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     public function getDescription(): string
     {
         return $this->transClass(self::class,$this->value.'.description');
->>>>>>> ceb9f4f (.)
     }
 
     /**
@@ -187,19 +110,11 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
         );
     }
 
-<<<<<<< HEAD
-    /**
-     * Get consent types grouped by category.
-     * 
-     * @return array<string, array<string, string>>
-     */
-=======
     /*
      * Get consent types grouped by category.
      * 
      * @return array<string, array<string, string>>
 
->>>>>>> ceb9f4f (.)
     public static function groupedByCategory(): array
     {
         return [
@@ -229,24 +144,6 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
             ],
         ];
     }
-<<<<<<< HEAD
-
-    /**
-     * Get consent types as a flattened array for forms.
-     * 
-     * @return array<string, string>
-     */
-    public static function forFormSelect(): array
-    {
-        $result = [];
-        
-        foreach (self::groupedByCategory() as $category => $types) {
-            $result[__("gdpr::consent.categories.$category")] = $types;
-        }
-        
-        return $result;
-    }
-=======
     */
     /*
      * Get consent types as a flattened array for forms.
@@ -264,5 +161,4 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
         return $result;
     }
         */
->>>>>>> ceb9f4f (.)
 }
