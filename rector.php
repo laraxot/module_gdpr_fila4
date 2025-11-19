@@ -10,6 +10,9 @@ use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     $rectorConfig->paths([
         __DIR__,
     ]);
@@ -19,6 +22,7 @@ return static function (RectorConfig $rectorConfig): void {
         '*/docs',
         '*/vendor',
     ]);
+<<<<<<< HEAD
 =======
     $rectorConfig->paths(
         [
@@ -34,6 +38,8 @@ return static function (RectorConfig $rectorConfig): void {
         ]
     );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
     // register a single rule
     // $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
@@ -41,6 +47,9 @@ return static function (RectorConfig $rectorConfig): void {
 
     // define sets of rules
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
     $rectorConfig->sets([
         PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
         // SetList::DEAD_CODE,
@@ -54,6 +63,7 @@ return static function (RectorConfig $rectorConfig): void {
         // SetList::EARLY_RETURN,
         // SetList::INSTANCEOF,
     ]);
+<<<<<<< HEAD
 =======
     $rectorConfig->sets(
         [
@@ -72,6 +82,8 @@ return static function (RectorConfig $rectorConfig): void {
         ]
     );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
     $rectorConfig->importNames();
 };

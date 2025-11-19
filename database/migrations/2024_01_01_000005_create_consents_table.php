@@ -15,6 +15,9 @@ return new class extends XotBaseMigration
         // -- CREATE --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->uuid('treatment_id');
@@ -49,6 +52,7 @@ return new class extends XotBaseMigration
                 hasSoftDeletes: true,
             );
         });
+<<<<<<< HEAD
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
@@ -87,5 +91,7 @@ return new class extends XotBaseMigration
             }
         );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     }
 };
