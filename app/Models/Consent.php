@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -25,11 +27,11 @@ use Illuminate\Support\Carbon;
  * @property string|null $user_id
  * @property string|null $type
  * @property string|null $accepted_at
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Gdpr\Models\Treatment|null $treatment
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read ProfileContract|null $creator
+ * @property-read Treatment|null $treatment
+ * @property-read ProfileContract|null $updater
  *
- * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
+ * @method static ConsentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
  * @method static Builder<static>|Consent query()
