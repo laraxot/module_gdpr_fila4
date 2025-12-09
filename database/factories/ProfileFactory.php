@@ -9,15 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Profile;
 
 /**
-<<<<<<< HEAD
  * @extends Factory<Profile>
-=======
-<<<<<<< HEAD
- * @extends Factory<Profile>
-=======
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Gdpr\Models\Profile>
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
  */
 class ProfileFactory extends Factory
 {
