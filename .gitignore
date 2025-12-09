@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -26,16 +27,23 @@ build/
 
 # Laravel specific
 <<<<<<< HEAD
+=======
+>>>>>>> 7f200e9 (.)
 # ==============================================
 # LARAXOT MODULE GDPR - .GITIGNORE
 # ==============================================
 # Modulo Gdpr Laraxot - Template standardizzato
+<<<<<<< HEAD
 # Ultimo aggiornamento: 2025-01-31
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> 7f200e9 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 /vendor/
 /vendor
 /node_modules/
@@ -46,12 +54,22 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
+=======
+vendor/
+node_modules/
+package-lock.json
+yarn.lock
+composer.lock
+>>>>>>> 7f200e9 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
 # ==============================================
 /build
+<<<<<<< HEAD
 /build/
+=======
+>>>>>>> 7f200e9 (.)
 build/
 dist/
 docs/cache/
@@ -85,8 +103,11 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+<<<<<<< HEAD
 =======
 >>>>>>> 54ea05f (.)
+=======
+>>>>>>> 7f200e9 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -95,6 +116,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 
 # Database directories
 database/Factories_
@@ -174,6 +196,8 @@ database_old
 # Other
 -e
 <<<<<<< HEAD
+=======
+>>>>>>> 7f200e9 (.)
 .env.*
 !.env.example
 
@@ -190,7 +214,10 @@ Homestead.json
 # GIT SPECIFIC
 # ==============================================
 .git-rewrite/
+<<<<<<< HEAD
 .git-rewrite
+=======
+>>>>>>> 7f200e9 (.)
 .git-blame-ignore-revs
 
 # ==============================================
@@ -230,12 +257,15 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
+<<<<<<< HEAD
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
 resources/lang/
 
 # ==============================================
+=======
+>>>>>>> 7f200e9 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -266,6 +296,7 @@ test_gdpr_requests.sql
 
 # ==============================================
 # END OF GDPR .GITIGNORE
+<<<<<<< HEAD
 # ==============================================
 =======
 >>>>>>> 54ea05f (.)
@@ -278,3 +309,6 @@ public_html
 public_html
 =======
 >>>>>>> 54ea05f (.)
+=======
+# ==============================================
+>>>>>>> 7f200e9 (.)
