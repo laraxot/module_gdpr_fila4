@@ -12,10 +12,6 @@ return [
         'sort' => 20,
     ],
     /*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
      * |--------------------------------------------------------------------------
      * | Impostazioni Generali GDPR
      * |--------------------------------------------------------------------------
@@ -32,28 +28,6 @@ return [
      * | Configurazione per la gestione dei cookie e banner informativi
      * |
      */
-<<<<<<< HEAD
-=======
-    |--------------------------------------------------------------------------
-    | Impostazioni Generali GDPR
-    |--------------------------------------------------------------------------
-    |
-    | Configurazioni base per la gestione della privacy e protezione dati
-    |
-    */
-    'enabled' => env('GDPR_ENABLED', true),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Cookie Policy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per la gestione dei cookie e banner informativi
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'cookie' => [
         'consent_lifetime' => env('GDPR_COOKIE_LIFETIME', 365), // giorni
         'categories' => [
@@ -74,10 +48,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Retention Policy
@@ -86,20 +56,6 @@ return [
      * | Configurazione dei periodi di conservazione dei dati
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Retention Policy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei periodi di conservazione dei dati
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'retention' => [
         'user_data' => [
             'personal' => 365 * 5, // 5 anni
@@ -112,10 +68,6 @@ return [
             'quotes' => 365 * 2, // 2 anni
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Registro dei Trattamenti
@@ -124,20 +76,6 @@ return [
      * | Configurazione per il registro delle attività di trattamento
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Registro dei Trattamenti
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per il registro delle attività di trattamento
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'processing_register' => [
         'enabled' => true,
         'categories' => [
@@ -163,10 +101,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Consensi Specifici Settore Assicurativo
@@ -175,20 +109,6 @@ return [
      * | Configurazione dei consensi specifici richiesti nel settore assicurativo
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Consensi Specifici Settore Assicurativo
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei consensi specifici richiesti nel settore assicurativo
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'insurance_consents' => [
         'health_data' => [
             'code' => 'con1',
@@ -226,10 +146,6 @@ return [
             'required' => false,
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Documenti Privacy
@@ -238,20 +154,6 @@ return [
      * | Configurazione dei documenti privacy richiesti
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Documenti Privacy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei documenti privacy richiesti
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'privacy_documents' => [
         'generali' => [
             'name' => 'Informativa Privacy Generali',
@@ -264,10 +166,6 @@ return [
             'required' => true,
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Diritti dell'Interessato
@@ -276,20 +174,6 @@ return [
      * | Configurazione per la gestione delle richieste degli interessati
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Diritti dell'Interessato
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per la gestione delle richieste degli interessati
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'data_subject_rights' => [
         'enabled' => true,
         'request_types' => [
@@ -315,10 +199,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Misure di Sicurezza
@@ -327,20 +207,6 @@ return [
      * | Configurazione delle misure di sicurezza implementate
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Misure di Sicurezza
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione delle misure di sicurezza implementate
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'security_measures' => [
         'encryption' => [
             'enabled' => true,
@@ -362,10 +228,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
     /*
      * |--------------------------------------------------------------------------
      * | Data Protection Officer
@@ -374,20 +236,6 @@ return [
      * | Informazioni di contatto del DPO
      * |
      */
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Data Protection Officer
-    |--------------------------------------------------------------------------
-    |
-    | Informazioni di contatto del DPO
-    |
-    */
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
     'dpo' => [
         'name' => env('GDPR_DPO_NAME', ''),
         'email' => env('GDPR_DPO_EMAIL', ''),
