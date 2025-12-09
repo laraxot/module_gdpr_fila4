@@ -79,20 +79,12 @@ class Event extends BaseModel
         return $this->belongsTo(Consent::class);
     }
 
-<<<<<<< HEAD
     public function setPayloadAttribute(null|string $value): void
-=======
-    public function setPayloadAttribute(?string $value): void
->>>>>>> d6fdc5d (.)
     {
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
-<<<<<<< HEAD
     public function setIpAttribute(null|string $value): void
-=======
-    public function setIpAttribute(?string $value): void
->>>>>>> d6fdc5d (.)
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
     }
