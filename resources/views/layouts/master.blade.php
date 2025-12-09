@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
 <!DOCTYPE html>
+=======
+TYPE html>
+>>>>>>> 7f200e9 (.)
 <html lang="en">
     <head>
         <meta charset="utf-8">
