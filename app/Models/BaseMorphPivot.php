@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
 use Modules\Xot\Traits\Updater;
 
@@ -12,7 +13,7 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BaseMorphPivot extends MorphPivot
 {
-    use \Modules\Xot\Models\Traits\HasXotFactory;
+    use HasXotFactory;
     use Updater;
 
     // use HasUuids;

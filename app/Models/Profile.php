@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\User\Models\DeviceProfile;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Modules\User\Models\User;
+use Modules\Gdpr\Database\Factories\ProfileFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
@@ -40,14 +45,14 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property Carbon|null $deleted_at
  * @property SchemalessAttributes $extra
  * @property-read string $avatar
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read Collection<int, DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
- * @property-read \Modules\User\Models\DeviceProfile|null $pivot
+ * @property-read DeviceProfile|null $pivot
  * @property-read Collection<int, Device> $devices
  * @property-read int|null $devices_count
  * @property-read string|null $full_name
- * @property-read MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
+ * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read Collection<int, DeviceUser> $mobileDeviceUsers
  * @property-read int|null $mobile_device_users_count
@@ -59,11 +64,11 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property-read int|null $permissions_count
  * @property-read Collection<int, Role> $roles
  * @property-read int|null $roles_count
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
- * @property-read \Modules\User\Models\User|null $user
+ * @property-read ProfileContract|null $updater
+ * @property-read User|null $user
  * @property-read string|null $user_name
  *
- * @method static \Modules\Gdpr\Database\Factories\ProfileFactory factory($count = null, $state = [])
+ * @method static ProfileFactory factory($count = null, $state = [])
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()
  * @method static Builder<static>|Profile permission($permissions, $without = false)

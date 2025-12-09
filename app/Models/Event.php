@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Gdpr\Database\Factories\EventFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -32,11 +34,11 @@ use function Safe\json_encode;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- * @property-read \Modules\Gdpr\Models\Consent|null $consent
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read Consent|null $consent
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
  *
- * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
+ * @method static EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
@@ -76,12 +78,12 @@ class Event extends BaseModel
         return $this->belongsTo(Consent::class);
     }
 
-    public function setPayloadAttribute(?string $value): void
+    public function setPayloadAttribute(null|string $value): void
     {
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
-    public function setIpAttribute(?string $value): void
+    public function setIpAttribute(null|string $value): void
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
     }
