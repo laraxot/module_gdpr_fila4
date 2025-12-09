@@ -153,11 +153,11 @@ enum ConsentType: string implements HasLabel, HasIcon, HasColor
     public static function forFormSelect(): array
     {
         $result = [];
-        
+
         foreach (self::groupedByCategory() as $category => $types) {
             $result[__("gdpr::consent.categories.$category")] = $types;
         }
-        
+
         return $result;
     }
         */
