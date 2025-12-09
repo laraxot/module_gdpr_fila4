@@ -58,7 +58,18 @@ use function Safe\json_encode;
  *
  * @mixin \Eloquent
  */
-/** */
+/**
+ * @property-read \Modules\Gdpr\Models\Consent|null $consent
+ * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-write mixed $ip
+ * @property-write mixed $payload
+ * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Event newModelQuery()
+ * @method static Builder<static>|Event newQuery()
+ * @method static Builder<static>|Event query()
+ * @mixin \Eloquent
+ */
 class Event extends BaseModel
 {
     use HasUuids;
