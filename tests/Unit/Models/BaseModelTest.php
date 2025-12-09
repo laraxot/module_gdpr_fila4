@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Gdpr\Models\BaseModel;
+=======
+use Modules\Gdpr\Models\BaseModel;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> d6fdc5d (.)
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
