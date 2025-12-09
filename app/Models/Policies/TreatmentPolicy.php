@@ -20,23 +20,7 @@ class TreatmentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-<<<<<<< HEAD
     public function view(UserContract $user, Treatment $_treatment): bool
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function view(UserContract $user, Treatment $_treatment): bool
-=======
-    public function view(UserContract $user, Treatment $treatment): bool
->>>>>>> a12f125f4a (.)
-=======
-    public function view(UserContract $user, Treatment $_treatment): bool
->>>>>>> b93ef594b4 (.)
-=======
-    public function view(UserContract $user, Treatment $treatment): bool
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('treatment.view');
     }
@@ -52,23 +36,7 @@ class TreatmentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-<<<<<<< HEAD
     public function update(UserContract $user, Treatment $_treatment): bool
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function update(UserContract $user, Treatment $_treatment): bool
-=======
-    public function update(UserContract $user, Treatment $treatment): bool
->>>>>>> a12f125f4a (.)
-=======
-    public function update(UserContract $user, Treatment $_treatment): bool
->>>>>>> b93ef594b4 (.)
-=======
-    public function update(UserContract $user, Treatment $treatment): bool
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('treatment.update');
     }
@@ -76,23 +44,7 @@ class TreatmentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
-<<<<<<< HEAD
     public function delete(UserContract $user, Treatment $_treatment): bool
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function delete(UserContract $user, Treatment $_treatment): bool
-=======
-    public function delete(UserContract $user, Treatment $treatment): bool
->>>>>>> a12f125f4a (.)
-=======
-    public function delete(UserContract $user, Treatment $_treatment): bool
->>>>>>> b93ef594b4 (.)
-=======
-    public function delete(UserContract $user, Treatment $treatment): bool
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('treatment.delete');
     }
@@ -100,23 +52,7 @@ class TreatmentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
-<<<<<<< HEAD
     public function restore(UserContract $user, Treatment $_treatment): bool
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function restore(UserContract $user, Treatment $_treatment): bool
-=======
-    public function restore(UserContract $user, Treatment $treatment): bool
->>>>>>> a12f125f4a (.)
-=======
-    public function restore(UserContract $user, Treatment $_treatment): bool
->>>>>>> b93ef594b4 (.)
-=======
-    public function restore(UserContract $user, Treatment $treatment): bool
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('treatment.restore');
     }
@@ -128,20 +64,4 @@ class TreatmentPolicy extends GdprBasePolicy
     {
         return $user->hasPermissionTo('treatment.forceDelete');
     }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> a12f125f4a (.)
-=======
-}
->>>>>>> b93ef594b4 (.)
-=======
-}
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
