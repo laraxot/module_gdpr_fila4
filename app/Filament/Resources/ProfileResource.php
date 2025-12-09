@@ -36,7 +36,8 @@ class ProfileResource extends XotBaseResource
             'created_by' => TextInput::make('created_by')->maxLength(36)->default(null),
             'deleted_by' => TextInput::make('deleted_by')->maxLength(36)->default(null),
             'is_active' => Toggle::make('is_active')->required(),
-        ]);}
+        ]);
+    }
 
     #[Override]
     public static function getRelations(): array
