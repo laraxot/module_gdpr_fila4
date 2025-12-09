@@ -16,29 +16,31 @@ expect()->extend('toBeConsent', function () {
 });
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function createConsent(array $attributes = []): Consent
 {
     $factory = Consent::factory();
-    if (!is_object($factory) || !method_exists($factory, 'create')) {
+    if (! is_object($factory) || ! method_exists($factory, 'create')) {
         throw new \RuntimeException('Consent factory not available');
     }
     $consent = $factory->create($attributes);
     assert($consent instanceof Consent);
+
     return $consent;
 }
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function makeConsent(array $attributes = []): Consent
 {
     $factory = Consent::factory();
-    if (!is_object($factory) || !method_exists($factory, 'make')) {
+    if (! is_object($factory) || ! method_exists($factory, 'make')) {
         throw new \RuntimeException('Consent factory not available');
     }
     $consent = $factory->make($attributes);
     assert($consent instanceof Consent);
+
     return $consent;
 }
