@@ -49,7 +49,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
  *
- * @mixin IdeHelperConsent
  * @mixin \Eloquent
  */
 /** */
