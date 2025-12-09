@@ -20,7 +20,23 @@ class ConsentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, Consent $_consent): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function view(UserContract $user, Consent $_consent): bool
+=======
+    public function view(UserContract $user, Consent $consent): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function view(UserContract $user, Consent $_consent): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function view(UserContract $user, Consent $consent): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('consent.view');
     }
@@ -36,7 +52,23 @@ class ConsentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, Consent $_consent): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function update(UserContract $user, Consent $_consent): bool
+=======
+    public function update(UserContract $user, Consent $consent): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function update(UserContract $user, Consent $_consent): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function update(UserContract $user, Consent $consent): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('consent.update');
     }
@@ -44,7 +76,23 @@ class ConsentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, Consent $_consent): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function delete(UserContract $user, Consent $_consent): bool
+=======
+    public function delete(UserContract $user, Consent $consent): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function delete(UserContract $user, Consent $_consent): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function delete(UserContract $user, Consent $consent): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('consent.delete');
     }
@@ -52,7 +100,23 @@ class ConsentPolicy extends GdprBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, Consent $_consent): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function restore(UserContract $user, Consent $_consent): bool
+=======
+    public function restore(UserContract $user, Consent $consent): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function restore(UserContract $user, Consent $_consent): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function restore(UserContract $user, Consent $consent): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('consent.restore');
     }
@@ -64,4 +128,20 @@ class ConsentPolicy extends GdprBasePolicy
     {
         return $user->hasPermissionTo('consent.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> a12f125f4a (.)
+=======
+}
+>>>>>>> b93ef594b4 (.)
+=======
+}
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
