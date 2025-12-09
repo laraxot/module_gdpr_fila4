@@ -86,11 +86,15 @@ class Foo extends bar
 
 ## Collegamenti tra versioni di customizing-your-site.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 * [customizing-your-site.md](laravel/Modules/Gdpr/docs/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Xot/docs/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/UI/docs/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Tenant/docs/it/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Cms/docs/customizing-your-site.md)
+<<<<<<< HEAD
 =======
 * [customizing-your-site.md](laravel/Modules/Gdpr/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Xot/project_docs/customizing-your-site.md)
@@ -98,6 +102,8 @@ class Foo extends bar
 * [customizing-your-site.md](laravel/Modules/Tenant/project_docs/it/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Cms/project_docs/customizing-your-site.md)
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
 <<<<<<< HEAD
 >>>>>>> f13dd89 (.)
