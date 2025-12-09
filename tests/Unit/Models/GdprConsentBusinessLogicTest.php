@@ -56,7 +56,7 @@ describe('GDPR Consent Business Logic', function (): void {
 
         foreach ($validBases as $basis) {
             /** @var \Illuminate\Database\Eloquent\Collection */
-        $consent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
+            $consent = GdprConsent/** @phpstan-ignore-line */ ::factory()->create([
                 'legal_basis' => $basis,
             ]);
 
