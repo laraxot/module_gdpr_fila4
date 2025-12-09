@@ -13,6 +13,9 @@ class ListTreatments extends XotBaseListRecords
 {
     protected static string $resource = TreatmentResource::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableColumns(): array
     {
         return [
