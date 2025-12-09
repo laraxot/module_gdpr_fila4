@@ -5,8 +5,9 @@ declare(strict_types=1);
 use Modules\Gdpr\Models\GdprConsent;
 use Modules\User\Models\User;
 
-test('gdpr consent can be created', function () {
-    $user = User::factory()->create();
+test('gdpr consent can be created', function (): void {
+    /** @var User */
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
     $consent = createGdprConsent([
         'user_id' => $user->id,
@@ -25,22 +26,24 @@ test('gdpr consent can be created', function () {
         ->not->toBeNull();
 });
 
-test('gdpr consent belongs to user', function () {
-    $user = User::factory()->create();
+test('gdpr consent belongs to user', function (): void {
+    /** @var User */
+        $user = User/** @phpstan-ignore-line */ ::factory()->create();
     $consent = createGdprConsent(['user_id' => $user->id]);
 
     expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
 });
 
-test('gdpr consent can be withdrawn', function () {
+test('gdpr consent can be withdrawn', function (): void {
     $consent = createGdprConsent(['withdrawn_at' => null]);
 
+    /** @phpstan-ignore-next-line method.nonObject */
     $consent->withdraw();
 
     expect($consent->fresh()->withdrawn_at)->not->toBeNull();
 });
 
-test('gdpr consent scope active works', function () {
+test('gdpr consent scope active works', function (): void {
     createGdprConsent(['withdrawn_at' => null]); // Active
     createGdprConsent(['withdrawn_at' => now()]); // Withdrawn
 

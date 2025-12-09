@@ -1,30 +1,62 @@
-# Dependencies and packages
-/vendor/
-/node_modules/
-/docs/vendor/
+# ==============================================
+# LARAXOT MODULE GDPR - .GITIGNORE
+# ==============================================
+# Modulo Gdpr Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-31
+# ==============================================
 
-# Lock files and cache
-*.lock
-*.cache
-*.phar
-*.jar
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+/vendor/
+/vendor
+/node_modules/
+/node_modules
+/docs/vendor/
 package-lock.json
+yarn.lock
+composer.lock
 yarn-error.log
 npm-debug.log
-composer.lock
-.phpunit.result.cache
-.php-cs-fixer.cache
 
-# Log files
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build
+/build/
+build/
+dist/
+docs/cache/
+cache/
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
 *.log
 error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# Build directories
-/build/
-/build
-build/
-
-# Laravel specific
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -33,84 +65,99 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+.env.*
+!.env.example
 
-# Database directories
-database/Factories_
-database/Factories_old
-database/Migrations_old
-
-# Local configurations
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
 Homestead.yaml
 Homestead.json
 /.vagrant
-
-# IDE specific
 /.idea
 .phpintel
 
-# Git specific
-.git-blame-ignore-revs
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
 .git-rewrite/
 .git-rewrite
-
-# Temporary and system files
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-.DS_Store
-# Dependencies
-vendor/
-node_modules/
-package-lock.json
-
-# Build and compiled files
-/build
-docs/cache/
-cache/
-
-# Cache and temporary files
-*.cache
-*.lock
-*.phar
-*.log
-.php-cs-fixer.cache
-
-# Git related
-.git-rewrite/
 .git-blame-ignore-revs
 
-# Backup files
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
 *.old
 *.old1
+*.old2
 *.backup
 *.backup.*
 *.bak
+*.bakcup
 *.new
 
-# Documentation and cache
-docs/phpstan/
-docs/cache/
-cache/
-
-# Development tools
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
 .windsurf/
 .cursor/
+.phpstorm.meta.php
 
-# PHPStan documentation
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
 docs/phpstan/
+docs/cache/
 
-# Old directories
-resources/views/Components_old
-database/Migrations_old
-database/Seeders_old
-database/Factories_old
-database_old
+# ==============================================
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
 
-# Other
--e
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+
+# ==============================================
+# MODULE SPECIFIC - GDPR
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# Dati GDPR temporanei
+gdpr/temp/
+gdpr/exports/temp/
+gdpr/requests/temp/
+
+# Cache GDPR
+storage/gdpr/
+storage/privacy/
+
+# File di test GDPR
+gdpr_test_data.json
+test_gdpr_requests.sql
+
+# ==============================================
+# END OF GDPR .GITIGNORE
+# ==============================================
 
 # 🚫 File specifici del progetto
 *.fila2
