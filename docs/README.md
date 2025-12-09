@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 # 🔐 **GDPR Module** - Sistema Completo Conformità GDPR
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -560,6 +563,7 @@ CREATE INDEX idx_consents_active ON consents (subject_id, revoked_at);
 - [Modulo Notify](../Notify/docs/README.md) - Sistema notifiche
 - [Documentazione Principale](../../../docs/README.md) - Documentazione generale
 
+<<<<<<< HEAD
 =======
 # GDPR Module Documentation
 
@@ -643,3 +647,5 @@ Gdpr::grantConsent('analytics', $user);
 - **Encryption Errors**: If you encounter errors related to `Crypt`, verify that your `APP_KEY` is correctly set in your `.env` file.
 - **Relationship Issues**: Double-check that foreign key constraints are correctly defined in your migrations and that relationships in the models are correctly specified.
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
