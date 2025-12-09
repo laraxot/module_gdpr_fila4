@@ -9,7 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Consent;
 
 /**
+<<<<<<< HEAD
  * @extends Factory<Consent>
+=======
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Gdpr\Models\Consent>
+>>>>>>> 5a85228 (.)
  */
 class ConsentFactory extends Factory
 {
@@ -25,6 +29,11 @@ class ConsentFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+        ];
+>>>>>>> 5a85228 (.)
     }
 }
