@@ -51,6 +51,7 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
+/** */
 class Consent extends BaseModel
 {
     use HasUuids;
