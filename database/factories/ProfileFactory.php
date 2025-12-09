@@ -9,7 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Profile;
 
 /**
+<<<<<<< HEAD
  * @extends Factory<Profile>
+=======
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Gdpr\Models\Profile>
+>>>>>>> 5a85228 (.)
  */
 class ProfileFactory extends Factory
 {
@@ -25,8 +29,12 @@ class ProfileFactory extends Factory
      *
      * @return array
      */
+<<<<<<< HEAD
     public function definition()
     {
+=======
+    public function definition(): void {
+>>>>>>> 5a85228 (.)
         return [
             'id' => fake()->word,
             'user_id' => fake()->unique()->randomNumber(),
