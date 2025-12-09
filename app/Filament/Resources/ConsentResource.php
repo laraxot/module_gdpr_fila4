@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Filament\Resources;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\CreateConsent;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\EditConsent;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\ListConsents;
@@ -28,7 +27,8 @@ class ConsentResource extends XotBaseResource
                 ->relationship('treatment', 'name')
                 ->required(),
             'subject_id' => TextInput::make('subject_id')->required()->maxLength(191),
-        ]);}
+        ]);
+    }
 
     #[Override]
     public static function getPages(): array
