@@ -92,6 +92,7 @@ use function Safe\json_encode;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
+ * @mixin IdeHelperEvent
  * @mixin \Eloquent
  */
 class Event extends BaseModel

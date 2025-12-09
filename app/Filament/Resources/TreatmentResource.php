@@ -7,6 +7,9 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\EditTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
@@ -23,7 +26,7 @@ class TreatmentResource extends XotBaseResource
     #[Override]
     public static function getFormSchema(): array
     {
-        return array_values([
+        return [
             'active' => Toggle::make('active')->required(),
             'required' => Toggle::make('required')->required(),
             'name' => TextInput::make('name')->required()->maxLength(191),
@@ -31,7 +34,30 @@ class TreatmentResource extends XotBaseResource
             'documentVersion' => TextInput::make('documentVersion')->maxLength(191)->default(null),
             'documentUrl' => TextInput::make('documentUrl')->maxLength(191)->default(null),
             'weight' => TextInput::make('weight')->required()->numeric(),
-        ]);
+        ];
+    }
+
+    public function getTableColumns(): array
+    {
+        return [
+            // Tables\Columns\TextColumn::make('id')
+
+            //     ->searchable(),
+            IconColumn::make('active')->boolean(),
+            IconColumn::make('required')->boolean(),
+            TextColumn::make('name')->searchable(),
+            TextColumn::make('documentVersion')->searchable(),
+            TextColumn::make('documentUrl')->searchable(),
+            TextColumn::make('weight')->numeric()->sortable(),
+            TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ];
     }
 
     #[Override]
