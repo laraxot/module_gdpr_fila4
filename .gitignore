@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -62,8 +65,11 @@ Homestead.json
 *.exe
 *:Zone.Identifier
 .DS_Store
+<<<<<<< HEAD
 =======
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 # Dependencies
 vendor/
 node_modules/
@@ -90,6 +96,9 @@ cache/
 *.old1
 *.backup
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 *.backup.*
 *.bak
 *.new
@@ -102,14 +111,20 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
+<<<<<<< HEAD
 =======
 *.bak
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
 # PHPStan documentation
 docs/phpstan/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 # Old directories
 resources/views/Components_old
 database/Migrations_old
@@ -124,7 +139,10 @@ database_old
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 =======
 # Other
 -e
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
