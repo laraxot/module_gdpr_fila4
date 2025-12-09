@@ -8,10 +8,14 @@ use Modules\User\Models\User;
 test('gdpr consent can be created', function () {
     $user = User::factory()->create();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 0c1819a (.)
+=======
+
+>>>>>>> ceb9f4f (.)
     $consent = createGdprConsent([
         'user_id' => $user->id,
         'consent_type' => 'privacy_policy',
@@ -22,22 +26,29 @@ test('gdpr consent can be created', function () {
     expect($consent)
         ->toBeGdprConsent()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
         ->and($consent->consent_type)
         ->toBe('privacy_policy')
         ->and($consent->ip_address)
         ->toBe('192.168.1.1')
         ->and($consent->consented_at)
         ->not->toBeNull();
+<<<<<<< HEAD
 =======
         ->and($consent->consent_type)->toBe('privacy_policy')
         ->and($consent->ip_address)->toBe('192.168.1.1')
         ->and($consent->consented_at)->not->toBeNull();
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 });
 
 test('gdpr consent belongs to user', function () {
     $user = User::factory()->create();
     $consent = createGdprConsent(['user_id' => $user->id]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
@@ -47,10 +58,15 @@ test('gdpr consent belongs to user', function () {
         ->toBeInstanceOf(User::class)
         ->and($consent->user->id)->toBe($user->id);
 >>>>>>> 0c1819a (.)
+=======
+
+    expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
+>>>>>>> ceb9f4f (.)
 });
 
 test('gdpr consent can be withdrawn', function () {
     $consent = createGdprConsent(['withdrawn_at' => null]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     $consent->withdraw();
@@ -60,6 +76,11 @@ test('gdpr consent can be withdrawn', function () {
     $consent->withdraw();
     
 >>>>>>> 0c1819a (.)
+=======
+
+    $consent->withdraw();
+
+>>>>>>> ceb9f4f (.)
     expect($consent->fresh()->withdrawn_at)->not->toBeNull();
 });
 
@@ -67,6 +88,7 @@ test('gdpr consent scope active works', function () {
     createGdprConsent(['withdrawn_at' => null]); // Active
     createGdprConsent(['withdrawn_at' => now()]); // Withdrawn
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     $activeCount = GdprConsent::active()->count();
 
@@ -75,5 +97,10 @@ test('gdpr consent scope active works', function () {
     $activeCount = GdprConsent::active()->count();
     
 >>>>>>> 0c1819a (.)
+=======
+
+    $activeCount = GdprConsent::active()->count();
+
+>>>>>>> ceb9f4f (.)
     expect($activeCount)->toBe(1);
 });
