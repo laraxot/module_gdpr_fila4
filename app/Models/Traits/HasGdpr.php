@@ -125,12 +125,13 @@ trait HasGdpr
     /**
      * Get all required consents that the user hasn't given yet.
      *
-     * @return array<string, string>
+     * @return array<string>
      */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
+        /** @var array<string> */
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 

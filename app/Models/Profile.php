@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\User\Models\DeviceProfile;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Modules\User\Models\User;
-use Modules\Gdpr\Database\Factories\ProfileFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Support\Carbon;
+use Modules\Gdpr\Database\Factories\ProfileFactory;
 use Modules\User\Models\BaseProfile;
 use Modules\User\Models\Device;
+use Modules\User\Models\DeviceProfile;
 use Modules\User\Models\DeviceUser;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
+use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 /**

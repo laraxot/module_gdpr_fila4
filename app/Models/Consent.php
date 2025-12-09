@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\Gdpr\Database\Factories\ConsentFactory;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modules\Gdpr\Models\Consent.
