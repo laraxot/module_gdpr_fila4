@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
 return new class() extends XotBaseMigration
+=======
+return new class extends XotBaseMigration
+>>>>>>> 58b8df4 (.)
 {
     /**
      * Run the migrations.

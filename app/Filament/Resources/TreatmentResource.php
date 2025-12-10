@@ -25,7 +25,7 @@ class TreatmentResource extends XotBaseResource
     #[Override]
     public static function getFormSchema(): array
     {
-        return array_values([
+        return [
             'active' => Toggle::make('active')->required(),
             'required' => Toggle::make('required')->required(),
             'name' => TextInput::make('name')->required()->maxLength(191),
@@ -33,7 +33,10 @@ class TreatmentResource extends XotBaseResource
             'documentVersion' => TextInput::make('documentVersion')->maxLength(191)->default(null),
             'documentUrl' => TextInput::make('documentUrl')->maxLength(191)->default(null),
             'weight' => TextInput::make('weight')->required()->numeric(),
-        ]);}
+        ];
+    }
+
+    
 
     #[Override]
     public static function getPages(): array
