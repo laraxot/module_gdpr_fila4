@@ -23,14 +23,14 @@ class EventResource extends XotBaseResource
     #[Override]
     public static function getFormSchema(): array
     {
-        return [
+        return array_values([
             'treatment_id' => TextInput::make('treatment_id')->maxLength(36)->default(null),
             'consent_id' => Select::make('consent_id')->relationship('consent', 'id'),
             'subject_id' => TextInput::make('subject_id')->required()->maxLength(191),
             'ip' => TextInput::make('ip')->required()->maxLength(191),
             'action' => TextInput::make('action')->required()->maxLength(191),
             'payload' => Textarea::make('payload')->required()->columnSpanFull(),
-        ];
+        ]);
     }
 
     #[Override]
