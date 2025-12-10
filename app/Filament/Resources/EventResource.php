@@ -30,7 +30,8 @@ class EventResource extends XotBaseResource
             'ip' => TextInput::make('ip')->required()->maxLength(191),
             'action' => TextInput::make('action')->required()->maxLength(191),
             'payload' => Textarea::make('payload')->required()->columnSpanFull(),
-        ]);}
+        ]);
+    }
 
     #[Override]
     public static function getRelations(): array
