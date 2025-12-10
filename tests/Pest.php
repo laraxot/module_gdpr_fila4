@@ -8,6 +8,9 @@ use Modules\Gdpr\Tests\TestCase;
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
  * |--------------------------------------------------------------------------
  * | Test Case
  * |--------------------------------------------------------------------------
@@ -45,6 +48,7 @@ expect()->extend('toBeGdprRequest', fn () => $this->toBeInstanceOf(GdprRequest::
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 =======
 |--------------------------------------------------------------------------
 | Test Case
@@ -89,6 +93,8 @@ expect()->extend('toBeGdprRequest', function () {
 |
 */
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
 
 function createGdprConsent(array $attributes = []): GdprConsent
 {
