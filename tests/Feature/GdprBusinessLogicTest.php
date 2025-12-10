@@ -4,23 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
 use Modules\Gdpr\Models\GdprConsent;
 use Modules\Gdpr\Models\GdprDataDeletion;
 use Modules\Gdpr\Models\GdprDataExport;
 use Modules\Gdpr\Models\GdprRequest;
-<<<<<<< HEAD
-=======
-use Modules\Gdpr\Models\GdprRequest;
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\Gdpr\Models\GdprDataExport;
-use Modules\Gdpr\Models\GdprDataDeletion;
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
 use Modules\User\Models\User;
 use Tests\TestCase;
 
@@ -31,15 +18,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $gdprRequest = GdprRequest::factory()->create([
             'user_id' => $user->id,
@@ -97,15 +76,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $gdprConsent = GdprConsent::factory()->create([
             'user_id' => $user->id,
@@ -163,15 +134,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $dataExport = GdprDataExport::factory()->create([
             'user_id' => $user->id,
@@ -230,15 +193,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $dataDeletion = GdprDataDeletion::factory()->create([
             'user_id' => $user->id,
@@ -298,23 +253,10 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
 
         // Act & Assert - Valid request types
         $validTypes = ['data_access', 'data_rectification', 'data_deletion', 'data_portability'];
 
-<<<<<<< HEAD
-=======
-        
-        // Act & Assert - Valid request types
-        $validTypes = ['data_access', 'data_rectification', 'data_deletion', 'data_portability'];
-        
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
         foreach ($validTypes as $type) {
             $gdprRequest = GdprRequest::factory()->create([
                 'user_id' => $user->id,
@@ -335,15 +277,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $marketingConsent = GdprConsent::factory()->create([
             'user_id' => $user->id,
@@ -389,10 +323,6 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ceb9f4f (.)
 
         // Act - Create multiple requests
         GdprRequest::factory()
@@ -421,37 +351,6 @@ class GdprBusinessLogicTest extends TestCase
         $totalRequests = GdprRequest::where('user_id', $user->id)->count();
         $accessRequests = GdprRequest::where('user_id', $user->id)->where('type', 'data_access')->count();
         $deletionRequests = GdprRequest::where('user_id', $user->id)->where('type', 'data_deletion')->count();
-<<<<<<< HEAD
-=======
-        
-        // Act - Create multiple requests
-        GdprRequest::factory()->count(3)->create([
-            'user_id' => $user->id,
-            'type' => 'data_access',
-        ]);
-
-        GdprRequest::factory()->count(2)->create([
-            'user_id' => $user->id,
-            'type' => 'data_deletion',
-        ]);
-
-        // Act - Create consents
-        GdprConsent::factory()->count(4)->create([
-            'user_id' => $user->id,
-            'consent_given' => true,
-        ]);
-
-        // Assert
-        $totalRequests = GdprRequest::where('user_id', $user->id)->count();
-        $accessRequests = GdprRequest::where('user_id', $user->id)
-            ->where('type', 'data_access')
-            ->count();
-        $deletionRequests = GdprRequest::where('user_id', $user->id)
-            ->where('type', 'data_deletion')
-            ->count();
->>>>>>> 0c1819a (.)
-=======
->>>>>>> ceb9f4f (.)
         $totalConsents = GdprConsent::where('user_id', $user->id)->count();
 
         $this->assertEquals(5, $totalRequests);
@@ -465,15 +364,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $dataExport = GdprDataExport::factory()->create([
             'user_id' => $user->id,
@@ -499,15 +390,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $urgentDeletion = GdprDataDeletion::factory()->create([
             'user_id' => $user->id,
@@ -534,15 +417,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $explicitConsent = GdprConsent::factory()->create([
             'user_id' => $user->id,
@@ -580,15 +455,7 @@ class GdprBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0c1819a (.)
-=======
-
->>>>>>> ceb9f4f (.)
         // Act
         $gdprRequest = GdprRequest::factory()->create([
             'user_id' => $user->id,
