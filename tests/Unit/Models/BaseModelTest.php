@@ -4,21 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Gdpr\Models\BaseModel;
-=======
-use Modules\Gdpr\Models\BaseModel;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Database\Eloquent\Model;
->>>>>>> 0c1819a (.)
-=======
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Modules\Gdpr\Models\BaseModel;
->>>>>>> ceb9f4f (.)
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
