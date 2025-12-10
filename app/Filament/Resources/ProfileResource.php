@@ -22,7 +22,7 @@ class ProfileResource extends XotBaseResource
     #[Override]
     public static function getFormSchema(): array
     {
-        return array_values([
+        return [
             'type' => TextInput::make('type')->maxLength(255)->default(null),
             'first_name' => TextInput::make('first_name')->maxLength(191)->default(null),
             'last_name' => TextInput::make('last_name')->maxLength(191)->default(null),
@@ -36,7 +36,7 @@ class ProfileResource extends XotBaseResource
             'created_by' => TextInput::make('created_by')->maxLength(36)->default(null),
             'deleted_by' => TextInput::make('deleted_by')->maxLength(36)->default(null),
             'is_active' => Toggle::make('is_active')->required(),
-        ]);
+        ];
     }
 
     #[Override]
