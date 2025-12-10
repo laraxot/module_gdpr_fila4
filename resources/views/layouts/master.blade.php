@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
 <!DOCTYPE html>
-=======
-TYPE html>
->>>>>>> d6fdc5d (.)
 <html lang="en">
     <head>
         <meta charset="utf-8">
