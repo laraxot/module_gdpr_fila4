@@ -12,6 +12,7 @@ return [
         'sort' => 20,
     ],
     /*
+<<<<<<< HEAD
     |--------------------------------------------------------------------------
     | Impostazioni Generali GDPR
     |--------------------------------------------------------------------------
@@ -29,6 +30,24 @@ return [
     | Configurazione per la gestione dei cookie e banner informativi
     |
     */
+=======
+     * |--------------------------------------------------------------------------
+     * | Impostazioni Generali GDPR
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazioni base per la gestione della privacy e protezione dati
+     * |
+     */
+    'enabled' => env('GDPR_ENABLED', true),
+    /*
+     * |--------------------------------------------------------------------------
+     * | Cookie Policy
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione per la gestione dei cookie e banner informativi
+     * |
+     */
+>>>>>>> a074f99 (.)
     'cookie' => [
         'consent_lifetime' => env('GDPR_COOKIE_LIFETIME', 365), // giorni
         'categories' => [
@@ -49,6 +68,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -58,6 +78,16 @@ return [
     | Configurazione dei periodi di conservazione dei dati
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Retention Policy
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione dei periodi di conservazione dei dati
+     * |
+     */
+>>>>>>> a074f99 (.)
     'retention' => [
         'user_data' => [
             'personal' => 365 * 5, // 5 anni
@@ -70,6 +100,7 @@ return [
             'quotes' => 365 * 2, // 2 anni
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -79,6 +110,16 @@ return [
     | Configurazione per il registro delle attività di trattamento
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Registro dei Trattamenti
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione per il registro delle attività di trattamento
+     * |
+     */
+>>>>>>> a074f99 (.)
     'processing_register' => [
         'enabled' => true,
         'categories' => [
@@ -104,6 +145,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -113,6 +155,16 @@ return [
     | Configurazione dei consensi specifici richiesti nel settore assicurativo
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Consensi Specifici Settore Assicurativo
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione dei consensi specifici richiesti nel settore assicurativo
+     * |
+     */
+>>>>>>> a074f99 (.)
     'insurance_consents' => [
         'health_data' => [
             'code' => 'con1',
@@ -150,6 +202,7 @@ return [
             'required' => false,
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -159,6 +212,16 @@ return [
     | Configurazione dei documenti privacy richiesti
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Documenti Privacy
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione dei documenti privacy richiesti
+     * |
+     */
+>>>>>>> a074f99 (.)
     'privacy_documents' => [
         'generali' => [
             'name' => 'Informativa Privacy Generali',
@@ -171,6 +234,7 @@ return [
             'required' => true,
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -180,6 +244,16 @@ return [
     | Configurazione per la gestione delle richieste degli interessati
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Diritti dell'Interessato
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione per la gestione delle richieste degli interessati
+     * |
+     */
+>>>>>>> a074f99 (.)
     'data_subject_rights' => [
         'enabled' => true,
         'request_types' => [
@@ -205,6 +279,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -214,6 +289,16 @@ return [
     | Configurazione delle misure di sicurezza implementate
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Misure di Sicurezza
+     * |--------------------------------------------------------------------------
+     * |
+     * | Configurazione delle misure di sicurezza implementate
+     * |
+     */
+>>>>>>> a074f99 (.)
     'security_measures' => [
         'encryption' => [
             'enabled' => true,
@@ -235,6 +320,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     /*
     |--------------------------------------------------------------------------
@@ -244,6 +330,16 @@ return [
     | Informazioni di contatto del DPO
     |
     */
+=======
+    /*
+     * |--------------------------------------------------------------------------
+     * | Data Protection Officer
+     * |--------------------------------------------------------------------------
+     * |
+     * | Informazioni di contatto del DPO
+     * |
+     */
+>>>>>>> a074f99 (.)
     'dpo' => [
         'name' => env('GDPR_DPO_NAME', ''),
         'email' => env('GDPR_DPO_EMAIL', ''),
