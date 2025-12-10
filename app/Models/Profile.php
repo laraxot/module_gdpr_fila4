@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\User\Models\DeviceProfile;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Modules\User\Models\User;
-use Modules\Gdpr\Database\Factories\ProfileFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
