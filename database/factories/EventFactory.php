@@ -9,7 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Event;
 
 /**
+<<<<<<< HEAD
  * @extends Factory<Event>
+=======
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Gdpr\Models\Event>
+>>>>>>> 5a85228 (.)
  */
 class EventFactory extends Factory
 {
@@ -25,6 +29,11 @@ class EventFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+        ];
+>>>>>>> 5a85228 (.)
     }
 }
