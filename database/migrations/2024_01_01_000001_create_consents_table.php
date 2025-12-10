@@ -6,11 +6,15 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class() extends XotBaseMigration {
 =======
 return new class() extends XotBaseMigration
 {
 >>>>>>> 0c1819a (.)
+=======
+return new class() extends XotBaseMigration {
+>>>>>>> ceb9f4f (.)
     /**
      * Run the migrations.
      */
@@ -19,6 +23,9 @@ return new class() extends XotBaseMigration
         // -- CREATE --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->uuid('treatment_id');
@@ -39,6 +46,7 @@ return new class() extends XotBaseMigration
                 hasSoftDeletes: true,
             );
         });
+<<<<<<< HEAD
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
@@ -63,5 +71,7 @@ return new class() extends XotBaseMigration
             }
         );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
     }
 };
