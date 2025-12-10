@@ -5,7 +5,8 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class() extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
@@ -25,14 +26,14 @@ return new class() extends XotBaseMigration {
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-            if (!$this->hasColumn('user_id')) {
+            if (! $this->hasColumn('user_id')) {
                 $table->morphs('user');
             }
-            if (!$this->hasColumn('type')) {
+            if (! $this->hasColumn('type')) {
                 $table->string('type')->nullable();
             }
 
-            if (!$this->hasColumn('accepted_at')) {
+            if (! $this->hasColumn('accepted_at')) {
                 $table->timestamp('accepted_at')->nullable();
             }
             $this->updateTimestamps(
