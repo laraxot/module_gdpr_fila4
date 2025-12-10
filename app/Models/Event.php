@@ -56,6 +56,7 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
  *
+ * @mixin IdeHelperEvent
  * @mixin \Eloquent
  */
 class Event extends BaseModel
