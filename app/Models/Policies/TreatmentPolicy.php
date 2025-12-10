@@ -21,10 +21,14 @@ class TreatmentPolicy extends GdprBasePolicy
      * Determine whether the user can view the model.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function view(UserContract $user, Treatment $_treatment): bool
 =======
     public function view(UserContract $user, Treatment $treatment): bool
 >>>>>>> 0c1819a (.)
+=======
+    public function view(UserContract $user, Treatment $_treatment): bool
+>>>>>>> ceb9f4f (.)
     {
         return $user->hasPermissionTo('treatment.view');
     }
@@ -41,10 +45,14 @@ class TreatmentPolicy extends GdprBasePolicy
      * Determine whether the user can update the model.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function update(UserContract $user, Treatment $_treatment): bool
 =======
     public function update(UserContract $user, Treatment $treatment): bool
 >>>>>>> 0c1819a (.)
+=======
+    public function update(UserContract $user, Treatment $_treatment): bool
+>>>>>>> ceb9f4f (.)
     {
         return $user->hasPermissionTo('treatment.update');
     }
@@ -53,10 +61,14 @@ class TreatmentPolicy extends GdprBasePolicy
      * Determine whether the user can delete the model.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function delete(UserContract $user, Treatment $_treatment): bool
 =======
     public function delete(UserContract $user, Treatment $treatment): bool
 >>>>>>> 0c1819a (.)
+=======
+    public function delete(UserContract $user, Treatment $_treatment): bool
+>>>>>>> ceb9f4f (.)
     {
         return $user->hasPermissionTo('treatment.delete');
     }
@@ -65,10 +77,14 @@ class TreatmentPolicy extends GdprBasePolicy
      * Determine whether the user can restore the model.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function restore(UserContract $user, Treatment $_treatment): bool
 =======
     public function restore(UserContract $user, Treatment $treatment): bool
 >>>>>>> 0c1819a (.)
+=======
+    public function restore(UserContract $user, Treatment $_treatment): bool
+>>>>>>> ceb9f4f (.)
     {
         return $user->hasPermissionTo('treatment.restore');
     }
@@ -81,7 +97,11 @@ class TreatmentPolicy extends GdprBasePolicy
         return $user->hasPermissionTo('treatment.forceDelete');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 0c1819a (.)
+=======
+}
+>>>>>>> ceb9f4f (.)
