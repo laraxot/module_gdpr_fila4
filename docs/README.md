@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔐 **GDPR Module** - Sistema Completo Conformità GDPR
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -559,6 +560,7 @@ CREATE INDEX idx_consents_active ON consents (subject_id, revoked_at);
 - [Modulo Notify](../Notify/docs/README.md) - Sistema notifiche
 - [Documentazione Principale](../../../docs/README.md) - Documentazione generale
 
+=======
 # GDPR Module Documentation
 
 This document provides a comprehensive overview of the `Gdpr` module for Laraxot PTVX, which is designed to manage user consent and data processing treatments in compliance with GDPR regulations.
@@ -640,3 +642,4 @@ Gdpr::grantConsent('analytics', $user);
 - **Model Not Found**: Ensure all models (`Consent`, `Treatment`, `Event`) are correctly placed in the `laravel/Modules/Gdpr/app/Models/` directory and extend the module's `BaseModel`.
 - **Encryption Errors**: If you encounter errors related to `Crypt`, verify that your `APP_KEY` is correctly set in your `.env` file.
 - **Relationship Issues**: Double-check that foreign key constraints are correctly defined in your migrations and that relationships in the models are correctly specified.
+>>>>>>> 5562af7 (.)
