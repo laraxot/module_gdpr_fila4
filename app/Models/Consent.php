@@ -49,7 +49,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
  *
- * @mixin IdeHelperConsent
  * @mixin \Eloquent
  */
 /** */

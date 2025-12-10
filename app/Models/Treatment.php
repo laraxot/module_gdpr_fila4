@@ -49,9 +49,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
  *
- * @mixin IdeHelperTreatment
  * @mixin \Eloquent
  */
+/** */
 class Treatment extends BaseModel
 {
     use HasUuids;
