@@ -23,16 +23,10 @@ class ProfileFactory extends Factory
     /**
      * Define the model's default state.
      *
-<<<<<<< HEAD
      * @return array
      */
     public function definition()
     {
-=======
-     * @return array<string, mixed>
-     */
-    public function definition(): array {
->>>>>>> d6fdc5d (.)
         return [
             'id' => fake()->word,
             'user_id' => fake()->unique()->randomNumber(),
