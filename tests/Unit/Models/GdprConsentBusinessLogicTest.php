@@ -8,11 +8,7 @@ use Modules\User\Models\User;
 describe('GDPR Consent Business Logic', function () {
     it('records consent with required metadata', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 7f200e9 (.)
         $consent = GdprConsent::create([
             'user_id' => $user->id,
             'purpose' => 'marketing_emails',
@@ -25,7 +21,6 @@ describe('GDPR Consent Business Logic', function () {
 
         expect($consent)
             ->toBeInstanceOf(GdprConsent::class)
-<<<<<<< HEAD
             ->and($consent->user_id)
             ->toBe($user->id)
             ->and($consent->purpose)
@@ -34,12 +29,6 @@ describe('GDPR Consent Business Logic', function () {
             ->toBeTrue()
             ->and($consent->legal_basis)
             ->toBe('consent');
-=======
-            ->and($consent->user_id)->toBe($user->id)
-            ->and($consent->purpose)->toBe('marketing_emails')
-            ->and($consent->consent_given)->toBeTrue()
-            ->and($consent->legal_basis)->toBe('consent');
->>>>>>> 7f200e9 (.)
     });
 
     it('allows consent withdrawal', function () {
@@ -49,7 +38,6 @@ describe('GDPR Consent Business Logic', function () {
 
         $consent->withdraw();
 
-<<<<<<< HEAD
         expect($consent->fresh()->consent_given)->toBeFalse()->and($consent->fresh()->withdrawal_date)->not->toBeNull();
     });
 
@@ -63,24 +51,11 @@ describe('GDPR Consent Business Logic', function () {
             'legitimate_interests',
         ];
 
-=======
-        expect($consent->fresh()->consent_given)->toBeFalse()
-            ->and($consent->fresh()->withdrawal_date)->not->toBeNull();
-    });
-
-    it('validates legal basis for processing', function () {
-        $validBases = ['consent', 'contract', 'legal_obligation', 'vital_interests', 'public_task', 'legitimate_interests'];
-        
->>>>>>> 7f200e9 (.)
         foreach ($validBases as $basis) {
             $consent = GdprConsent::factory()->create([
                 'legal_basis' => $basis,
             ]);
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 7f200e9 (.)
             expect($consent->legal_basis)->toBe($basis);
         }
     });
@@ -100,11 +75,7 @@ describe('GDPR Consent Business Logic', function () {
 
     it('tracks consent history', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 7f200e9 (.)
         // Initial consent
         $consent1 = GdprConsent::create([
             'user_id' => $user->id,
@@ -130,7 +101,6 @@ describe('GDPR Consent Business Logic', function () {
         ]);
 
         $history = GdprConsent::getConsentHistory($user->id, 'analytics');
-<<<<<<< HEAD
 
         expect($history)
             ->toHaveCount(3)
@@ -138,12 +108,6 @@ describe('GDPR Consent Business Logic', function () {
             ->toBeTrue()
             ->and($history->get(1)->consent_given)
             ->toBeFalse();
-=======
-        
-        expect($history)->toHaveCount(3)
-            ->and($history->first()->consent_given)->toBeTrue()
-            ->and($history->get(1)->consent_given)->toBeFalse();
->>>>>>> 7f200e9 (.)
     });
 
     it('validates consent expiration', function () {
@@ -157,11 +121,6 @@ describe('GDPR Consent Business Logic', function () {
             'expires_at' => now()->addYear(),
         ]);
 
-<<<<<<< HEAD
         expect($expiredConsent->isExpired())->toBeTrue()->and($validConsent->isExpired())->toBeFalse();
-=======
-        expect($expiredConsent->isExpired())->toBeTrue()
-            ->and($validConsent->isExpired())->toBeFalse();
->>>>>>> 7f200e9 (.)
     });
 });
