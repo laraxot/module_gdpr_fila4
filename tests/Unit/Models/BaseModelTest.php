@@ -10,11 +10,7 @@ use Tests\TestCase;
 
 
 beforeEach(function () {
-<<<<<<< HEAD
     $this->baseModel = new class() extends BaseModel
-=======
-    $this->baseModel = new class extends BaseModel
->>>>>>> 58b8df4 (.)
     {
         protected $table = 'test_gdpr_table';
     };

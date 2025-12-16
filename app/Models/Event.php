@@ -54,11 +54,7 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereTreatmentId($value)
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
-<<<<<<< HEAD
- * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
-=======
- *
->>>>>>> ee89572 (.)
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @mixin \Eloquent
  */
 class Event extends BaseModel
