@@ -1,12 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+>>>>>>> c0561a4 (.)
 declare(strict_types=1);
 
 return [
@@ -49,6 +52,7 @@ return [
         'data_deleted' => 'Dati Eliminati',
     ],
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,3 +109,5 @@ return array (
 =======
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+>>>>>>> c0561a4 (.)

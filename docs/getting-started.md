@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
@@ -103,3 +104,8 @@ npm run dev
 This module handles GDPR compliance and data protection features.
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+# GDPR Module - Getting Started
+
+This module handles GDPR compliance and data protection features.
+>>>>>>> c0561a4 (.)

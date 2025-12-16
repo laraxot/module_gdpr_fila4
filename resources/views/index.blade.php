@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+>>>>>>> c0561a4 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -18,6 +22,8 @@ declare(strict_types=1);
 =======
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+>>>>>>> c0561a4 (.)
 @extends('gdpr::layouts.master')
 
 @section('content')

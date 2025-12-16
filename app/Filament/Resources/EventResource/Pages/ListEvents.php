@@ -32,6 +32,7 @@ class ListEvents extends XotBaseListRecords
                 ->sortable()
                 ->searchable(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'ip' => TextColumn::make('ip')->searchable(),
             'action' => TextColumn::make('action')->searchable(),
 =======
@@ -50,6 +51,10 @@ class ListEvents extends XotBaseListRecords
             'action' => TextColumn::make('action')->searchable(),
 >>>>>>> ceb9f4f (.)
 >>>>>>> 6cb3da7 (.)
+=======
+            'ip' => TextColumn::make('ip')->searchable(),
+            'action' => TextColumn::make('action')->searchable(),
+>>>>>>> c0561a4 (.)
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
