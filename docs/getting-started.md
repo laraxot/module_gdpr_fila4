@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fdd1830 (.)
 # GDPR Module - Getting Started
@@ -122,3 +123,5 @@ This module handles GDPR compliance and data protection features.
 =======
 >>>>>>> 5562af7 (.)
 >>>>>>> fdd1830 (.)
+=======
+>>>>>>> d354cd9 (.)
