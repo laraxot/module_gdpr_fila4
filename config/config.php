@@ -12,14 +12,6 @@ return [
         'sort' => 20,
     ],
     /*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> 5562af7 (.)
      * |--------------------------------------------------------------------------
      * | Impostazioni Generali GDPR
      * |--------------------------------------------------------------------------
@@ -27,10 +19,6 @@ return [
      * | Configurazioni base per la gestione della privacy e protezione dati
      * |
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     'enabled' => env('GDPR_ENABLED', true),
     /*
      * |--------------------------------------------------------------------------
@@ -40,50 +28,6 @@ return [
      * | Configurazione per la gestione dei cookie e banner informativi
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-    |--------------------------------------------------------------------------
-    | Impostazioni Generali GDPR
-    |--------------------------------------------------------------------------
-    |
-    | Configurazioni base per la gestione della privacy e protezione dati
-    |
-    */
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
-    'enabled' => env('GDPR_ENABLED', true),
-    /*
-<<<<<<< HEAD
-=======
-    'enabled' => env('GDPR_ENABLED', true),
-
-    /*
->>>>>>> origin/develop
-    |--------------------------------------------------------------------------
-    | Cookie Policy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per la gestione dei cookie e banner informativi
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-     * |--------------------------------------------------------------------------
-     * | Cookie Policy
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione per la gestione dei cookie e banner informativi
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'cookie' => [
         'consent_lifetime' => env('GDPR_COOKIE_LIFETIME', 365), // giorni
         'categories' => [
@@ -104,12 +48,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Retention Policy
@@ -118,35 +56,6 @@ return [
      * | Configurazione dei periodi di conservazione dei dati
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Retention Policy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei periodi di conservazione dei dati
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Retention Policy
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione dei periodi di conservazione dei dati
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'retention' => [
         'user_data' => [
             'personal' => 365 * 5, // 5 anni
@@ -159,12 +68,6 @@ return [
             'quotes' => 365 * 2, // 2 anni
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Registro dei Trattamenti
@@ -173,35 +76,6 @@ return [
      * | Configurazione per il registro delle attività di trattamento
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Registro dei Trattamenti
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per il registro delle attività di trattamento
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Registro dei Trattamenti
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione per il registro delle attività di trattamento
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'processing_register' => [
         'enabled' => true,
         'categories' => [
@@ -227,12 +101,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Consensi Specifici Settore Assicurativo
@@ -241,35 +109,6 @@ return [
      * | Configurazione dei consensi specifici richiesti nel settore assicurativo
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Consensi Specifici Settore Assicurativo
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei consensi specifici richiesti nel settore assicurativo
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Consensi Specifici Settore Assicurativo
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione dei consensi specifici richiesti nel settore assicurativo
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'insurance_consents' => [
         'health_data' => [
             'code' => 'con1',
@@ -307,12 +146,6 @@ return [
             'required' => false,
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Documenti Privacy
@@ -321,35 +154,6 @@ return [
      * | Configurazione dei documenti privacy richiesti
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Documenti Privacy
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione dei documenti privacy richiesti
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Documenti Privacy
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione dei documenti privacy richiesti
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'privacy_documents' => [
         'generali' => [
             'name' => 'Informativa Privacy Generali',
@@ -362,12 +166,6 @@ return [
             'required' => true,
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Diritti dell'Interessato
@@ -376,35 +174,6 @@ return [
      * | Configurazione per la gestione delle richieste degli interessati
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Diritti dell'Interessato
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione per la gestione delle richieste degli interessati
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Diritti dell'Interessato
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione per la gestione delle richieste degli interessati
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'data_subject_rights' => [
         'enabled' => true,
         'request_types' => [
@@ -430,12 +199,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Misure di Sicurezza
@@ -444,35 +207,6 @@ return [
      * | Configurazione delle misure di sicurezza implementate
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Misure di Sicurezza
-    |--------------------------------------------------------------------------
-    |
-    | Configurazione delle misure di sicurezza implementate
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Misure di Sicurezza
-     * |--------------------------------------------------------------------------
-     * |
-     * | Configurazione delle misure di sicurezza implementate
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'security_measures' => [
         'encryption' => [
             'enabled' => true,
@@ -494,12 +228,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
     /*
      * |--------------------------------------------------------------------------
      * | Data Protection Officer
@@ -508,35 +236,6 @@ return [
      * | Informazioni di contatto del DPO
      * |
      */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-
-    /*
-    |--------------------------------------------------------------------------
-    | Data Protection Officer
-    |--------------------------------------------------------------------------
-    |
-    | Informazioni di contatto del DPO
-    |
-    */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    /*
-     * |--------------------------------------------------------------------------
-     * | Data Protection Officer
-     * |--------------------------------------------------------------------------
-     * |
-     * | Informazioni di contatto del DPO
-     * |
-     */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
     'dpo' => [
         'name' => env('GDPR_DPO_NAME', ''),
         'email' => env('GDPR_DPO_EMAIL', ''),
