@@ -4,23 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources;
 
-use Override;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
-use Modules\Gdpr\Filament\Resources\EventResource\Pages\ListEvents;
+use Filament\Forms\Components\TextInput;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\CreateEvent;
 use Modules\Gdpr\Filament\Resources\EventResource\Pages\EditEvent;
-use Filament\Forms;
-use Modules\Gdpr\Filament\Resources\EventResource\Pages;
+use Modules\Gdpr\Filament\Resources\EventResource\Pages\ListEvents;
 use Modules\Gdpr\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class EventResource extends XotBaseResource
 {
-    protected static null|string $model = Event::class;
+    protected static ?string $model = Event::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     #[Override]
     public static function getFormSchema(): array
