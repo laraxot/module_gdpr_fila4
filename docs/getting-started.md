@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
@@ -109,3 +110,5 @@ This module handles GDPR compliance and data protection features.
 
 This module handles GDPR compliance and data protection features.
 >>>>>>> c0561a4 (.)
+=======
+>>>>>>> a4541bf (.)
