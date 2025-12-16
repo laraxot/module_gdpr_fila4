@@ -11,40 +11,12 @@ return [
         [
             // A logical name for your treatment.
             'name' => 'gdpr.privacy',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
             // You can specify which document
             // describes the treatment type
             // with a document version and url.
             // This part is optional.
             'documentVersion' => '1.0',
             'documentUrl' => env('PRIVACY_POLICY'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
             // Whether this treatment is active or not.
             // The reason why this flag is here is to
             // allow for progressive modifications, so you
@@ -54,44 +26,11 @@ return [
             // process is to deactivate the current one
             // then add a new record.
             'active' => true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5562af7 (.)
             // Set if this treatment is mandatory or optional.
             'required' => true,
             // A description text to be shown near a checkbox
             // or anywhere in your UI.
             'description' => 'gdpr.privacy.text',
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> b93ef594b4 (.)
-            // Set if this treatment is mandatory or optional.
-            'required' => true,
-            // A description text to be shown near a checkbox
-            // or anywhere in your UI.
-            'description' => 'gdpr.privacy.text',
-<<<<<<< HEAD
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
-            // Set if this treatment is mandatory or optional.
-            'required' => true,
-
-            // A description text to be shown near a checkbox
-            // or anywhere in your UI.
-            'description' => 'gdpr.privacy.text',
-
->>>>>>> origin/develop
->>>>>>> 5562af7 (.)
             // UI weight, use this to choose what should be
             // listed first.
             'weight' => 0,
