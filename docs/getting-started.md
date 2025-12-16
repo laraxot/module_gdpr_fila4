@@ -1,16 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fdd1830 (.)
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # GDPR Module - Getting Started
 
 This module handles GDPR compliance and data protection features.
 =======
+=======
+>>>>>>> fdd1830 (.)
 ---
 title: Getting Started
 description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
@@ -98,6 +104,7 @@ npm run dev
 * [getting-started.md](laravel/Modules/Tenant/docs/it/getting-started.md)
 * [getting-started.md](laravel/Modules/Cms/docs/getting-started.md)
 
+<<<<<<< HEAD
 >>>>>>> 0c1819a (.)
 =======
 # GDPR Module - Getting Started
@@ -112,3 +119,6 @@ This module handles GDPR compliance and data protection features.
 >>>>>>> c0561a4 (.)
 =======
 >>>>>>> a4541bf (.)
+=======
+>>>>>>> 5562af7 (.)
+>>>>>>> fdd1830 (.)
