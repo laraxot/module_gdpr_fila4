@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,11 +19,14 @@
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 5562af7 (.)
 >>>>>>> fdd1830 (.)
+=======
+>>>>>>> adb2503 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +51,8 @@ declare(strict_types=1);
 >>>>>>> 6cb3da7 (.)
 =======
 >>>>>>> c0561a4 (.)
+=======
+>>>>>>> adb2503 (.)
 <x-filament::page>
 
 </x-filament::page>

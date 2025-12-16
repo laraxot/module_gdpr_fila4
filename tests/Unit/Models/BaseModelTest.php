@@ -6,6 +6,10 @@ namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
+<<<<<<< HEAD
+=======
+use Tests\TestCase;
+>>>>>>> adb2503 (.)
 
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel

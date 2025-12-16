@@ -16,6 +16,7 @@ class ListTreatments extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             // Tables\Columns\TextColumn::make('id')
             //     ->searchable(),
             IconColumn::make('active')->boolean(),
@@ -32,6 +33,14 @@ class ListTreatments extends XotBaseListRecords
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+=======
+            'id' => TextColumn::make('id')->numeric()->sortable(),
+            'name' => TextColumn::make('name')->searchable()->sortable(),
+            'description' => TextColumn::make('description')->searchable()->sortable(),
+            'is_active' => IconColumn::make('is_active')->boolean(),
+            'data_creazione' => TextColumn::make('data_creazione')->dateTime()->sortable(),
+            'data_ultima_modifica' => TextColumn::make('data_ultima_modifica')->dateTime()->sortable(),
+>>>>>>> adb2503 (.)
         ];
     }
 }
