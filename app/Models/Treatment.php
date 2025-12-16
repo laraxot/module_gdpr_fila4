@@ -47,7 +47,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedAt($value)
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
+<<<<<<< HEAD
  * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
+=======
+ *
+>>>>>>> ee89572 (.)
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel
