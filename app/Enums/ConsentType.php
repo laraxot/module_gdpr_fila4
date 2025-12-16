@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
@@ -15,7 +18,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
-enum ConsentType: string implements HasColor, HasIcon, HasLabel
+enum ConsentType: string implements HasLabel, HasIcon, HasColor
 {
     use TransTrait;
 
@@ -45,26 +48,28 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class, $this->value.'.label');
+        return $this->transClass(self::class, $this->value . '.label');
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class, $this->value.'.color');
+        return $this->transClass(self::class, $this->value . '.color');
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class, $this->value.'.icon');
+        return $this->transClass(self::class, $this->value . '.icon');
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class, $this->value.'.description');
+        return $this->transClass(self::class, $this->value . '.description');
     }
 
     /**
      * Check if this consent type is required for using the service.
+     *
+     * @return bool
      */
     public function isRequired(): bool
     {
@@ -82,9 +87,9 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
      */
     public static function getRequiredConsentTypes(): array
     {
-        return array_map(fn (self $type) => $type->value, array_filter(
+        return array_map(fn(self $type) => $type->value, array_filter(
             self::cases(),
-            fn (self $type) => $type->isRequired(),
+            fn(self $type) => $type->isRequired(),
         ));
     }
 
@@ -96,8 +101,8 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
     public static function getOptionalConsentTypes(): array
     {
         return array_map(
-            fn (self $type) => $type->value,
-            array_filter(self::cases(), fn (self $type) => ! $type->isRequired()),
+            fn(self $type) => $type->value,
+            array_filter(self::cases(), fn(self $type) => !$type->isRequired()),
         );
     }
 

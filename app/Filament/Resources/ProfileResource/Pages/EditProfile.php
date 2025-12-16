@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ProfileResource\Pages;
 
-use Modules\Gdpr\Filament\Resources\ProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
+use Modules\Gdpr\Filament\Resources\ProfileResource;
 
 class EditProfile extends XotBaseEditRecord
 {

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources\EventResource\Pages;
 
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables;
 use Modules\Gdpr\Filament\Resources\EventResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
