@@ -20,7 +20,23 @@ class ProfilePolicy extends GdprBasePolicy
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
     public function view(UserContract $user, Profile $_profile): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function view(UserContract $user, Profile $_profile): bool
+=======
+    public function view(UserContract $user, Profile $profile): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function view(UserContract $user, Profile $_profile): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function view(UserContract $user, Profile $profile): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('profile.view');
     }
@@ -36,7 +52,23 @@ class ProfilePolicy extends GdprBasePolicy
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
     public function update(UserContract $user, Profile $_profile): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function update(UserContract $user, Profile $_profile): bool
+=======
+    public function update(UserContract $user, Profile $profile): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function update(UserContract $user, Profile $_profile): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function update(UserContract $user, Profile $profile): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('profile.update');
     }
@@ -44,7 +76,23 @@ class ProfilePolicy extends GdprBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
     public function delete(UserContract $user, Profile $_profile): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function delete(UserContract $user, Profile $_profile): bool
+=======
+    public function delete(UserContract $user, Profile $profile): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function delete(UserContract $user, Profile $_profile): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function delete(UserContract $user, Profile $profile): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('profile.delete');
     }
@@ -52,7 +100,23 @@ class ProfilePolicy extends GdprBasePolicy
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
     public function restore(UserContract $user, Profile $_profile): bool
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function restore(UserContract $user, Profile $_profile): bool
+=======
+    public function restore(UserContract $user, Profile $profile): bool
+>>>>>>> a12f125f4a (.)
+=======
+    public function restore(UserContract $user, Profile $_profile): bool
+>>>>>>> b93ef594b4 (.)
+=======
+    public function restore(UserContract $user, Profile $profile): bool
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
     {
         return $user->hasPermissionTo('profile.restore');
     }
@@ -64,4 +128,20 @@ class ProfilePolicy extends GdprBasePolicy
     {
         return $user->hasPermissionTo('profile.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> a12f125f4a (.)
+=======
+}
+>>>>>>> b93ef594b4 (.)
+=======
+}
+>>>>>>> origin/develop
+>>>>>>> 5562af7 (.)
