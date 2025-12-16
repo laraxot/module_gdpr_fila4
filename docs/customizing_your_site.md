@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ef13ad6 (.)
 ---
 title: Customizing Your Site
 description: Customizing your Jigsaw docs site
@@ -91,7 +86,3 @@ class Foo extends bar
 * [customizing-your-site.md](laravel/Modules/Tenant/docs/it/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Cms/docs/customizing-your-site.md)
 
-<<<<<<< HEAD
->>>>>>> f13dd89 (.)
-=======
->>>>>>> ef13ad6 (.)
