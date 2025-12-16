@@ -25,6 +25,7 @@ error_log
 build/
 
 # Laravel specific
+<<<<<<< HEAD
 # ==============================================
 # LARAXOT MODULE GDPR - .GITIGNORE
 # ==============================================
@@ -61,6 +62,8 @@ error_log
 build/
 
 # Laravel specific
+=======
+>>>>>>> ef13ad6 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -147,6 +150,7 @@ database_old
 
 # Other
 -e
+<<<<<<< HEAD
 .env.*
 !.env.example
 
@@ -227,9 +231,14 @@ database_old
 
 # Other
 -e
+=======
+>>>>>>> ef13ad6 (.)
 
 # 🚫 File specifici del progetto
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 public_html
+=======
+>>>>>>> ef13ad6 (.)
