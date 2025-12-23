@@ -125,12 +125,20 @@ trait HasGdpr
     /**
      * Get all required consents that the user hasn't given yet.
      *
+<<<<<<< HEAD
      * @return array<string, string>
+=======
+     * @return array<string>
+>>>>>>> laraxot/develop
      */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
+<<<<<<< HEAD
+=======
+        /** @var array<string> */
+>>>>>>> laraxot/develop
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 

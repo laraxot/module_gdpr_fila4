@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\Pivot;
 // //use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
+=======
+use Modules\Xot\Models\XotBasePivot;
+>>>>>>> laraxot/develop
 
 /**
  * Class BasePivot.
  */
+<<<<<<< HEAD
 abstract class BasePivot extends Pivot
 {
     use Updater;
@@ -57,4 +62,9 @@ abstract class BasePivot extends Pivot
             'deleted_by' => 'string',
         ];
     }
+=======
+abstract class BasePivot extends XotBasePivot
+{
+    protected $connection = 'gdpr';
+>>>>>>> laraxot/develop
 }

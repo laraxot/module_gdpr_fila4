@@ -4,12 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Gdpr\Database\Factories\ConsentFactory;
+=======
+>>>>>>> laraxot/develop
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+<<<<<<< HEAD
+=======
+use Modules\Gdpr\Database\Factories\ConsentFactory;
+use Modules\Xot\Contracts\ProfileContract;
+>>>>>>> laraxot/develop
 
 /**
  * Modules\Gdpr\Models\Consent.
@@ -49,6 +57,11 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
  *
+<<<<<<< HEAD
+=======
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
+>>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Consent extends BaseModel

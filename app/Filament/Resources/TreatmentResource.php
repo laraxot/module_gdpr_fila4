@@ -7,8 +7,11 @@ namespace Modules\Gdpr\Filament\Resources;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+<<<<<<< HEAD
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+=======
+>>>>>>> laraxot/develop
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\CreateTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\EditTreatment;
 use Modules\Gdpr\Filament\Resources\TreatmentResource\Pages\ListTreatments;
@@ -20,7 +23,11 @@ class TreatmentResource extends XotBaseResource
 {
     protected static ?string $model = Treatment::class;
 
+<<<<<<< HEAD
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+=======
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+>>>>>>> laraxot/develop
 
     #[Override]
     public static function getFormSchema(): array
@@ -36,6 +43,7 @@ class TreatmentResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     public function getTableColumns(): array
     {
         return [
@@ -59,6 +67,8 @@ class TreatmentResource extends XotBaseResource
         ];
     }
 
+=======
+>>>>>>> laraxot/develop
     #[Override]
     public static function getPages(): array
     {

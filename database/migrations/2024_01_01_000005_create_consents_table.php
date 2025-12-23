@@ -15,6 +15,7 @@ return new class extends XotBaseMigration
         // -- CREATE --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->uuid('treatment_id');
@@ -52,6 +53,11 @@ return new class extends XotBaseMigration
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
+=======
+        $this->tableCreate(
+            function ($table): void {
+                /** @var \Illuminate\Database\Schema\Blueprint $table */
+>>>>>>> laraxot/develop
                 $table->uuid('id')->primary();
                 $table->uuid('treatment_id');
                 // $table->foreignId('treatment_id')->nullable()->index();
@@ -72,20 +78,35 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('type')) {
                     $table->string('type')->nullable();
                 }
+<<<<<<< HEAD
                 
                 if (! $this->hasColumn('accepted_at')) {
                     $table->timestamp('accepted_at')->nullable();
                 }
                  // -- Change --
+=======
+
+                if (! $this->hasColumn('accepted_at')) {
+                    $table->timestamp('accepted_at')->nullable();
+                }
+                // -- Change --
+>>>>>>> laraxot/develop
                 if ($this->hasColumn('user_id')) {
                     $table->string('user_id')->nullable()->change();
                 }
                 $table->uuid('treatment_id')->nullable()->change();
                 $table->string('subject_id')->nullable()->change();
+<<<<<<< HEAD
                 
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );
 >>>>>>> 5a85228 (.)
+=======
+
+                $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+            }
+        );
+>>>>>>> laraxot/develop
     }
 };

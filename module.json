@@ -1,8 +1,13 @@
 {
     "name": "Gdpr",
     "alias": "gdpr",
+<<<<<<< HEAD
     "description": "",
     "keywords": [],
+=======
+    "description": "Conformità GDPR completa con gestione consensi, privacy policy e diritti utente",
+    "keywords": ["gdpr", "privacy", "compliance", "consent", "data-protection"],
+>>>>>>> laraxot/develop
     "priority": 0,
     "providers": [
         "Modules\\Gdpr\\Providers\\GdprServiceProvider",

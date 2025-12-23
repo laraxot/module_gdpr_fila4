@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
 use Modules\Xot\Traits\Updater;
+=======
+use Modules\Xot\Models\XotBaseMorphPivot;
+>>>>>>> laraxot/develop
 
 /**
  * Class BaseMorphPivot.
  */
+<<<<<<< HEAD
 abstract class BaseMorphPivot extends MorphPivot
 {
     use HasXotFactory;
@@ -76,4 +81,9 @@ abstract class BaseMorphPivot extends MorphPivot
             'deleted_by' => 'string',
         ];
     }
+=======
+abstract class BaseMorphPivot extends XotBaseMorphPivot
+{
+    protected $connection = 'gdpr';
+>>>>>>> laraxot/develop
 }
