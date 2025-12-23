@@ -8,19 +8,11 @@ use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
-<<<<<<< HEAD
-=======
     public string $name = 'Gdpr';
 
->>>>>>> laraxot/develop
     protected string $moduleNamespace = 'Modules\Gdpr\Http\Controllers';
 
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
-<<<<<<< HEAD
-
-    public string $name = 'Gdpr';
-=======
->>>>>>> laraxot/develop
 }
