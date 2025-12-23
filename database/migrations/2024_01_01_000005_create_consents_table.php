@@ -13,15 +13,10 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
-            $table->uuid('treatment_id');
             // $table->foreignId('treatment_id')->nullable()->index();
             $table->string('subject_id');
-
             // $table->unique(['subject_id', 'treatment_id']);
             // $table->foreign('treatment_id')->references('id')->on('gdpr_treatment');
         });
@@ -31,6 +26,7 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('user_id')) {
                 $table->morphs('user');
             }
+
             if (! $this->hasColumn('type')) {
                 $table->string('type')->nullable();
             }
@@ -38,6 +34,7 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('accepted_at')) {
                 $table->timestamp('accepted_at')->nullable();
             }
+
             // -- Change --
             if ($this->hasColumn('user_id')) {
                 $table->string('user_id')->nullable()->change();
@@ -50,63 +47,5 @@ return new class extends XotBaseMigration
                 hasSoftDeletes: true,
             );
         });
-=======
-        $this->tableCreate(
-            function (Blueprint $table): void {
-=======
-        $this->tableCreate(
-            function ($table): void {
-                /** @var \Illuminate\Database\Schema\Blueprint $table */
->>>>>>> laraxot/develop
-                $table->uuid('id')->primary();
-                $table->uuid('treatment_id');
-                // $table->foreignId('treatment_id')->nullable()->index();
-                $table->string('subject_id');
-
-                // $table->unique(['subject_id', 'treatment_id']);
-
-                // $table->foreign('treatment_id')->references('id')->on('gdpr_treatment');
-            }
-        );
-
-        // -- UPDATE --
-        $this->tableUpdate(
-            function (Blueprint $table): void {
-                if (! $this->hasColumn('user_id')) {
-                    $table->morphs('user');
-                }
-                if (! $this->hasColumn('type')) {
-                    $table->string('type')->nullable();
-                }
-<<<<<<< HEAD
-                
-                if (! $this->hasColumn('accepted_at')) {
-                    $table->timestamp('accepted_at')->nullable();
-                }
-                 // -- Change --
-=======
-
-                if (! $this->hasColumn('accepted_at')) {
-                    $table->timestamp('accepted_at')->nullable();
-                }
-                // -- Change --
->>>>>>> laraxot/develop
-                if ($this->hasColumn('user_id')) {
-                    $table->string('user_id')->nullable()->change();
-                }
-                $table->uuid('treatment_id')->nullable()->change();
-                $table->string('subject_id')->nullable()->change();
-<<<<<<< HEAD
-                
-                $this->updateTimestamps(table: $table, hasSoftDeletes: true);
-            }
-        );
->>>>>>> 5a85228 (.)
-=======
-
-                $this->updateTimestamps(table: $table, hasSoftDeletes: true);
-            }
-        );
->>>>>>> laraxot/develop
     }
 };

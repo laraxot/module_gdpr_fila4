@@ -10,27 +10,22 @@ use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\EditP
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\ListProfiles;
 use Modules\Gdpr\Models\Profile;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class ProfileResource extends XotBaseResource
 {
     protected static ?string $model = Profile::class;
 
-<<<<<<< HEAD
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-=======
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
->>>>>>> laraxot/develop
 
     protected static ?string $cluster = ProfileCluster::class;
 
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [];
     }
 
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         return [

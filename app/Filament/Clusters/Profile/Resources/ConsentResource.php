@@ -10,33 +10,28 @@ use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\EditC
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ConsentResource\Pages\ListConsents;
 use Modules\Gdpr\Models\Consent;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
-<<<<<<< HEAD
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-=======
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
->>>>>>> laraxot/develop
 
     protected static ?string $cluster = ProfileCluster::class;
 
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [];
     }
 
-    #[Override]
+    #[\Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         return [

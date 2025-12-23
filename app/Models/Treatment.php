@@ -4,19 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-<<<<<<< HEAD
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Gdpr\Database\Factories\TreatmentFactory;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use Illuminate\Support\Carbon;
-=======
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Carbon;
 use Modules\Gdpr\Database\Factories\TreatmentFactory;
 use Modules\Xot\Contracts\ProfileContract;
->>>>>>> laraxot/develop
 
 /**
  * Modules\Gdpr\Models\Treatment.
@@ -57,11 +49,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
  *
-<<<<<<< HEAD
-=======
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
->>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel

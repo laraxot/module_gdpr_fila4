@@ -8,21 +8,13 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
-<<<<<<< HEAD
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Gdpr\Database\Factories\EventFactory;
-=======
->>>>>>> laraxot/develop
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
-<<<<<<< HEAD
-=======
 use Modules\Gdpr\Database\Factories\EventFactory;
 use Modules\Xot\Contracts\ProfileContract;
->>>>>>> laraxot/develop
 
 use function Safe\json_encode;
 
@@ -64,11 +56,8 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
  *
-<<<<<<< HEAD
-=======
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
->>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -91,20 +80,12 @@ class Event extends BaseModel
         return $this->belongsTo(Consent::class);
     }
 
-<<<<<<< HEAD
-    public function setPayloadAttribute(null|string $value): void
-=======
     public function setPayloadAttribute(?string $value): void
->>>>>>> laraxot/develop
     {
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
-<<<<<<< HEAD
-    public function setIpAttribute(null|string $value): void
-=======
     public function setIpAttribute(?string $value): void
->>>>>>> laraxot/develop
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
     }

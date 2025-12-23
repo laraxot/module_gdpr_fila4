@@ -18,11 +18,7 @@ class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
-<<<<<<< HEAD
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-=======
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
->>>>>>> laraxot/develop
 
     #[Override]
     public static function getFormSchema(): array
