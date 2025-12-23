@@ -13,12 +13,6 @@ class ListConsents extends XotBaseListRecords
 {
     protected static string $resource = ConsentResource::class;
 
-<<<<<<< HEAD
-    /**
-     * @return array<string, mixed>
-     */
-=======
->>>>>>> laraxot/develop
     public function getTableColumns(): array
     {
         return [

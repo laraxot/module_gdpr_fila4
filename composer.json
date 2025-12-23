@@ -26,14 +26,11 @@
             "Modules\\Gdpr\\Database\\Seeders\\": "database/seeders/"
         }
     },
-<<<<<<< HEAD
-=======
     "autoload-dev": {
         "psr-4": {
             "Modules\\Gdpr\\Tests\\": "tests/"
         }
     },
->>>>>>> laraxot/develop
     "require": {
         "statikbe/laravel-cookie-consent": "*"
     },

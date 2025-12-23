@@ -47,19 +47,11 @@ trait HasGdpr
      *
      * @return HasManyThrough<Treatment, Consent, $this>
      */
-<<<<<<< HEAD
-    public function treatments()
-    {
-        return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')->where(
-            'consents.user_type',
-            get_class($this),
-=======
     public function treatments(): HasManyThrough
     {
         return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')->where(
             'consents.user_type',
             static::class,
->>>>>>> laraxot/develop
         ); // Foreign key on consents table // Foreign key on treatments table // Local key on users table // Local key on consents table
     }
 
@@ -70,13 +62,8 @@ trait HasGdpr
      */
     public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
     {
-<<<<<<< HEAD
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
-        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
-=======
         $type = $type instanceof ConsentType ? $type->value : $type;
         $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
->>>>>>> laraxot/develop
 
         if ($cached && Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
@@ -96,11 +83,7 @@ trait HasGdpr
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
-<<<<<<< HEAD
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
-=======
         $type = $type instanceof ConsentType ? $type->value : $type;
->>>>>>> laraxot/develop
 
         /** @var Consent $consent */
         $consent = $this->consents()->create([
@@ -121,11 +104,7 @@ trait HasGdpr
      */
     public function revokeConsent(ConsentType|string $type): bool
     {
-<<<<<<< HEAD
-        $type = ($type instanceof ConsentType) ? $type->value : $type;
-=======
         $type = $type instanceof ConsentType ? $type->value : $type;
->>>>>>> laraxot/develop
 
         $updated = $this->activeConsents()
             ->where('type', $type)
@@ -144,33 +123,15 @@ trait HasGdpr
     }
 
     /**
-<<<<<<< HEAD
-     * Clear cached consent status.
-     */
-    protected function clearConsentCache(string $type): void
-    {
-        $cacheKey = 'user_'.((string) $this->getKey()).'_consent_'.$type;
-        Cache::forget($cacheKey);
-    }
-
-    /**
-     * Get all required consents that the user hasn't given yet.
-     *
-     * @return array<string, string>
-=======
      * Get all required consents that the user hasn't given yet.
      *
      * @return array<string>
->>>>>>> laraxot/develop
      */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-<<<<<<< HEAD
-=======
         /** @var array<string> */
->>>>>>> laraxot/develop
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 
@@ -181,8 +142,6 @@ trait HasGdpr
     {
         return empty($this->getMissingRequiredConsents());
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Clear cached consent status.
@@ -192,5 +151,4 @@ trait HasGdpr
         $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
         Cache::forget($cacheKey);
     }
->>>>>>> laraxot/develop
 }

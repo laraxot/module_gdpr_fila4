@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Providers\Filament;
 
 use Filament\Panel;
 use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 use Override;

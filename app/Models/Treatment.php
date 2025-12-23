@@ -26,98 +26,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
-<<<<<<< HEAD
- *
- * @method static TreatmentFactory factory($count = null, $state = [])
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- *
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- *
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereWeight($value)
- * @method static Builder|Treatment whereCreatedBy($value)
- * @method static Builder|Treatment whereDeletedAt($value)
- * @method static Builder|Treatment whereDeletedBy($value)
- * @method static Builder|Treatment whereUpdatedBy($value)
- *
- * @property string|null $deleted_by
- *
- * @method static TreatmentFactory factory($count = null, $state = [])
- * @method static Builder|Treatment newModelQuery()
- * @method static Builder|Treatment newQuery()
- * @method static Builder|Treatment query()
- * @method static Builder|Treatment whereActive($value)
- * @method static Builder|Treatment whereCreatedAt($value)
- * @method static Builder|Treatment whereCreatedBy($value)
- * @method static Builder|Treatment whereDeletedAt($value)
- * @method static Builder|Treatment whereDeletedBy($value)
- * @method static Builder|Treatment whereDescription($value)
- * @method static Builder|Treatment whereDocumentUrl($value)
- * @method static Builder|Treatment whereDocumentVersion($value)
- * @method static Builder|Treatment whereId($value)
- * @method static Builder|Treatment whereName($value)
- * @method static Builder|Treatment whereRequired($value)
- * @method static Builder|Treatment whereUpdatedAt($value)
- * @method static Builder|Treatment whereUpdatedBy($value)
- * @method static Builder|Treatment whereWeight($value)
- *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
- *
- * @mixin IdeHelperTreatment
-=======
  * @property string|null $deleted_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
@@ -143,7 +51,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
->>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel

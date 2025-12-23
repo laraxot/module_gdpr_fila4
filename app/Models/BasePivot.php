@@ -7,25 +7,9 @@ namespace Modules\Gdpr\Models;
 use Modules\Xot\Models\XotBasePivot;
 
 /**
-<<<<<<< HEAD
- * Base Pivot for Gdpr module.
- *
- * Extends XotBasePivot which provides all standard properties and casts.
- *
- * @see \Modules\Xot\Models\XotBasePivot
- */
-abstract class BasePivot extends XotBasePivot
-{
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
-=======
  * Class BasePivot.
  */
 abstract class BasePivot extends XotBasePivot
 {
->>>>>>> laraxot/develop
     protected $connection = 'gdpr';
 }

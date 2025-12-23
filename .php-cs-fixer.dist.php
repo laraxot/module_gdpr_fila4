@@ -38,10 +38,6 @@ $config
         'class_definition' => true,
         'elseif' => true,
     ])
-<<<<<<< HEAD
-    ->setFinder($finder);
-=======
     ->setFinder($finder)
->>>>>>> laraxot/develop
 
 return $config;

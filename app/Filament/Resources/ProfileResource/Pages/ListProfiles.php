@@ -19,12 +19,6 @@ class ListProfiles extends UserListProfiles
      * @return array<string, Tables\Columns\Column>
      */
     #[Override]
-<<<<<<< HEAD
-    /**
-     * @return array<string, mixed>
-     */
-=======
->>>>>>> laraxot/develop
     public function getTableColumns(): array
     {
         return [
