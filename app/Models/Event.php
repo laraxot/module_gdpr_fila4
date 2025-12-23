@@ -30,6 +30,7 @@ use function Safe\json_encode;
  * @property string $payload
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+<<<<<<< HEAD
  * @property Consent|null $consent
  *
  * @method static EventFactory factory($count = null, $state = [])
@@ -46,10 +47,13 @@ use function Safe\json_encode;
  * @method static Builder|Event whereTreatmentId($value)
  * @method static Builder|Event whereUpdatedAt($value)
  *
+=======
+>>>>>>> laraxot/develop
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
  *
  * @method static Builder|Event whereCreatedBy($value)
  * @method static Builder|Event whereDeletedAt($value)
@@ -93,6 +97,32 @@ use function Safe\json_encode;
  * @property ProfileContract|null $updater
  *
  * @mixin IdeHelperEvent
+=======
+ * @property-read Consent|null $consent
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ *
+ * @method static EventFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Event newModelQuery()
+ * @method static Builder<static>|Event newQuery()
+ * @method static Builder<static>|Event query()
+ * @method static Builder<static>|Event whereAction($value)
+ * @method static Builder<static>|Event whereConsentId($value)
+ * @method static Builder<static>|Event whereCreatedAt($value)
+ * @method static Builder<static>|Event whereCreatedBy($value)
+ * @method static Builder<static>|Event whereDeletedAt($value)
+ * @method static Builder<static>|Event whereDeletedBy($value)
+ * @method static Builder<static>|Event whereId($value)
+ * @method static Builder<static>|Event whereIp($value)
+ * @method static Builder<static>|Event wherePayload($value)
+ * @method static Builder<static>|Event whereSubjectId($value)
+ * @method static Builder<static>|Event whereTreatmentId($value)
+ * @method static Builder<static>|Event whereUpdatedAt($value)
+ * @method static Builder<static>|Event whereUpdatedBy($value)
+ *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
+>>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Event extends BaseModel

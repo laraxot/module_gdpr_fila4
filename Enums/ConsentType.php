@@ -4,14 +4,31 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Enums;
 
+<<<<<<< HEAD
+=======
+use Filament\Support\Contracts\HasColor;
+// use Modules\Core\Traits\EnumTrait;
+use Filament\Support\Contracts\HasIcon;
+use Filament\Support\Contracts\HasLabel;
+use Modules\Xot\Filament\Traits\TransTrait;
+
+>>>>>>> laraxot/develop
 /**
  * Enum ConsentType
  *
  * Defines all available consent types in the application.
  * Each consent type must have a corresponding translation key in the language files.
  */
+<<<<<<< HEAD
 enum ConsentType: string
 {
+=======
+enum ConsentType: string implements HasColor, HasIcon, HasLabel
+{
+    // use EnumTrait;
+    use TransTrait;
+
+>>>>>>> laraxot/develop
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
     case MARKETING_SMS = 'marketing_sms';
@@ -36,6 +53,7 @@ enum ConsentType: string
     case PROFILING = 'profiling';
     case AUTOMATED_DECISION_MAKING = 'automated_decision_making';
 
+<<<<<<< HEAD
     /**
      * Get the human-readable name of the consent type.
      */
@@ -80,6 +98,27 @@ enum ConsentType: string
             self::PROFILING => __('gdpr::consent.descriptions.profiling'),
             self::AUTOMATED_DECISION_MAKING => __('gdpr::consent.descriptions.automated_decision_making'),
         };
+=======
+    public function getLabel(): string
+    {
+        return $this->transClass(self::class, $this->value.'.label');
+    }
+
+    public function getColor(): string
+    {
+        return $this->transClass(self::class, $this->value.'.color');
+
+    }
+
+    public function getIcon(): string
+    {
+        return $this->transClass(self::class, $this->value.'.icon');
+    }
+
+    public function getDescription(): string
+    {
+        return $this->transClass(self::class, $this->value.'.description');
+>>>>>>> laraxot/develop
     }
 
     /**
@@ -87,11 +126,19 @@ enum ConsentType: string
      */
     public function isRequired(): bool
     {
+<<<<<<< HEAD
         return \in_array($this, [
             self::PRIVACY_POLICY,
             self::TERMS_AND_CONDITIONS,
             self::AGE_VERIFICATION,
         ], true);
+=======
+        return in_array($this, [
+            self::PRIVACY_POLICY,
+            self::TERMS_AND_CONDITIONS,
+            self::AGE_VERIFICATION,
+        ]);
+>>>>>>> laraxot/develop
     }
 
     /**
@@ -102,8 +149,13 @@ enum ConsentType: string
     public static function getRequiredConsentTypes(): array
     {
         return array_map(
+<<<<<<< HEAD
             static fn (self $type) => $type->value,
             array_filter(self::cases(), static fn (self $type) => $type->isRequired())
+=======
+            fn (self $type) => $type->value,
+            array_filter(self::cases(), fn (self $type) => $type->isRequired())
+>>>>>>> laraxot/develop
         );
     }
 
@@ -115,6 +167,7 @@ enum ConsentType: string
     public static function getOptionalConsentTypes(): array
     {
         return array_map(
+<<<<<<< HEAD
             static fn (self $type) => $type->value,
             array_filter(self::cases(), static fn (self $type) => ! $type->isRequired())
         );
@@ -125,6 +178,18 @@ enum ConsentType: string
      *
      * @return array<string, array<string, string>>
      */
+=======
+            fn (self $type) => $type->value,
+            array_filter(self::cases(), fn (self $type) => ! $type->isRequired())
+        );
+    }
+
+    /*
+     * Get consent types grouped by category.
+     *
+     * @return array<string, array<string, string>>
+
+>>>>>>> laraxot/develop
     public static function groupedByCategory(): array
     {
         return [
@@ -154,24 +219,38 @@ enum ConsentType: string
             ],
         ];
     }
+<<<<<<< HEAD
 
     /**
      * Get consent types as a flattened array for forms.
      *
      * @return array<string, string>
      */
+=======
+    */
+    /*
+     * Get consent types as a flattened array for forms.
+     *
+     * @return array<string, string>
+
+>>>>>>> laraxot/develop
     public static function forFormSelect(): array
     {
         $result = [];
 
         foreach (self::groupedByCategory() as $category => $types) {
+<<<<<<< HEAD
             foreach ($types as $value => $label) {
                 $result[$value] = $label;
             }
+=======
+            $result[__("gdpr::consent.categories.$category")] = $types;
+>>>>>>> laraxot/develop
         }
 
         return $result;
     }
+<<<<<<< HEAD
 
     /**
      * @deprecated Use label() instead
@@ -180,4 +259,7 @@ enum ConsentType: string
     {
         return $this->label();
     }
+=======
+        */
+>>>>>>> laraxot/develop
 }

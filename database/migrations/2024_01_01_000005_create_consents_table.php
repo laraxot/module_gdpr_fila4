@@ -13,6 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
+<<<<<<< HEAD
 
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
@@ -20,6 +21,12 @@ return new class extends XotBaseMigration
             // $table->foreignId('treatment_id')->nullable()->index();
             $table->string('subject_id');
 
+=======
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->uuid('id')->primary();
+            // $table->foreignId('treatment_id')->nullable()->index();
+            $table->string('subject_id');
+>>>>>>> laraxot/develop
             // $table->unique(['subject_id', 'treatment_id']);
             // $table->foreign('treatment_id')->references('id')->on('gdpr_treatment');
         });
@@ -29,6 +36,10 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('user_id')) {
                 $table->morphs('user');
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/develop
             if (! $this->hasColumn('type')) {
                 $table->string('type')->nullable();
             }
@@ -36,6 +47,10 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('accepted_at')) {
                 $table->timestamp('accepted_at')->nullable();
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/develop
             // -- Change --
             if ($this->hasColumn('user_id')) {
                 $table->string('user_id')->nullable()->change();

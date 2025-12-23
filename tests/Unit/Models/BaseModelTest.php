@@ -5,11 +5,15 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Gdpr\Models\BaseModel;
 use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
+=======
+use Modules\Gdpr\Models\BaseModel;
+>>>>>>> laraxot/develop
 
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel

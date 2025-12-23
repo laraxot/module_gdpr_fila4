@@ -26,6 +26,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
+<<<<<<< HEAD
  *
  * @method static TreatmentFactory factory($count = null, $state = [])
  * @method static Builder|Treatment newModelQuery()
@@ -116,6 +117,33 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  *
  * @mixin IdeHelperTreatment
+=======
+ * @property string|null $deleted_by
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ *
+ * @method static TreatmentFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Treatment newModelQuery()
+ * @method static Builder<static>|Treatment newQuery()
+ * @method static Builder<static>|Treatment query()
+ * @method static Builder<static>|Treatment whereActive($value)
+ * @method static Builder<static>|Treatment whereCreatedAt($value)
+ * @method static Builder<static>|Treatment whereCreatedBy($value)
+ * @method static Builder<static>|Treatment whereDeletedAt($value)
+ * @method static Builder<static>|Treatment whereDeletedBy($value)
+ * @method static Builder<static>|Treatment whereDescription($value)
+ * @method static Builder<static>|Treatment whereDocumentUrl($value)
+ * @method static Builder<static>|Treatment whereDocumentVersion($value)
+ * @method static Builder<static>|Treatment whereId($value)
+ * @method static Builder<static>|Treatment whereName($value)
+ * @method static Builder<static>|Treatment whereRequired($value)
+ * @method static Builder<static>|Treatment whereUpdatedAt($value)
+ * @method static Builder<static>|Treatment whereUpdatedBy($value)
+ * @method static Builder<static>|Treatment whereWeight($value)
+ *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
+>>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel

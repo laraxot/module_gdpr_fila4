@@ -15,17 +15,23 @@ use Modules\Xot\Contracts\ProfileContract;
  * Modules\Gdpr\Models\Consent.
  *
  * @property string $id
+<<<<<<< HEAD
  * @property string $treatment_id
  * @property string $subject_id
  * @property string $id
  * @property string $treatment_id
  * @property string $subject_id
+=======
+ * @property string|null $treatment_id
+ * @property string|null $subject_id
+>>>>>>> laraxot/develop
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
  * @property Treatment|null $treatment
  *
  * @method static ConsentFactory factory($count = null, $state = [])
@@ -79,6 +85,36 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserType($value)
  *
  * @mixin IdeHelperConsent
+=======
+ * @property string $user_type
+ * @property string|null $user_id
+ * @property string|null $type
+ * @property string|null $accepted_at
+ * @property-read ProfileContract|null $creator
+ * @property-read Treatment|null $treatment
+ * @property-read ProfileContract|null $updater
+ *
+ * @method static ConsentFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Consent newModelQuery()
+ * @method static Builder<static>|Consent newQuery()
+ * @method static Builder<static>|Consent query()
+ * @method static Builder<static>|Consent whereAcceptedAt($value)
+ * @method static Builder<static>|Consent whereCreatedAt($value)
+ * @method static Builder<static>|Consent whereCreatedBy($value)
+ * @method static Builder<static>|Consent whereDeletedAt($value)
+ * @method static Builder<static>|Consent whereDeletedBy($value)
+ * @method static Builder<static>|Consent whereId($value)
+ * @method static Builder<static>|Consent whereSubjectId($value)
+ * @method static Builder<static>|Consent whereTreatmentId($value)
+ * @method static Builder<static>|Consent whereType($value)
+ * @method static Builder<static>|Consent whereUpdatedAt($value)
+ * @method static Builder<static>|Consent whereUpdatedBy($value)
+ * @method static Builder<static>|Consent whereUserId($value)
+ * @method static Builder<static>|Consent whereUserType($value)
+ *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
+>>>>>>> laraxot/develop
  * @mixin \Eloquent
  */
 class Consent extends BaseModel

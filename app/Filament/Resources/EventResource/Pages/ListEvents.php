@@ -12,9 +12,12 @@ class ListEvents extends XotBaseListRecords
 {
     protected static string $resource = EventResource::class;
 
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> laraxot/develop
     public function getTableColumns(): array
     {
         return [

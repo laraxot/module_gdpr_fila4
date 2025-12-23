@@ -13,6 +13,7 @@ class ListTreatments extends XotBaseListRecords
 {
     protected static string $resource = TreatmentResource::class;
 
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
@@ -25,6 +26,27 @@ class ListTreatments extends XotBaseListRecords
             'is_active' => IconColumn::make('is_active')->boolean(),
             'data_creazione' => TextColumn::make('data_creazione')->dateTime()->sortable(),
             'data_ultima_modifica' => TextColumn::make('data_ultima_modifica')->dateTime()->sortable(),
+=======
+    public function getTableColumns(): array
+    {
+        return [
+            // Tables\Columns\TextColumn::make('id')
+            //     ->searchable(),
+            IconColumn::make('active')->boolean(),
+            IconColumn::make('required')->boolean(),
+            TextColumn::make('name')->searchable(),
+            TextColumn::make('documentVersion')->searchable(),
+            TextColumn::make('documentUrl')->searchable(),
+            TextColumn::make('weight')->numeric()->sortable(),
+            TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+>>>>>>> laraxot/develop
         ];
     }
 }

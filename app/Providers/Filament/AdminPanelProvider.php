@@ -6,7 +6,10 @@ namespace Modules\Gdpr\Providers\Filament;
 
 use Filament\Panel;
 use Filament\Support\Assets\Css;
+<<<<<<< HEAD
 use Filament\Support\Assets\Js;
+=======
+>>>>>>> laraxot/develop
 use Filament\Support\Facades\FilamentAsset;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 use Override;

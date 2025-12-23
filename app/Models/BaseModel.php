@@ -4,16 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 // //use Laravel\Scout\Searchable;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
+=======
+use Modules\Xot\Models\XotBaseModel;
+>>>>>>> laraxot/develop
 
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 abstract class BaseModel extends Model
 {
     // use Searchable;
@@ -82,4 +87,10 @@ abstract class BaseModel extends Model
             'deleted_by' => 'string',
         ];
     }
+=======
+abstract class BaseModel extends XotBaseModel
+{
+    /** @var string */
+    protected $connection = 'gdpr';
+>>>>>>> laraxot/develop
 }

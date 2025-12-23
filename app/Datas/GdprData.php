@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Datas;
 
+<<<<<<< HEAD
 use Filament\Support\Colors\Color;
+=======
+>>>>>>> laraxot/develop
 use Livewire\Wireable;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Concerns\WireableData;
