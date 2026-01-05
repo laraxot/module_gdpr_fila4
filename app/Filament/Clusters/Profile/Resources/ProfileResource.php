@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters\Profile\Resources;
 
+use Override;
 use Modules\Gdpr\Filament\Clusters\Profile as ProfileCluster;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\Gdpr\Filament\Clusters\Profile\Resources\ProfileResource\Pages\EditProfile;
@@ -15,17 +16,17 @@ class ProfileResource extends XotBaseResource
 {
     protected static ?string $model = Profile::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $cluster = ProfileCluster::class;
 
-    #[\Override]
+    #[Override]
     public static function getFormSchema(): array
     {
         return [];
     }
 
-    #[\Override]
+    #[Override]
     public static function getPages(): array
     {
         return [
