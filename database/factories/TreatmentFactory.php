@@ -9,7 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Treatment;
 
 /**
+<<<<<<< HEAD
  * @extends Factory<Treatment>
+=======
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Gdpr\Models\Treatment>
+>>>>>>> 5a85228 (.)
  */
 class TreatmentFactory extends Factory
 {
@@ -25,6 +29,11 @@ class TreatmentFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+        ];
+>>>>>>> 5a85228 (.)
     }
 }
