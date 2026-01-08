@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ceb9f4f (.)
 declare(strict_types=1);
 
 return [
@@ -43,6 +46,7 @@ return [
         'data_deleted' => 'Dati Eliminati',
     ],
 ];
+<<<<<<< HEAD
 =======
 return array (
   'navigation' => 
@@ -93,3 +97,5 @@ return array (
   ),
 );
 >>>>>>> 0c1819a (.)
+=======
+>>>>>>> ceb9f4f (.)
