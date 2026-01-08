@@ -15,6 +15,7 @@ class ListConsents extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             TextColumn::make('id')->searchable(),
             TextColumn::make('treatment.name')->searchable(),
             TextColumn::make('subject_id')->searchable(),
@@ -26,6 +27,14 @@ class ListConsents extends XotBaseListRecords
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+=======
+            'id' => TextColumn::make('id')->numeric()->sortable(),
+            'treatment_id' => TextColumn::make('treatment.name')->sortable(),
+            'subject_id' => TextColumn::make('subject.name')->sortable(),
+            'is_accepted' => IconColumn::make('is_accepted')->boolean(),
+            'data_creazione' => TextColumn::make('data_creazione')->dateTime()->sortable(),
+            'data_ultima_modifica' => TextColumn::make('data_ultima_modifica')->dateTime()->sortable(),
+>>>>>>> 95dc6c2f (.)
         ];
     }
 }
