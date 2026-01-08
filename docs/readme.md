@@ -1,7 +1,11 @@
 # 🔐 **GDPR Module** - Sistema Completo Conformità GDPR
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+<<<<<<< HEAD
 [![Filament 3.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
+=======
+[![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+>>>>>>> 5a85228 (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![GDPR Compliant](https://img.shields.io/badge/GDPR-Compliant-green.svg)](https://gdpr.eu/)
 [![Privacy Protection](https://img.shields.io/badge/Privacy-Protection%20Ready-blue.svg)](https://gdpr.eu/)
