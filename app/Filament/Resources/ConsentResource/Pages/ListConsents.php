@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ConsentResource\Pages;
 
+<<<<<<< HEAD
+=======
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\IconColumn;
+>>>>>>> 4f72b08a (.)
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -14,6 +19,7 @@ class ListConsents extends XotBaseListRecords
 
     public function getTableColumns(): array
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return [
 <<<<<<< HEAD
@@ -40,6 +46,9 @@ class ListConsents extends XotBaseListRecords
 =======
 =======
         /** @var array<string, \Filament\Tables\Columns\Column> */
+=======
+        /** @var array<string, Column> */
+>>>>>>> 4f72b08a (.)
         return [
             'id' => TextColumn::make('id')
                 ->numeric()
@@ -56,8 +65,11 @@ class ListConsents extends XotBaseListRecords
             'data_ultima_modifica' => TextColumn::make('data_ultima_modifica')
                 ->dateTime()
                 ->sortable(),
+<<<<<<< HEAD
 >>>>>>> 5a85228 (.)
 >>>>>>> ead2100a (.)
+=======
+>>>>>>> 4f72b08a (.)
         ];
     }
 }

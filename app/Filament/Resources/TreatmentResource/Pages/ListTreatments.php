@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\TreatmentResource\Pages;
 
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\TreatmentResource;
@@ -15,6 +16,7 @@ class ListTreatments extends XotBaseListRecords
 
     public function getTableColumns(): array
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return [
 <<<<<<< HEAD
@@ -46,6 +48,9 @@ class ListTreatments extends XotBaseListRecords
 =======
 =======
         /** @var array<string, \Filament\Tables\Columns\Column> */
+=======
+        /** @var array<string, Column> */
+>>>>>>> 4f72b08a (.)
         return [
             'id' => TextColumn::make('id')
                 ->numeric()
@@ -64,8 +69,11 @@ class ListTreatments extends XotBaseListRecords
             'data_ultima_modifica' => TextColumn::make('data_ultima_modifica')
                 ->dateTime()
                 ->sortable(),
+<<<<<<< HEAD
 >>>>>>> 5a85228 (.)
 >>>>>>> ead2100a (.)
+=======
+>>>>>>> 4f72b08a (.)
         ];
     }
 }
