@@ -6,6 +6,7 @@ namespace Modules\Gdpr\Filament\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Pages\Auth\XotBaseEditProfile;
 
 class EditProfile extends XotBaseEditProfile
@@ -21,6 +22,11 @@ class EditProfile extends BaseEditProfile
 =======
 class EditProfile extends \Filament\Auth\Pages\EditProfile
 >>>>>>> 4f72b08a (.)
+=======
+use Modules\Xot\Filament\Pages\Auth\XotBaseEditProfile;
+
+class EditProfile extends XotBaseEditProfile
+>>>>>>> cc408a6f (.)
 {
     protected static bool $shouldRegisterNavigation = true;
 

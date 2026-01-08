@@ -56,7 +56,11 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
  *
+<<<<<<< HEAD
  * @property-read ProfileContract|null $deleter
+=======
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+>>>>>>> cc408a6f (.)
  *
  * @mixin \Eloquent
  */
@@ -80,12 +84,12 @@ class Event extends BaseModel
         return $this->belongsTo(Consent::class);
     }
 
-    public function setPayloadAttribute(null|string $value): void
+    public function setPayloadAttribute(?string $value): void
     {
         $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
-    public function setIpAttribute(null|string $value): void
+    public function setIpAttribute(?string $value): void
     {
         $this->attributes['ip'] = Crypt::encrypt($value);
     }

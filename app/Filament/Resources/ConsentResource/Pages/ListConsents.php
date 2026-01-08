@@ -5,10 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Filament\Resources\ConsentResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 >>>>>>> 4f72b08a (.)
+=======
+>>>>>>> cc408a6f (.)
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -23,6 +26,9 @@ class ListConsents extends XotBaseListRecords
 <<<<<<< HEAD
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cc408a6f (.)
             TextColumn::make('id')->searchable(),
             TextColumn::make('treatment.name')->searchable(),
             TextColumn::make('subject_id')->searchable(),
@@ -34,6 +40,7 @@ class ListConsents extends XotBaseListRecords
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+<<<<<<< HEAD
 =======
             'id' => TextColumn::make('id')->numeric()->sortable(),
             'treatment_id' => TextColumn::make('treatment.name')->sortable(),
@@ -70,6 +77,8 @@ class ListConsents extends XotBaseListRecords
 >>>>>>> ead2100a (.)
 =======
 >>>>>>> 4f72b08a (.)
+=======
+>>>>>>> cc408a6f (.)
         ];
     }
 }

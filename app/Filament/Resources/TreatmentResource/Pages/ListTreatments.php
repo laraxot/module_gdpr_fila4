@@ -20,6 +20,9 @@ class ListTreatments extends XotBaseListRecords
 <<<<<<< HEAD
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cc408a6f (.)
             // Tables\Columns\TextColumn::make('id')
             //     ->searchable(),
             IconColumn::make('active')->boolean(),
@@ -36,6 +39,7 @@ class ListTreatments extends XotBaseListRecords
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
+<<<<<<< HEAD
 =======
             'id' => TextColumn::make('id')->numeric()->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
@@ -74,6 +78,8 @@ class ListTreatments extends XotBaseListRecords
 >>>>>>> ead2100a (.)
 =======
 >>>>>>> 4f72b08a (.)
+=======
+>>>>>>> cc408a6f (.)
         ];
     }
 }

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -27,6 +28,8 @@ use Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class);
 >>>>>>> 95dc6c2f (.)
+=======
+>>>>>>> cc408a6f (.)
 
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel

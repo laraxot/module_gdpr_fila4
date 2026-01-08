@@ -49,7 +49,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
  *
+<<<<<<< HEAD
  * @property-read ProfileContract|null $deleter
+=======
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+>>>>>>> cc408a6f (.)
  *
  * @mixin \Eloquent
  */
