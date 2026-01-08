@@ -19,9 +19,6 @@ class ListProfiles extends UserListProfiles
      * @return array<string, Tables\Columns\Column>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableColumns(): array
     {
         return [
