@@ -44,6 +44,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property string|null $vat_number
  * @property Carbon|null $deleted_at
  * @property SchemalessAttributes $extra
+ *
  * @property-read string $avatar
  * @property-read ProfileContract|null $creator
  * @property-read Collection<int, DeviceUser> $deviceUsers
@@ -96,11 +97,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Profile withoutPermission($permissions)
  * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
  *
-<<<<<<< HEAD
  * @property-read ProfileContract|null $deleter
-=======
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
->>>>>>> cc408a6f (.)
  *
  * @mixin \Eloquent
  */

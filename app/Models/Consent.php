@@ -27,6 +27,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $user_id
  * @property string|null $type
  * @property string|null $accepted_at
+ *
  * @property-read ProfileContract|null $creator
  * @property-read Treatment|null $treatment
  * @property-read ProfileContract|null $updater
@@ -49,11 +50,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
  *
-<<<<<<< HEAD
  * @property-read ProfileContract|null $deleter
-=======
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
->>>>>>> cc408a6f (.)
  *
  * @mixin \Eloquent
  */

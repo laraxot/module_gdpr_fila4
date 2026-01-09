@@ -27,6 +27,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *
@@ -49,11 +50,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
  *
-<<<<<<< HEAD
  * @property-read ProfileContract|null $deleter
-=======
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
->>>>>>> cc408a6f (.)
  *
  * @mixin \Eloquent
  */
