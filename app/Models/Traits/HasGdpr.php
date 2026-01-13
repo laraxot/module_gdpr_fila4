@@ -13,12 +13,12 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 
 /**
- * Trait HasGdpr
+ * Trait HasGdpr.
  *
  * Provides GDPR-related functionality for Eloquent models.
  *
- * @property-read Collection<int, Consent> $consents
- * @property-read Collection<int, Consent> $activeConsents
+ * @property Collection<int, Consent> $consents
+ * @property Collection<int, Consent> $activeConsents
  */
 trait HasGdpr
 {
@@ -58,7 +58,7 @@ trait HasGdpr
     /**
      * Check if the user has given a specific consent.
      *
-     * @param  bool  $cached  Use cached version if available
+     * @param bool $cached Use cached version if available
      */
     public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
     {
@@ -79,7 +79,7 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -131,7 +131,7 @@ trait HasGdpr
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /** @var array<string> */
+        /* @var array<string> */
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 
