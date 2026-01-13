@@ -19,6 +19,8 @@ class ConsentPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can view the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function view(UserContract $user, Consent $_consent): bool
     {
@@ -35,6 +37,8 @@ class ConsentPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can update the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function update(UserContract $user, Consent $_consent): bool
     {
@@ -43,6 +47,8 @@ class ConsentPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can delete the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function delete(UserContract $user, Consent $_consent): bool
     {
@@ -51,6 +57,8 @@ class ConsentPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can restore the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function restore(UserContract $user, Consent $_consent): bool
     {
@@ -59,6 +67,8 @@ class ConsentPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can permanently delete the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function forceDelete(UserContract $user, Consent $consent): bool
     {

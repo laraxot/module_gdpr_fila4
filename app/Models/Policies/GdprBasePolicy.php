@@ -12,10 +12,12 @@ abstract class GdprBasePolicy
 {
     use HandlesAuthorization;
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function before(UserContract $user, string $_ability): ?bool
     {
-        $xotData = XotData::make();
-        if ($user->hasRole('super-admin')) {
+        if (XotData::make()->super_admin === $user->email) {
             return true;
         }
 

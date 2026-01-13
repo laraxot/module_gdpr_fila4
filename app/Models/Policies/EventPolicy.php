@@ -19,6 +19,8 @@ class EventPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can view the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function view(UserContract $user, Event $_event): bool
     {
@@ -35,6 +37,8 @@ class EventPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can update the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function update(UserContract $user, Event $_event): bool
     {
@@ -43,6 +47,8 @@ class EventPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can delete the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function delete(UserContract $user, Event $_event): bool
     {
@@ -51,6 +57,8 @@ class EventPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can restore the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function restore(UserContract $user, Event $_event): bool
     {
@@ -59,6 +67,8 @@ class EventPolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can permanently delete the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function forceDelete(UserContract $user, Event $event): bool
     {
