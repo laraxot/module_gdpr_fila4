@@ -47,6 +47,8 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can delete the model.
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function delete(UserContract $user, Profile $_profile): bool
     {
