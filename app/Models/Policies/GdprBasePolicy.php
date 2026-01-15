@@ -12,8 +12,6 @@ abstract class GdprBasePolicy
 {
     use HandlesAuthorization;
 
-    /**
-     */
     public function before(UserContract $user, string $_ability): ?bool
     {
         if (XotData::make()->super_admin === $user->email) {
