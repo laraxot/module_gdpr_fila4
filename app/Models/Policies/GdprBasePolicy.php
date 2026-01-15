@@ -13,7 +13,6 @@ abstract class GdprBasePolicy
     use HandlesAuthorization;
 
     /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function before(UserContract $user, string $_ability): ?bool
     {

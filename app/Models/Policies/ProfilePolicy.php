@@ -19,8 +19,6 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can view the model.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function view(UserContract $user, Profile $_profile): bool
     {
@@ -37,8 +35,6 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can update the model.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function update(UserContract $user, Profile $_profile): bool
     {
@@ -47,8 +43,6 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can delete the model.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function delete(UserContract $user, Profile $_profile): bool
     {
