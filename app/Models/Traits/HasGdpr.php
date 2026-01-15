@@ -56,18 +56,33 @@ trait HasGdpr
     }
 
     /**
+<<<<<<< Updated upstream
      * Check if the user has given a specific consent.
      *
      * @param bool $cached Use cached version if available
+=======
+     * Check if the user has given a specific consent (using cached version if available).
+>>>>>>> Stashed changes
      */
-    public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
+    public function hasGivenConsent(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
         $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
 
-        if ($cached && Cache::has($cacheKey)) {
+        if (Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
         }
+
+        return $this->hasGivenConsentWithoutCache($type);
+    }
+
+    /**
+     * Check if the user has given a specific consent (bypassing cache).
+     */
+    public function hasGivenConsentWithoutCache(ConsentType|string $type): bool
+    {
+        $type = $type instanceof ConsentType ? $type->value : $type;
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
 
         $hasConsent = $this->activeConsents()->where('type', $type)->exists();
 

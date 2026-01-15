@@ -33,7 +33,7 @@ class GdprServiceProvider extends XotBaseServiceProvider
     public function registerMyMiddleware(Router $router): void
     {
         $gdpr = GdprData::make();
-        if ($gdpr->cookie_banner_enabled) {
+        if ($gdpr->cookie_banner_on) {
             $router->pushMiddlewareToGroup('web', CookieConsentMiddleware::class);
         }
     }

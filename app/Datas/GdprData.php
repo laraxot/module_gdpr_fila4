@@ -50,7 +50,7 @@ class GdprData extends Data implements Wireable
 {
     use WireableData;
 
-    public bool $cookie_banner_enabled = true;
+    public bool $cookie_banner_on = true;
 
     /**
      * Singleton instance.
