@@ -56,13 +56,8 @@ trait HasGdpr
     }
 
     /**
-<<<<<<< Updated upstream
+     * <<<<<<< Updated upstream
      * Check if the user has given a specific consent.
-     *
-     * @param bool $cached Use cached version if available
-=======
-     * Check if the user has given a specific consent (using cached version if available).
->>>>>>> Stashed changes
      */
     public function hasGivenConsent(ConsentType|string $type): bool
     {
