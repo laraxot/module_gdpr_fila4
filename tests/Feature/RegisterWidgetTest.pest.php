@@ -5,21 +5,19 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Feature;
 
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
-use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\User;
-use function Pest\Laravel\actingAs;
 
 uses(TestCase::class);
 
-/**
+/*
  * Test per verificare che il RegisterWidget del modulo GDPR funzioni correttamente.
- * 
+ *
  * NOTA: Utilizziamo --env=testing che punta a MySQL (come configurato)
  * Utilizziamo migrate senza force (niente --force)
  * Non specifichiamo modulo specifico per migrare tutto
- * 
+ *
  * Perché usiamo MySQL e non SQLite per i test:
  * - Il progetto utilizza connessioni multiple (user, gdpr, etc.)
  * - SQLite non supporta bene le relazioni cross-database
@@ -156,7 +154,7 @@ test('form components are accessible', function () {
     $response = $this->get('/it/auth/register');
 
     $response->assertStatus(200);
-    
+
     // Verifica presenza campi form
     $response->assertSee('first_name');
     $response->assertSee('last_name');

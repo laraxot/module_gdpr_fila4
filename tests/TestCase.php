@@ -80,7 +80,7 @@ abstract class TestCase extends BaseTestCase
         ];
 
         foreach ($moduleConnections as $name) {
-            if (config("database.connections.{$name}") === null) {
+            if (null === config("database.connections.{$name}")) {
                 Config::set("database.connections.{$name}", $defaultConfig);
             }
         }

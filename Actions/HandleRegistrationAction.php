@@ -5,14 +5,12 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Actions;
 
 use Illuminate\Support\Facades\Log;
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per la gestione delle notifiche di successo/errore registrazione.
- * 
+ *
  * Estende QueueableAction per separazione responsabilità.
  */
 class HandleRegistrationAction extends QueueableAction
@@ -20,9 +18,7 @@ class HandleRegistrationAction extends QueueableAction
     /**
      * Handle successful registration.
      *
-     * @param User $user
      * @param array<string> $data
-     * @return void
      */
     public function execute(User $user, array $data): void
     {
@@ -38,9 +34,7 @@ class HandleRegistrationAction extends QueueableAction
     /**
      * Handle registration errors.
      *
-     * @param \Exception $exception
      * @param array<string> $data
-     * @return void
      */
     public function execute(\Exception $exception, array $data): void
     {
@@ -65,8 +59,6 @@ class HandleRegistrationAction extends QueueableAction
 
     /**
      * Get the display name for the action.
-     *
-     * @return string
      */
     public function displayName(): string
     {
@@ -75,8 +67,6 @@ class HandleRegistrationAction extends QueueableAction
 
     /**
      * Get the description for the action.
-     *
-     * @return string
      */
     public function description(): string
     {

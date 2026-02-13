@@ -4,15 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions;
 
-use Illuminate\Support\Facades\Log;
 use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
-use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per la validazione dei consensi GDPR durante la registrazione.
- * 
+ *
  * Estende QueueableAction per separazione responsabilità.
  */
 class ValidateGdprConsentAction extends QueueableAction
@@ -21,6 +18,7 @@ class ValidateGdprConsentAction extends QueueableAction
      * Validate GDPR consent requirements.
      *
      * @param array<string, mixed> $data
+     *
      * @throws \Illuminate\Validation\ValidationException
      */
     public function execute(array $data): array
@@ -57,8 +55,6 @@ class ValidateGdprConsentAction extends QueueableAction
 
     /**
      * Get the display name for the action.
-     *
-     * @return string
      */
     public function displayName(): string
     {
@@ -67,8 +63,6 @@ class ValidateGdprConsentAction extends QueueableAction
 
     /**
      * Get the description for the action.
-     *
-     * @return string
      */
     public function description(): string
     {

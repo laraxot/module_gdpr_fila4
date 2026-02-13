@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions;
 
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Factory as ValidationFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
@@ -13,7 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per il salvataggio dei consensi GDPR.
- * 
+ *
  * Estende QueueableAction per separazione responsabilità.
  * Usa il container Laravel per risolvere le dipendenze correttamente.
  */
@@ -31,20 +30,18 @@ class SaveGdprConsentsAction extends QueueableAction
     /**
      * Save GDPR consents for a user.
      *
-     * @param User $user
      * @param array<string> $consentTypes
-     * @return void
      */
     public function execute(User $user, array $consentTypes): void
     {
         foreach ($consentTypes as $consentType) {
             $treatment = Treatment::where('name', $consentType)->first();
-            
-            if (!$treatment) {
+
+            if (! $treatment) {
                 $this->logger->warning("GDPR treatment '{$consentType}' not found for user {$user->id}");
                 continue;
             }
-            
+
             // Crea o aggiorna il consenso
             Consent::updateOrCreate([
                 'user_id' => $user->id,
@@ -57,7 +54,7 @@ class SaveGdprConsentsAction extends QueueableAction
                 'user_agent' => request()->userAgent(),
             ]);
         }
-        
+
         $this->logger->info('GDPR consents saved', [
             'user_id' => $user->id,
             'user_email' => $user->email,
@@ -78,8 +75,6 @@ class SaveGdprConsentsAction extends QueueableAction
 
     /**
      * Get the display name for the action.
-     *
-     * @return string
      */
     public function displayName(): string
     {
@@ -88,8 +83,6 @@ class SaveGdprConsentsAction extends QueueableAction
 
     /**
      * Get the description for the action.
-     *
-     * @return string
      */
     public function description(): string
     {
